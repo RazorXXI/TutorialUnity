@@ -13,6 +13,7 @@ Estos apuntes han sido realizados por mi, durante la realización del curso de P
 
 
 
+
 Como hemos ido viendo, los `scripts` son componentes que nosotros creamos, para darle comportamientos y funcionalidades a los **GameObjects** de nuestro juego o aplicación.
 
   
