@@ -33,7 +33,8 @@ Es muy importante tener en cuenta, que hast que un `array` no está inicializado
 
 Un detalle importante a mencionar es que, si no inicializamos un array y lo ponemos como *public* o lo indicamos como *[SerilizeField]*, siempre podemos inicializarlo, añadiendo valores desde el editor de Unity.
 
-**IMPORTANTE: Un array NO PUEDE cambiar de tamaño NUNCA en tiempo de ejecución.**
+| **IMPORTANTE: Un array NO PUEDE cambiar de tamaño NUNCA en tiempo de ejecución.** |
+|---|
 
 Podemos asignar valores a una posición del `array`, para ello, simplemente deberemos indicar su indice de posición y asignar el valor (*Los verdaderos programadores y C# empiezan a contar desde 0 hasta n-1. Con lo cual, el primer elemento de un array siempre estará en la posición 0.*)
 
@@ -55,9 +56,10 @@ int[] magiasJugadoresEquipoB = new int[5];
 magiasJugadoresEquipoA[2] = magiasJugadoresEquipoB[3];
 ```
 
-**TRUCO DEL ALMENDRUCO**
+| **TRUCO DEL ALMENDRUCO** |
+|---|
 
-**Si no inicializamos ni definimos el tamaño del array en nuestro script, lo podemos definir mediante el editor, siempre y cuando el array este como [SerializeField], de ese modo, podemos añadir la dimensión y los elementos directamente mediante el editor de Unity.**
+| **Si no inicializamos ni definimos el tamaño del array en nuestro script, lo podemos definir mediante el editor, siempre y cuando el array este como [SerializeField], de ese modo, podemos añadir la dimensión y los elementos directamente mediante el editor de Unity.** |
 
 Siguiendo con los `arrays`, otra cosa interesante es el saber el tamaño del array. Para ello, utilizaremos su método `length`:
 
