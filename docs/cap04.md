@@ -12,13 +12,13 @@
 
   Las dos maneras de inicializar un array en C# son:
 
-    * Primera Forma:
+  - Primera Forma:
 
     ```
       tipoDato[] nombreArray = {valor1, valor2,..., valorN};
    ```
 
-    * Segunda Forma:
+  - Segunda Forma:
     ```
       tipoDato[] nombreArray = new tipoDato[dimension];
     ```
