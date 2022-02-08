@@ -33,7 +33,7 @@
   
   De momento no es preciso que entiendas el esquema este, pero tenlo en tu cabeza, que te va a ser útil y poco a poco, mas adelante lo iras pillando.
   
-  Bueno, ya sabemos como se crea una corrutina, pero claro, ahora la pregunta es... ¿Como se llama a una corrutina?. Pues bien mi brillante amigo, simplemente añadiendo una llamada con el método `StartCoroutine(corrutina());`.
+  Bueno, ya sabemos como se crea una corrutina, pero claro, ahora la pregunta es... ¿Como se llama a una corrutina?. Pues bien mi brillante amigo, simplemente añadiendo una llamada con el método `StartCoroutine(corrutina());`, donde `corrutina()` será el nombre que le hayamos dado nosotros a la **corrutina** que hayamos creado.
   
   Con el ejemplo lo vas a pillar mejor. En este ejemplo, vamos a llamar a la corrutina anterior (`sayHelloAfterTime`), en nuestro método `Start()`.
   
@@ -46,7 +46,7 @@
   
   Voila!!! Tan sencillo como eso. No creo que necesite mucha explicación, no?
   
-  Si te estas preguntando si dentro de una corrutina puede haber mas de un `yield return`, la respuesta es que si. Te lo voy a poner con un ejemplito guapo guapo:
+  Si te estas preguntando si dentro de una corrutina puede haber mas de un `yield return`, la respuesta es que SI. Te lo voy a poner con un ejemplito guapo guapo:
   
   ```c#
   IEnumerator sayHelloAfterTime()
@@ -60,7 +60,7 @@
   
   Es que estamos hoy que lo petamos. Te quejarás de todo lo que te estoy enseñando eeeh piratilla...
   
-  Como hemos visto en los ejemplos anteriores, con `yield return new WaitForSeconds(segundos)`, detenemos la ejecución un tiempo que es pasado como segundos por parámetro. Pero este no es el unico return, tambien tenemos `yield return null`, que lo que hace es pausar la ejecución un *frame*  antes de ejecutar la línea de código que se encuentre a continuación de este.
+  Como hemos visto en los ejemplos anteriores, con `yield return new WaitForSeconds(segundos)`, detenemos la ejecución un tiempo que es pasado como segundos por parámetro. Pero este no es el único `return`, también tenemos `yield return null`, el cual lo que hace es pausar la ejecución un *frame* antes de ejecutar la siguiente línea de código a continuación de este.
   
   Un ejemplo con `yield return null`:
   
@@ -73,4 +73,6 @@
   ```
   
   Las corrutinas son muy útiles para facilitarnos la vida, cuando tenemos que hacer cosas que queremos que se pausen. Pero como detalle diré que, las corrutinas no afectan al rendimiento de nuestro programa o juego (ni lo mejora, ni lo empeora), simplemente nos da una cierta comodidad para  hacer cierto tipo de cosas mucho mas fáciles que si lo tuviéramos que hacer sin corrutinas.
+
+
   
