@@ -90,3 +90,16 @@ Veamos un ejemplo de ambos:
 public int edad; //Esta variable sería pública
 private float vida; //Esta variable sería privada
 ```
+
+**NOTA**
+
+**Es importante indicar, que si no se especifica el modificador de acceso de una variable, C# toma por defecto este como private.**
+
+Otro dato importante que debemos saber, es que C# por defecto inicializa las variables por defecto según el tipo de dato:
+
+| Tipo de Dato | Valor Inicializado |
+| :--- | :--- |
+| int | 0 |
+| bool | false |
+| float | 0.0 |
+| string | null |
