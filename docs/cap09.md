@@ -221,7 +221,7 @@ Bien, que hace todo esto que hemos puesto aquí? Pues es muy simple. Básicament
 Ahora voy a explicarte, que hace algunas de las funciones de nuestro `script`.
 
 Comenzamos:
-- `transform.Translate(vector3.forward * distanceToMove * Time.deltaTime)`: Básicamente esta función lo que hace es mediante `vector3.forward` es desplazar el objeto, el cual calculamos su desplazamiento, multiplicando la distancia que queremos que se mueva (`distanceToMove`) por el tiempo (`Time.deltaTime`). Acuérdate que Espacio = Velocidad * Tiempo. Aquí la velocidad la calculamos con `vector3.forward * distanceToMove` y el tiempo pues creo que queda claro cual es no? (Por si no lo tienes claro, el tiempo lo da `Time.deltaTime`).
+- `transform.Translate(vector3.forward * distanceToMove * Time.deltaTime)`: Básicamente esta función lo que hace es mediante `vector3.forward` desplazar el objeto, el cual calculamos su desplazamiento, multiplicando la distancia que queremos que se mueva (`distanceToMove`) por el tiempo (`Time.deltaTime`). Acuérdate de eso de (Espacio = Velocidad * Tiempo). Aquí la velocidad la calculamos con `vector3.forward * distanceToMove` y el tiempo pues creo que queda claro cual es no? (Por si no lo tienes claro, el tiempo lo da `Time.deltaTime`).
 
 |**NOTA**|
 |:---|
