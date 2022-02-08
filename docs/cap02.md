@@ -41,7 +41,7 @@ int edadPlayer = 18;
 
   ### Tips importantes sobre las Variables
 
-Como hemos visto, según indiquemos, una variable puedes ser pública o privada, pudiendo ser vista por el inspector de **Unity** o no. Pero a lo mejor, queremos que una variable no sea accesible por otras clases, pero si desde el editor de **Unity**, para ello, indicaremos la propiedad `[SerializeField]` en la declaración de la variable. De este modo, permitimos que una variable sea privada, pero si accesible desde el editor de Unity. 
+  Como hemos visto, según indiquemos, una variable puedes ser pública o privada, pudiendo ser vista por el inspector de **Unity** o no. Pero a lo mejor, queremos que una variable no sea accesible por otras clases, pero si desde el editor de **Unity**, para ello, indicaremos la propiedad `[SerializeField]` en la declaración de la variable. De este modo, permitimos que una variable sea privada, pero si accesible desde el editor de Unity. 
 
 A continuación un ejemplo:
 
