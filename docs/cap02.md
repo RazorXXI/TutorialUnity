@@ -10,6 +10,7 @@ Una variable consta de:
 
 - **Identificador** : Es el nombre que le vamos a dar a la variable. Este nombre debe ser descriptivo para saber que es lo que va a guardar nuestra variable.
 - **Tipo de Dato** : Determina el tipo de dato que guardará la variable. Los tipos de datos mas comunes son:
+
   | Tipo | Descripción |
   | :--- | :--- |
   | **int** | Números enteros |
