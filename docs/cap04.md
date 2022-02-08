@@ -58,7 +58,6 @@ magiasJugadoresEquipoA[2] = magiasJugadoresEquipoB[3];
 
 | **TRUCO DEL ALMENDRUCO** |
 |---|
-
 | **Si no inicializamos ni definimos el tamaño del array en nuestro script, lo podemos definir mediante el editor, siempre y cuando el array este como [SerializeField], de ese modo, podemos añadir la dimensión y los elementos directamente mediante el editor de Unity.** |
 
 Siguiendo con los `arrays`, otra cosa interesante es el saber el tamaño del array. Para ello, utilizaremos su método `length`:
