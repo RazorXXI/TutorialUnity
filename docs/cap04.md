@@ -28,7 +28,7 @@ Debemos tener presente, que un `array` puede estar declarada pero no inicializad
 
 Es muy importante tener en cuenta, que hast que un `array` no está inicializado, no puede ser utilizado. 
 
-|**NOTA: Un array SOLO guarda valores de un mismo tipo.**|
+| **NOTA: Un array SOLO guarda valores de un mismo tipo.** |
 
 Un detalle importante a mencionar es que, si no inicializamos un array y lo ponemos como *public* o lo indicamos como *[SerilizeField]*, siempre podemos inicializarlo, añadiendo valores desde el editor de Unity.
 
