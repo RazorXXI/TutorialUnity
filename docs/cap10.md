@@ -74,5 +74,17 @@
   
   Las corrutinas son muy útiles para facilitarnos la vida, cuando tenemos que hacer cosas que queremos que se pausen. Pero como detalle diré que, las corrutinas no afectan al rendimiento de nuestro programa o juego (ni lo mejora, ni lo empeora), simplemente nos da una cierta comodidad para  hacer cierto tipo de cosas mucho mas fáciles que si lo tuviéramos que hacer sin corrutinas.
 
+  Como detalle curioso, cabe mencionar que podemos convertir el método `Start` de Unity, en una corrutina. Para ello, tan solo tenemos que cambiar `void` por `IEnumerator` y añadir `yield return` en algún punto del `Start`.
 
+  Vamos a verlo con un ejemplito:
+
+  ```c#
+  IEnumerator Start()
+  {
+    yield return new WaitForSeconds(3);
+    Debug.Log("Ejecutando desde Start");
+  }
+  ```
+
+  
   
