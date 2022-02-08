@@ -66,14 +66,14 @@ Ves que facilito es esto.
 
 Vale, ahora te voy a dar una serie de **TRUCONSEJOS** para que te ayuden a hacerte una idea de algunas cosas que podemos hacer.
 
-**TRUCONSEJO 1**
+|**TRUCONSEJO 1**|
+|:---|
+|**Cuando queramos generar nuevos objetos, como por ejemplo, balas, monedas u otra cosa, crearemos un objeto vacío "`Empty Object`", al cual se vamos a aplicar el `script` con el que crearemos los objetos que queramos.**|
 
-**Cuando queramos generar nuevos objetos, como por ejemplo, balas, monedas u otra cosa, crearemos un objeto vacío "`Empty Object`", al cual se vamos a aplicar el `script` con el que crearemos los objetos que queramos.**
 
-
-**TRUCONSEJO 2**
-
-**Si queremos crear una vista en primera persona, tenemos que crear una nueva Cámara, y la pondremos de hija del objeto que queramos que tenga ese punto de visión.**
+|**TRUCONSEJO 2**|
+|:---|
+|**Si queremos crear una vista en primera persona, tenemos que crear una nueva Cámara, y la pondremos de hija del objeto que queramos que tenga ese punto de visión.**|
 
 Bueno, vamos a seguir con el turrón.
 
