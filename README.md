@@ -6,6 +6,7 @@ Estos apuntes han sido realizados por mi, durante la realización del curso de P
 ## Indice de Capítulos
 
 * [Capítulo 1: Una breve introducción](./docs/cap01.md)
+* [Capítulo 2: Variables y Tipos de datos](./docs/cap02.md)
 
 ## Mostrar Información por Consola
 
