@@ -41,29 +41,6 @@ Bien, vamos por partes:
 
 De momento hasta aquí fácil verdad??
 
-Bien, pues como hemos visto como se crean nuevos objetos en la escena, ahora vamos a ver lo divertido. Como se destruyen objetos en la escena de juego.
-
-Para destruir un `GameObject` se usa el método `Destroy()`.
-
-Vamos a ver como se destruye algo con un ejemplo y lo comentamos:
-
-```c#
-void OnCollisionEnter(Collision coll)
-{
-  if(coll.GameObject.tag == "bullet")
-  {
-    Destroy(gameObject, 0.5f);
-  }
-}
-```
-
-Vamos a ver que ha pasado aquí y que hace este ejemplo:
-1. Primero, el `script` comprueba si un objeto cuyo **TAG** es "*bullet*", colisiona con el `GameObject` que tiene añadido el `script`.
-2. Si el objeto cuyo "*tag*" es "*bullet*" colisiona con el `gameObject` que tiene el `script`, entonces:
-  - El `gameObject` que tiene el `script` será destruido al transcurso de medio segundo (indicado como el parámetro 0.5f).
-
-Hasta aquí no debe haber problema no?? Esto es mas simple que el mecanismo de un chupete.
-
 Ahora vamos a ver otro ejemplo guapo. Vamos a crear un objeto, cuando presionemos una tecla.
 
 ```c#
@@ -246,9 +223,9 @@ Ahora voy a explicarte, que hace algunas de las funciones de nuestro `script`.
 Comenzamos:
 - `transform.Translate(vector3.forward * distanceToMove * Time.deltaTime)`: Básicamente esta función lo que hace es mediante `vector3.forward` es desplazar el objeto, el cual calculamos su desplazamiento, multiplicando la distancia que queremos que se mueva (`distanceToMove`) por el tiempo (`Time.deltaTime`). Acuérdate que Espacio = Velocidad * Tiempo. Aquí la velocidad la calculamos con `vector3.forward * distanceToMove` y el tiempo pues creo que queda claro cual es no? (Por si no lo tienes claro, el tiempo lo da `Time.deltaTime`).
 
-**NOTA**
-
-**No te voy a explicar lo que hace el if siguiente no?? Ya sabes, con DownArrow vamos a mover hacia atrás el objeto, igual que antes, pero en vez de adelante, hacia atrás (vector3.back)**
+|**NOTA**|
+|:---|
+|**No te voy a explicar lo que hace el if siguiente no?? Ya sabes, con DownArrow vamos a mover hacia atrás el objeto, igual que antes, pero en vez de adelante, hacia atrás (vector3.back)**|
 
 - `transform.Rotate(new Vector3(0, -angleOfRotation,0) * Time.deltaTime)`: Aquí lo que hacemos es llamar al método `Rotate`, al cual le pasamos como parámetros la rotación que queremos hacer en función del tiempo. Para ello creamos un `Vector3` cuyos parámetros los indicamos como (0,-angleOfRotation,0), esto lo que hace, es que solamente rote en torno al eje `y`, dejando fijo los otros dos. El valor de `angleOfRotation` es negativo, dado que estamos realizando un giro hacia la izquierda (sentido anti horario), para un giro a la derecha, ya habrás deducido que el valor de `angleOfRotation` es positivo, ya que gira en sentido horario. Si no lo tienes claro, imaginate un reloj de pulsera, lo normal es que las manecillas giren hacia la derecha (sentido horario, giro positivo, hacia la derecha...), con lo cual para girar a la izquierda tenemos que indicar su valor como negativo (sentido antihorario, giro negativo, hacia la izquierda...).
 
@@ -256,7 +233,6 @@ Ves como no era tan difícil de entender... Vamos bien mi joven amigo... Here we
 
 Bueno, de momento hemos visto varias cosas:
 - Como instanciar objetos.
-- Como destruir objetos.
 - Como mover objetos.
 - Como girar objetos.
 
@@ -306,6 +282,29 @@ Pues ya esta, aquí te he explicado básicamente como funciona y lo que hemos he
 ## Destruyendo Cosas de Forma Controlada
 
 Uff... mucho tute con esto de crear, mover... jope, que de cosas podemos hacer y todo lo que hemos visto en un ratito. Tranquilo, que aun queda mas, así que yo que tu me iba por un chupachups de Koyak, que esto aun va para largo.
+
+Bien, pues como hemos visto como se crean nuevos objetos en la escena, ahora vamos a ver lo divertido. Como se destruyen objetos en la escena de juego.
+
+Para destruir un `GameObject` se usa el método `Destroy()`.
+
+Vamos a ver como se destruye algo con un ejemplo y lo comentamos:
+
+```c#
+void OnCollisionEnter(Collision coll)
+{
+  if(coll.GameObject.tag == "bullet")
+  {
+    Destroy(gameObject, 0.5f);
+  }
+}
+```
+
+Vamos a ver que ha pasado aquí y que hace este ejemplo:
+1. Primero, el `script` comprueba si un objeto cuyo **TAG** es "*bullet*", colisiona con el `GameObject` que tiene añadido el `script`.
+2. Si el objeto cuyo "*tag*" es "*bullet*" colisiona con el `gameObject` que tiene el `script`, entonces:
+  - El `gameObject` que tiene el `script` será destruido al transcurso de medio segundo (indicado como el parámetro 0.5f).
+
+Hasta aquí no debe haber problema no?? Esto es mas simple que el mecanismo de un chupete.
 
 Bueno, seguimos con lo que estamos. Recordamos cuando hablamos de los métodos `Find` para localizar cosas en nuestra escena? Pues bien, también podemos buscar objetos como ya dijimos por su clase, o buscar varios objetos y devolverlos en un `array`, pues teniendo esto claro, podemos usar ese `array` para destruir los objetos. Y como? Te estarás preguntando. Pues fácil, simplemente haciendo lo siguiente:
 
