@@ -16,3 +16,5 @@ A continuación un ejemplo para entenderlo mejor:
 string playerName = "Michael";
 Debug.Log(playerName); //Esto nos mostrará el nombre del Jugador por consola
 ```
+
+Aunque en nuestros juegos nunca vamos a mostrar información por la consola de Unity, si nos va a servir, a la hora de depurar y localizar errores en nuestro código.
