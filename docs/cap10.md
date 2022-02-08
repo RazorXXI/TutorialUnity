@@ -29,7 +29,7 @@
    ### Ciclo de vida de una corrutina
    Vamos a ver una imagen del ciclo de vida de una **corrutina**:
     
-   [Ciclo de Vida de Una Corrutina](https://i.ytimg.com/vi/n_sr1CtYi6I/maxresdefault.jpg)
+   ![Ciclo de Vida de Una Corrutina](https://i.ytimg.com/vi/n_sr1CtYi6I/maxresdefault.jpg)
   
   De momento no es preciso que entiendas el esquema este, pero tenlo en tu cabeza, que te va a ser útil y poco a poco, mas adelante lo iras pillando.
   
