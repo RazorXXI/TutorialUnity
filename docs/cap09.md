@@ -124,12 +124,12 @@ Ostras Pedrín!!! Que hemos hecho aquí??!! Naaa, tranquilo, ahora te cuento:
 2. Dentro del método que hemos creado, declaramos dos variables a las cuales hemos llamado `x` y `z`. A su vez, a cada una le hemos asignado un valor de manera aleatoria, el cual es aportado por la función `Random.Range`.
 3. Los parámetros de `Random.Range`, nos indican que esta va a generar un número aleatorio el cual este comprendido entre un "mínimo" y un "máximo" que son indicados mediante los parámetros de esta (como por ejemplo 18,24).
 4. Por último, llamamos al método `Instantiate` pasando como parámetros lo siguiente:
-  - obj: El `GameObject` que vamos a crear y que es suministrado mediante el parámetro de entrada `obj` de nuestro método.
-  - `new Vector3(x, transform.position.y,z)`: Estamos indicando una posición para crear el objeto en la cual se define mediante los valores que le pasamos a `Vector3`:
-    - x: Variable x la cual tiene un valor aleatorio generado previamente.
-    - transform.position.y: El valor de la coordenada `y` que tiene el `gameObject` que porta el `script`.
-    - z: Variable z la cual tiene un valor aleatorio generado previamente.
-  - Quaternion.identity: Valor de la rotación que tiene el `gameObject` que porta el `script`.
+    - obj: El `GameObject` que vamos a crear y que es suministrado mediante el parámetro de entrada `obj` de nuestro método.
+    - `new Vector3(x, transform.position.y,z)`: Estamos indicando una posición para crear el objeto en la cual se define mediante los valores que le pasamos a `Vector3`:
+      - x: Variable x la cual tiene un valor aleatorio generado previamente.
+      - transform.position.y: El valor de la coordenada `y` que tiene el `gameObject` que porta el `script`.
+      - z: Variable z la cual tiene un valor aleatorio generado previamente.
+    - Quaternion.identity: Valor de la rotación que tiene el `gameObject` que porta el `script`.
 
 Ya ves que no es tan complicado de entender. Se que acabamos de ver muchos conceptos de golpe y porrazo, pero tranquilo que con paciencia y practica los vas a ir pillando rápido y bien.
 
