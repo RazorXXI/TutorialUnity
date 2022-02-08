@@ -19,6 +19,7 @@
    ```
 
   - Segunda Forma:
+  
     ```
       tipoDato[] nombreArray = new tipoDato[dimension];
     ```
