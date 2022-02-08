@@ -183,11 +183,11 @@ Vale, ahora que ya sabes que es cada variable y para que sirve, te voy a explica
 2. Dentro de nuestro maravilloso método `Update`, creamos un objeto `Rigidbody` al cual hemos llamado `laBala` y que va a ser el que porte el `Rigidbody` del objeto instanciado.
 3. Con nuestro `if` comprobamos si hemos pulsado la barra espaciadora y si el tiempo transcurrido es mayor que el valor del intervalo que hemos indicado para que salga una bala.
 4. Si la condición del `if` se cumple:
-  - Primero asignamos el intervalo aplicando una suma del tiempo transcurrido y del retardo de la salida de la bala.
-  - Instanciamos la bala.
-  - Aplicamos una fuerza a la bala con los siguientes parámetros:
-    - La bala saldrá hacia delante (`salidaDeBala.forward`).
-    - Multiplicado por un valor que hemos decidido que sea 100 y por el valor de la variable `velocidadDisparo`.
+    - Primero asignamos el intervalo aplicando una suma del tiempo transcurrido y del retardo de la salida de la bala.
+    - Instanciamos la bala.
+    - Aplicamos una fuerza a la bala con los siguientes parámetros:
+      - La bala saldrá hacia delante (`salidaDeBala.forward`).
+      - Multiplicado por un valor que hemos decidido que sea 100 y por el valor de la variable `velocidadDisparo`.
 
 Realmente simple verdad? De este modo, creamos el disparo de la bala con muy pocas líneas de código y ya podemos ponernos a crear nuestro propio **Doom**. (Tranquilo Lucke, que para eso aun te queda un rato, pero vas por buen camino).
 
