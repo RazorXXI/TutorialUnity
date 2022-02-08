@@ -100,7 +100,7 @@ Así que este capítulo te va a ser realmente importante, ya que gracias a las e
   ```
 
   | **OJO AL MANOJO:** |
-  |---|
+  |:---|
   | **Es muy importante controlar que la condición se cumpla en algún momento, dado que si no se cumple entraremos en una mierda muy gorda que en informática se conoce como BUCLE INFINITO o THE FUCKING LOOP OF DEATH, el cual permanecerá dentro del bucle toda la eternidad, dejándonos el  ordenador bloqueado, con el consiguiente fallo de nuestro juego o aplicación. Así que mi "Joven Palawan", no se te olvide de hacer que se cumpla la condición.** |
 
   ## Estructura Switch
