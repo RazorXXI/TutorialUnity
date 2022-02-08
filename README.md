@@ -1,6 +1,11 @@
 # Scripting en C# Unity - Guía SuperCondensada de Programación en C# Unity
 
+La idea de realizar esta guía es que pueda servir a otros, tal y como me ha servido a mi, a la hora de aprender a programar en Unity3D.
+Estos apuntes han sido realizados por mi, durante la realización del curso de Programación de Videojuegos con Unity3D de Tokio School.
 
+## Indice de Capítulos
+
+* [Capítulo 1: Una breve introducción](./docs/cap01.md)
 
 ## Mostrar Información por Consola
 
