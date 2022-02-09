@@ -94,6 +94,6 @@
 
   Pero, que nos desviamos del tema. 
 
-  Para usar un `invoke`, tan solo deberemos crear una función como ya sabemos hacer, y si no lo sabes, entonces vas a tener que revisar el [Capítulo 5: Funciones](./docs/cap05.md)
+  Para usar un `invoke`, tan solo deberemos crear una función como ya sabemos hacer, y si no lo sabes, entonces vas a tener que revisar el [Capítulo 5: Funciones](./cap05.md)
 
   
