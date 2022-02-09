@@ -86,5 +86,14 @@
   }
   ```
 
-  
+  ## Invoke. Que es y como se usa
+
+  El método `invoke`, puede resultarnos muy similar a la corrutina, dado que lo que hace es al igual que las corrutinas, el temporizar la ejecución de código. Y tu te preguntaras... ¿Cual es la diferencia? Bueno, la diferencia aparte del rendimiento (`invoke` tiene peor rendimiento que una corrutina), es que permiten temporizar la llamada a métodos, ofreciendo así un mecanismo sencillo para construir temporizadores y ejecutar acciones que se van a repetir cada cierto tiempo.
+
+  En esencia, básicamente son casi iguales, aunque la corrutina es mucho mas potente, ya que la corrutina a diferencia de `invoke`, puede crear metodos con mas de una interrupción.
+
+  Pero, que nos desviamos del tema. 
+
+  Para usar un `invoke`, tan solo deberemos crear una función como ya sabemos hacer, y si no lo sabes, entonces vas a tener que revisar el [Capítulo 5: Funciones](./docs/cap05.md)
+
   
