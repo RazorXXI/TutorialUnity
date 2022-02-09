@@ -119,8 +119,9 @@
 
   1. Tenemos una función, que se llama `SaludandoConInvoke`, la cual lo que hace es mostrar un mensaje por la consola de Unity.
   2. Dentro del `Start`, nos encontramos la llamada al método `Invoke`, al cual se le pasan como parámetros lo siguiente:
-    - Un `string` con el nombre de la función que queremos invocar (_fijate bien, que esta pasado solo el nombre como string_).
-    - El segundo parámetro, es el tiempo que va a tardar `Invoke` en llamar a la función, en este caso, la función `SaludandoConInvoke`.
+
+      - Un `string` con el nombre de la función que queremos invocar (_fijate bien, que esta pasado solo el nombre como string_).
+      - El segundo parámetro, es el tiempo que va a tardar `Invoke` en llamar a la función, en este caso, la función `SaludandoConInvoke`.
 
 Si nos fijamos, el concepto es bastante similar a las corrutinas. El uso de una manera u otra de temporizar, es elección tuya. Ahora, que como ya te he comentado, las `corrutinas` tienen un rendimiento mas óptimo que el uso de `invoke`. Tambien es cuestión de legibilidad, y las corrutinas favorecen mucho mas el orden en nuestro código. Ahora es cuestión tuya de usar una u otra, tu mismo con tu mecanismo.
 
