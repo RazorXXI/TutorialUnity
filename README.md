@@ -1,7 +1,14 @@
 # Guía SuperCondensada de Programación en C# Unity
 
-La idea de realizar esta guía es que pueda servir a otros, tal y como me ha servido a mi, a la hora de aprender a programar en Unity3D.
-Estos apuntes han sido realizados por mi, durante la realización del curso de Programación de Videojuegos con Unity3D de Tokio School.
+La idea de realizar esta guía es que pueda servir a otros, al igual que a mi, a aprender a programar en Unity3D.
+
+Me decidí crear este documento, con la premisa de tener mis apuntes en algún sitio donde los pudiera consultar cada vez que los necesitara, estuviera donde estuviera.
+
+He de decir, que esto no es otra cosa que mis propios apuntes manuscritos, plasmados aquí y de una manera accesible y ordenada.
+
+Cualquiera que tenga ganas de aprender a programar en Unity3D, esto le puede servir como fuente de consulta, ya que está todo lo necesario pero de una manera muy condensada, sin irse por las ramas. Directo al grano y con mogollon de fragmente de códigos de ejemplo, los cuales también son ejemplos de mis apuntes escritos previamente en papel y lapiz.
+
+Espero que te sirva y te ayude, pues se lo complicado que es encontrar en internet información concisa y clara en webs sobre este tema.
 
 ## Indice de Capítulos
 
