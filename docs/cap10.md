@@ -94,6 +94,35 @@
 
   Pero, que nos desviamos del tema. 
 
-  Para usar un `invoke`, tan solo deberemos crear una función como ya sabemos hacer, y si no lo sabes, entonces vas a tener que revisar el [Capítulo 5: Funciones](./cap05.md)
+  Para usar un `invoke`, tan solo deberemos crear nuestras funciones como ya sabemos hacer, y si no lo sabes, entonces vas a tener que revisar el [Capítulo de Funciones](./cap05.md). 
+
+  Para invocar una función, tan solo tendremos que emplear la siguiente sintaxis en el lugar del código que vayamos a emplear `invoke`.
+
+  Vamos a ver un ejemplo:
+
+  ```c#
+  public class EjemploUsoInvoke : MonoBehaviour
+  {
+    void Start()
+    {
+      Invoke("SaludandoConInvoke", 5f);
+    }
+
+    void SaludandoConInvoke()
+    {
+      Debug.Log("Hola, te estoy saludando y me han llamado con Invoke");
+    }
+  }
+  ```
+
+  Bien, como funciona esto.
+
+  1. Tenemos una función, que se llama `SaludandoConInvoke`, la cual lo que hace es mostrar un mensaje por la consola de Unity.
+  2. Dentro del `Start`, nos encontramos la llamada al método `Invoke`, al cual se le pasan como parámetros lo siguiente:
+    - Un `string` con el nombre de la función que queremos invocar (_fijate bien, que esta pasado solo el nombre como string_).
+    - El segundo parámetro, es el tiempo que va a tardar `Invoke` en llamar a la función, en este caso, la función `SaludandoConInvoke`.
+
+Si nos fijamos, el concepto es bastante similar a las corrutinas. El uso de una manera u otra de temporizar, es elección tuya. Ahora, que como ya te he comentado, las `corrutinas` tienen un rendimiento mas óptimo que el uso de `invoke`. Tambien es cuestión de legibilidad, y las corrutinas favorecen mucho mas el orden en nuestro código. Ahora es cuestión tuya de usar una u otra, tu mismo con tu mecanismo.
+
 
   
