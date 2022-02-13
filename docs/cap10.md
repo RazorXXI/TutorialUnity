@@ -88,42 +88,76 @@
 
   ## Invoke. Que es y como se usa
 
-  El método `invoke`, puede resultarnos muy similar a la corrutina, dado que lo que hace es al igual que las corrutinas, el temporizar la ejecución de código. Y tu te preguntaras... ¿Cual es la diferencia? Bueno, la diferencia aparte del rendimiento (`invoke` tiene peor rendimiento que una corrutina), es que permiten temporizar la llamada a métodos, ofreciendo así un mecanismo sencillo para construir temporizadores y ejecutar acciones que se van a repetir cada cierto tiempo.
+  `Invoke` es un método heredado de `MonoBehaviour`, el cual básicamente lo que hace es, encontrar una función que coincide con el nombre dado y ejecutarla transcurridos un número de segundos proporcionados.
 
-  En esencia, básicamente son casi iguales, aunque la corrutina es mucho mas potente, ya que la corrutina a diferencia de `invoke`, puede crear metodos con mas de una interrupción.
+  Su sintaxis es:
 
-  Pero, que nos desviamos del tema. 
+  | `Invoke("NombreDeFuncion", segundos);` |
+  |:---|
 
-  Para usar un `invoke`, tan solo deberemos crear nuestras funciones como ya sabemos hacer, y si no lo sabes, entonces vas a tener que revisar el [Capítulo de Funciones](./cap05.md). 
-
-  Para invocar una función, tan solo tendremos que emplear la siguiente sintaxis en el lugar del código que vayamos a emplear `invoke`.
-
-  Vamos a ver un ejemplo:
+  Vamos a ver un ejemplo y a comentarlo para entenderlo mejor:
 
   ```c#
-  public class EjemploUsoInvoke : MonoBehaviour
-  {
-    void Start()
-    {
-      Invoke("SaludandoConInvoke", 5f);
-    }
+    Invoke("MiFuncion", 10f);
+  ```
 
-    void SaludandoConInvoke()
-    {
-      Debug.Log("Hola, te estoy saludando y me han llamado con Invoke");
-    }
+  En el ejemplo, el método `Invoke` está llamando a una función que le hemos pasado por parámetro como una `String` la cual hemos llamado *`MiFuncion`* y la cual se ejecutará cuando transcurran 10 segundos, los cuales hemos indicado en su paso de parámetros como `10f`.
+
+  El método `Invoke`, tiene dos problemas fundamentales:
+    - Si escribimos mal el nombre exacto de la función, `Invoke` jamas se ejecutará. Para solucionar este problema, podemos ejecutar `Invoke` de una manera mas elegante:
+      | `Invoke(nameof(MiFuncion), 10f);` |
+      |:---|
+
+      De esta forma, la función `nameof` nos ayuda a autocompletar la función, evitando así el cometer fallos a la hora de escribir el nombre de esta.
+    - Empeora el rendimiento. Ello es debido a que el uso de parámetros de entrada de tipo `String` a métodos, esta penado con una disminución del rendimiento.
+
+  Llegados a este punto, aun no quedará claro la diferencia entre la corrutina y el `invoke`, lo entiendo y es normal, de momento lo visto en esencia es lo mismo, ambos lo que hacen es temporizar la ejecución de acciones en función al tiempo. Pero hay un factor que es realmente importante y que marca la diferencia entre ambas y es que, el uso de `Invoke` no permite el paso de parámetros de entrada a la función que esté llamando, mientras que la corrutina si lo permite.
+
+  Vamos a ver un ejemplo para tener claro esto:
+
+  ```c#
+  //Aquí también estamos haciendo cosas...
+
+  Invoke("MiFuncionTeSaluda", 5f);
+  
+  //Aquí hay cosas que se están haciendo... tira para abajo
+
+  void MiFuncionTeSaluda()
+  {
+    Debug.Log("Hola... como estas...");
   }
   ```
 
-  Bien, como funciona esto.
+  Y ahora con corrutinas:
+  ```c#
+  //Estamos ocupados trabajando, siga un poco mas abajo por favor
+  StartCoroutine(MiFuncionTeSaluda("Miguel"));
 
-  1. Tenemos una función, que se llama `SaludandoConInvoke`, la cual lo que hace es mostrar un mensaje por la consola de Unity.
-  2. Dentro del `Start`, nos encontramos la llamada al método `Invoke`, al cual se le pasan como parámetros lo siguiente:
+  //Estamos definiendo funciones, no moleste
+  IEnumerator MiFuncionTeSaluda(string nombre)
+  {
+    yield return new WaitForSeconds(5f);
+    Debug.Log("Hola... como estas... " + nombre);
+  }
+  ```
 
-      - Un `string` con el nombre de la función que queremos invocar (_fijate bien, que esta pasado solo el nombre como string_).
-      - El segundo parámetro, es el tiempo que va a tardar `Invoke` en llamar a la función, en este caso, la función `SaludandoConInvoke`.
+  Como vemos en ambos ejemplos, estamos realizando lo mismo, pero con la salvedad de que al realizar la llamada con `invoke` no podemos pasarle parámetros a la función, cosa que si hacemos con la corrutina, a la cual le pasamos un parámetro de tipo `string` con el nombre de la persona a la que va a saludar.
 
-Si nos fijamos, el concepto es bastante similar a las corrutinas. El uso de una manera u otra de temporizar, es elección tuya. Ahora, que como ya te he comentado, las `corrutinas` tienen un rendimiento mas óptimo que el uso de `invoke`. Tambien es cuestión de legibilidad, y las corrutinas favorecen mucho mas el orden en nuestro código. Ahora es cuestión tuya de usar una u otra, tu mismo con tu mecanismo.
+  Bueno, hasta lo que hemos visto, ya creo que podemos tener mucho mas claro la diferencia entre `invoke` y `corrutina`. He de mencionar, que a la hora de usar una u otra, es mucho mas correcto usar `corrutinas` en lugar de `invoke`, siendo mas extendido el uso de las primeras.
+
+  Así que, llegados aquí tu te estarás diciendo... (LO TENGO CLARO, A POR TABACO EL `INVOKE` Y `CORRUTINAS LOVE FOREVER`), dejame que te cuente mi joven e impetuoso amigo, que no todo son desventajas. Y si te dijera, que ademas de retrasar la ejecución de una función, también podemos hacer que cada cierto tiempo se ejecute la función que hemos creado, de manera continua en el tiempo, cada cierto tiempo... Pues si, eso si lo podemos hacer con `Invoke`, para ello usaremos `InvokeRepeating`, que justamente hace esto que te acabo de comentar.
+
+  Su sintaxis es:
+  |`InvokeRepeating("MiFuncion", tiempoRet, tiempoRep);`|
+  |:---|
+
+  Donde:
+    - _tiempoRet_: Es el tiempo que transcurrirá en segundos, hasta que la función sea llamada.
+    - _tiempoRep_: Es el tiempo que transcurrirá en segundos, hasta que se vuelva a ejecutar nuevamente la función.
+
+  Aquí ya la cosa se pone interesante, por ejemplo imagina, que cada cierto tiempo quieras que en un punto de tu juego, salgan enemigos cada 10 segundos  cada vez. Pues esto lo haría `InvokeRepeating`. Pero... y si en un momento determinado queremos parar esto... No supondría un problema, ya que para ello, tenemos la función `CancelInvoek` que hace justo esto que hemos comentado.
+
+  `CancelInvoke`, tal y como acabamos de decir, detiene los `Invoke` que estén en ejecución, pero ojo al dato _DETIENE TODOS LOS INVOKES QUE ESTEN EN EJECUCION_, así que si por ejemplo la vas a usar para detener un `Invoke` en concreto, ten presente de volver a activar todos los demás que realmente necesites que estén en ejecución, ya que al llamar a `CancelInvoke`, estos habrán sido detenidos igualmente.
 
 
   
