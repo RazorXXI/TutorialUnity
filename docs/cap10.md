@@ -130,36 +130,36 @@ void MiFuncionTeSaluda()
 }
 ```
 
-  Y ahora con corrutinas:
-  ```c#
-  //Estamos ocupados trabajando, siga un poco mas abajo por favor
-  StartCoroutine(MiFuncionTeSaluda("Miguel"));
+Y ahora con corrutinas:
+```c#
+//Estamos ocupados trabajando, siga un poco mas abajo por favor
+StartCoroutine(MiFuncionTeSaluda("Miguel"));
 
-  //Estamos definiendo funciones, no moleste
-  IEnumerator MiFuncionTeSaluda(string nombre)
-  {
-    yield return new WaitForSeconds(5f);
-    Debug.Log("Hola... como estas... " + nombre);
-  }
-  ```
+//Estamos definiendo funciones, no moleste
+IEnumerator MiFuncionTeSaluda(string nombre)
+{
+  yield return new WaitForSeconds(5f);
+  Debug.Log("Hola... como estas... " + nombre);
+}
+```
 
-  Como vemos en ambos ejemplos, estamos realizando lo mismo, pero con la salvedad de que al realizar la llamada con `invoke` no podemos pasarle parámetros a la función, cosa que si hacemos con la corrutina, a la cual le pasamos un parámetro de tipo `string` con el nombre de la persona a la que va a saludar.
+Como vemos en ambos ejemplos, estamos realizando lo mismo, pero con la salvedad de que al realizar la llamada con `invoke` no podemos pasarle parámetros a la función, cosa que si hacemos con la corrutina, a la cual le pasamos un parámetro de tipo `string` con el nombre de la persona a la que va a saludar.
 
-  Bueno, hasta lo que hemos visto, ya creo que podemos tener mucho mas claro la diferencia entre `invoke` y `corrutina`. He de mencionar, que a la hora de usar una u otra, es mucho mas correcto usar `corrutinas` en lugar de `invoke`, siendo mas extendido el uso de las primeras.
+Bueno, hasta lo que hemos visto, ya creo que podemos tener mucho mas claro la diferencia entre `invoke` y `corrutina`. He de mencionar, que a la hora de usar una u otra, es mucho mas correcto usar `corrutinas` en lugar de `invoke`, siendo mas extendido el uso de las primeras.
 
-  Así que, llegados aquí tu te estarás diciendo... (LO TENGO CLARO, A POR TABACO EL `INVOKE` Y `CORRUTINAS LOVE FOREVER`), dejame que te cuente mi joven e impetuoso amigo, que no todo son desventajas. Y si te dijera, que ademas de retrasar la ejecución de una función, también podemos hacer que cada cierto tiempo se ejecute la función que hemos creado, de manera continua en el tiempo, cada cierto tiempo... Pues si, eso si lo podemos hacer con `Invoke`, para ello usaremos `InvokeRepeating`, que justamente hace esto que te acabo de comentar.
+Así que, llegados aquí tu te estarás diciendo... (LO TENGO CLARO, A POR TABACO EL `INVOKE` Y `CORRUTINAS LOVE FOREVER`), dejame que te cuente mi joven e impetuoso amigo, que no todo son desventajas. Y si te dijera, que ademas de retrasar la ejecución de una función, también podemos hacer que cada cierto tiempo se ejecute la función que hemos creado, de manera continua en el tiempo, cada cierto tiempo... Pues si, eso si lo podemos hacer con `Invoke`, para ello usaremos `InvokeRepeating`, que justamente hace esto que te acabo de comentar.
 
-  Su sintaxis es:
-  |`InvokeRepeating("MiFuncion", tiempoRet, tiempoRep);`|
-  |:---|
+Su sintaxis es:
+|`InvokeRepeating("MiFuncion", tiempoRet, tiempoRep);`|
+|:---|
 
-  Donde:
-    - _tiempoRet_: Es el tiempo que transcurrirá en segundos, hasta que la función sea llamada.
-    - _tiempoRep_: Es el tiempo que transcurrirá en segundos, hasta que se vuelva a ejecutar nuevamente la función.
+Donde:
+  - _tiempoRet_: Es el tiempo que transcurrirá en segundos, hasta que la función sea llamada.
+  - _tiempoRep_: Es el tiempo que transcurrirá en segundos, hasta que se vuelva a ejecutar nuevamente la función.
 
-  Aquí ya la cosa se pone interesante, por ejemplo imagina, que cada cierto tiempo quieras que en un punto de tu juego, salgan enemigos cada 10 segundos  cada vez. Pues esto lo haría `InvokeRepeating`. Pero... y si en un momento determinado queremos parar esto... No supondría un problema, ya que para ello, tenemos la función `CancelInvoek` que hace justo esto que hemos comentado.
+Aquí ya la cosa se pone interesante, por ejemplo imagina, que cada cierto tiempo quieras que en un punto de tu juego, salgan enemigos cada 10 segundos  cada vez. Pues esto lo haría `InvokeRepeating`. Pero... y si en un momento determinado queremos parar esto... No supondría un problema, ya que para ello, tenemos la función `CancelInvoek` que hace justo esto que hemos comentado.
 
-  `CancelInvoke`, tal y como acabamos de decir, detiene los `Invoke` que estén en ejecución, pero ojo al dato _DETIENE TODOS LOS INVOKES QUE ESTEN EN EJECUCION_, así que si por ejemplo la vas a usar para detener un `Invoke` en concreto, ten presente de volver a activar todos los demás que realmente necesites que estén en ejecución, ya que al llamar a `CancelInvoke`, estos habrán sido detenidos igualmente.
+`CancelInvoke`, tal y como acabamos de decir, detiene los `Invoke` que estén en ejecución, pero ojo al dato _DETIENE TODOS LOS INVOKES QUE ESTEN EN EJECUCION_, así que si por ejemplo la vas a usar para detener un `Invoke` en concreto, ten presente de volver a activar todos los demás que realmente necesites que estén en ejecución, ya que al llamar a `CancelInvoke`, estos habrán sido detenidos igualmente.
 
 
   
