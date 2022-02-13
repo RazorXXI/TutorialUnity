@@ -159,7 +159,7 @@ Donde:
 
 Aquí ya la cosa se pone interesante, por ejemplo imagina, que cada cierto tiempo quieras que en un punto de tu juego, salgan enemigos cada 10 segundos  cada vez. Pues esto lo haría `InvokeRepeating`. Pero... y si en un momento determinado queremos parar esto... No supondría un problema, ya que para ello, tenemos la función `CancelInvoek` que hace justo esto que hemos comentado.
 
-`CancelInvoke`, tal y como acabamos de decir, detiene los `Invoke` que estén en ejecución, pero ojo al dato _DETIENE TODOS LOS INVOKES QUE ESTEN EN EJECUCION_, así que si por ejemplo la vas a usar para detener un `Invoke` en concreto, ten presente de volver a activar todos los demás que realmente necesites que estén en ejecución, ya que al llamar a `CancelInvoke`, estos habrán sido detenidos igualmente.
+`CancelInvoke`, tal y como acabamos de decir, detiene los `Invoke` que estén en ejecución, pero ojo al dato __DETIENE TODOS LOS INVOKES QUE ESTEN EN EJECUCION__, así que si por ejemplo la vas a usar para detener un `Invoke` en concreto, ten presente de volver a activar todos los demás que realmente necesites que estén en ejecución, ya que al llamar a `CancelInvoke`, estos habrán sido detenidos igualmente.
 
 
   
