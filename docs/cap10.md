@@ -104,6 +104,7 @@
   En el ejemplo, el método `Invoke` está llamando a una función que le hemos pasado por parámetro como una `String` la cual hemos llamado *`MiFuncion`* y la cual se ejecutará cuando transcurran 10 segundos, los cuales hemos indicado en su paso de parámetros como `10f`.
 
   El método `Invoke`, tiene dos problemas fundamentales:
+  
     - Si escribimos mal el nombre exacto de la función, `Invoke` jamas se ejecutará. Para solucionar este problema, podemos ejecutar `Invoke` de una manera mas elegante:
       | `Invoke(nameof(MiFuncion), 10f);` |
       |:---|
