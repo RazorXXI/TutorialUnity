@@ -109,7 +109,7 @@
       | `Invoke(nameof(MiFuncion), 10f);` |
       |:---|
 
-      De esta forma, la función `nameof` nos ayuda a autocompletar la función, evitando así el cometer fallos a la hora de escribir el nombre de esta.
+    De esta forma, la función `nameof` nos ayuda a autocompletar la función, evitando así el cometer fallos a la hora de escribir el nombre de esta.
      - Empeora el rendimiento. Ello es debido a que el uso de parámetros de entrada de tipo `String` a métodos, esta penado con una disminución del rendimiento.
 
   Llegados a este punto, aun no quedará claro la diferencia entre la corrutina y el `invoke`, lo entiendo y es normal, de momento lo visto en esencia es lo mismo, ambos lo que hacen es temporizar la ejecución de acciones en función al tiempo. Pero hay un factor que es realmente importante y que marca la diferencia entre ambas y es que, el uso de `Invoke` no permite el paso de parámetros de entrada a la función que esté llamando, mientras que la corrutina si lo permite.
