@@ -2,6 +2,8 @@
 
 El lenguaje de programación empleado en Unity es C#. C# es un lenguaje de programación orientado a Objetos.
 
+![Unity](http://www.mac-torrent-download.net/wp-content/uploads/2015/04/Unity_3D_Pro_icon.jpg)
+
 Una cosa que debemos tener clara a la hora de programar en Unity, es el concepto de `GameObject`, dado que esto no es un objeto al uso como se entiende en programación.
 
 A la hora de desarrollar scripts en C# para Unity, debemos tener algunas cosas claras:
