@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Un ejemplo básico del uso del Raycast - La misión es entender como funciona y como se usa
 public class EjemploBasicoDeRaycast : MonoBehaviour
 {
     //Voy a usar la cámara como portadora del RayCast, modo Juego en primera persona
     [SerializeField] private Camera cam;
 
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
