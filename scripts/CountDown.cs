@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//Contador de cuenta atras simple - Solo cuenta segundos.
 public class CountDown : MonoBehaviour
 {
     [SerializeField] float countDownTime; //Para el tiempo que va a realizar la cuenta atrás
