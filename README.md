@@ -6,7 +6,7 @@ Me decidí crear este documento, con la premisa de tener mis apuntes en algún s
 
 He de decir, que esto no es otra cosa que mis propios apuntes manuscritos, plasmados aquí y de una manera accesible y ordenada.
 
-Cualquiera que tenga ganas de aprender a programar en Unity3D, esto le puede servir como fuente de consulta, ya que está todo lo necesario pero de una manera muy condensada, sin irse por las ramas. Directo al grano y con mogollon de fragmente de códigos de ejemplo, los cuales también son ejemplos de mis apuntes escritos previamente en papel y lapiz.
+Cualquiera que tenga ganas de aprender a programar en Unity3D, esto le puede servir como fuente de consulta, ya que está todo lo necesario pero de una manera muy condensada, sin irse por las ramas. Directo al grano y con mogollon de fragmentos de códigos de ejemplo o directamente códigos completos, los cuales también son ejemplos de mis apuntes escritos previamente en papel y lápiz.
 
 Espero que te sirva y te ayude, pues se lo complicado que es encontrar en internet información concisa y clara en webs sobre este tema.
 
