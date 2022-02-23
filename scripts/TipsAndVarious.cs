@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Varios ejemplos de uso de Invoke y Corrutinas - Ejemplos de utilización simple.
 public class TipsAndVarious : MonoBehaviour
 {
-   // Start is called before the first frame update
+
     void Start()
     {
         //Llamando con Invoke
