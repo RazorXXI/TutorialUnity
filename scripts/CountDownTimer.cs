@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//Contador de Cuenta atras avanzado - Aqui podemos programar el conteo de hasta minutos
 public class CountDownTimer : MonoBehaviour
 {
     [SerializeField] int minutes;           //Para indicar los minutos de la cuenta atrás
