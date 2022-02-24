@@ -17,13 +17,15 @@ public class EjemploBasicoDeRaycast : MonoBehaviour
 
     void DestroyWithRaycast()
     {
+        //Declaro una variable tipo raycast y le asigno la funcion ScreenPointToRay que lo que hace es devolver un rayo desde una cámara
+        //hasta un punto apuntado en la pantalla por el ratón.
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit; //Almacena la información que devuelve el rayo al impactar
+        
         //Vamos comprobando que hemos  pulsado el botón izquierdo del ratón
         if (Input.GetMouseButtonDown(0))
         {
-            //Declaro una variable tipo raycast y le asigno la funcion ScreenPointToRay que lo que hace es devolver un rayo desde una cámara
-            //hasta un punto apuntado en la pantalla por el ratón.
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit; //Almacena la información que devuelve el rayo al impactar
+            
 
             //Aquí compruebo si el raycast a impactado contra algo, cuya información esta contenida en "hit", a una distancia máxima de 100 unidades
             //y desde un origen, en una dirección
@@ -41,5 +43,6 @@ public class EjemploBasicoDeRaycast : MonoBehaviour
                 }
             }
         }
+        Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
     }
 }
