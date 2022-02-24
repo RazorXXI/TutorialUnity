@@ -27,7 +27,7 @@ Ahí podremos ver en el apartado que pone **Scenes in Build**, todas las escenas
 Para gestionar las escenas desde nuestros `scripts`, lo primero que debemos hacer es importar la directiva `UnityEngine.SceneManagement`.
 
 ```c#
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;//Directiva a importar para manejar escenas
 ```
 
 
