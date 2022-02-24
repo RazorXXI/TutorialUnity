@@ -92,7 +92,11 @@ En resumen, el script lo aplicamos en la escena donde estemos, para que comprueb
 
 Se que ahora mismo quizas, estes hecho la picha un lío. Es normal. Pero voy a ver si consigo que te hagas una idea para que lo pilles mejor.
 
-Imagina, que estas en la pantalla previa a un jefe final, pero que no aparece hasta que no consigas una serie de objetos. Bien, pues si pasamos de la escena previa a la del jefe, mediante `OnLevelWasLoaded` podemos hacer las comprobaciones pertinentes, primero, para verificar que estemos en la escena en concreto y segundo que llevamos todo lo necesario para que nos aparezca el Monstruaco gordo (_Bicho Gordo Cansino que te mata_), en ese caso (llevamos todos los trastos y se ha cargado la escena final), entonces poder instanciar al "__Bicharraco__". Que porque no instanciarlo antes?? Simple. Porque a lo mejor, en esa escena queremos poder entrar para hacer cosas antes, y no por ello tiene que aparecer nuestro "__Bicharraco__". Lo pillas??
+Imagina, que estas en la pantalla previa a un jefe final, pero que no aparece hasta que no consigas una serie de objetos. Bien, pues si pasamos de la escena previa a la del jefe, mediante `OnLevelWasLoaded` podemos hacer las comprobaciones pertinentes, primero, para verificar que estemos en la escena en concreto y segundo que llevamos todo lo necesario para que nos aparezca el Monstruaco gordo (_Bicho Gordo Cansino que te mata_), en ese caso (llevamos todos los trastos y se ha cargado la escena final), entonces poder instanciar al "__Bicharraco__". 
+
+Que porque no instanciarlo antes?? Simple. Porque a lo mejor, en esa escena queremos poder entrar para hacer cosas antes, y no por ello tiene que aparecer nuestro "__Bicharraco__". 
+
+Lo pillas??
 
 Bueno, creo que ya con esto puede quedar mas clarito para que, cuando, como y donde emplear `OnLevelWasLoad`.
 
