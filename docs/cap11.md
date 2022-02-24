@@ -18,5 +18,10 @@ Para ver el número asociado de cada escena, tenemos que dirigirnos en el menú 
 
 ![Pantalla Build Setting](../img/11_Build_Setting.png)
 
+Ahí podremos ver en el apartado que pone **Scenes in Build**, todas las escenas que componen nuestro juego, y justamente al lado derecho, podremos ver el indice que nos indica que número de escena es. Antes de seguir, voy a comentar, que para añadir nuevas escenas, lo podemos hacer de dos formas.
+
+	* **Forma 1:** Arrastramos desde el editor la escena que queramos añadir a `Scenes In Build`.
+	* **Forma 2:** Haciendo click en el botón que vemos en Build Setting (`Add Open Scenes`).
+
 A continuación vamos a ver un código, que permitirá realizar el cambio de escena en nuestro güego. "Al lio del montepío..."
 
