@@ -81,3 +81,16 @@ void OnLevelWasLoaded(int level) //El parámetro level es el indice de la escena
 	}
 }
 ```
+
+Como vemos en el ejemplo, simplemente estamos comprobando dentro del método `OnLevelWasLoaded`, que la escena que se haya cargado sea la escena número 4, en cuyo caso, si efectivamente se carga dicha escena, lo que hacemos es mostrar un mensaje por la consola de Unity, indicando que efectivamente se ha cargado.
+
+Ni que decir tiene a estas alturas, que esto, irá dentro de un `script`, el cual estará aplicado a un `GameObject` de nuestra escena. Y tu mi joven aprendiz, te estaras preguntando... (sino, piensalo con calma... tomaté tu tiempo) si voy a comprobar si la escena que he cargado es la 4, en que `GameObject` o en que escena tengo que aplicar el `script`?? Bien, ire por partes. En cuanto al `GameObject` al que aplicar el `script` te puedo decir, que al que te de a ti la gana... eso es a tu criterio. Y en cuanto a la segunda pregunta (en que escena debo aplicar el `script`?), te respondo con un ejemplo. 
+
+Imaginate, que estas en la escena de tu juego (pongamos que es la escena 2), y que si te metes en una cueva (la cual corresponde a una escena que diremos por ejemplo que es la 3) y si te metes en una casa se cargaría la escena de dentro de la casa (que sería por ejemplo la escena 4), pues bien para aplicar el `script` que usa `OnLevelWasLoad`, deberiamos aplicarlo en la escena actual (recuerda que hemos dicho que es la escena __2__), por lo que si accedemos a la cueva (escena __3__) no saltaria, pero si accedemos a la casa (escena __4__) si nos saltaria. En resumen, el script lo aplicamos en la escena donde estemos, para que compruebe que cuando cambiemos de escena, la que se haya cargado sea la que nosotros queremos con nuestro `OnLevelWasLoad`.
+
+Se que ahora mismo quizas, estes hecho la picha un lío. Es normal. Pero voy a ver si consigo que te hagas una idea para que lo pilles mejor.
+
+Imagina, que estas en la pantalla previa a un jefe final, pero que no aparece hasta que no consigas una serie de objetos. Bien, pues si pasamos de la escena previa a la del jefe, mediante `OnLevelWasLoaded` podemos hacer las comprobaciones pertinentes, primero, para verificar que estemos en la escena en concreto y segundo que llevamos todo lo necesario para que nos aparezca el Monstruaco gordo (Bicho Gordo Cansino que te mata), en ese caso (llevamos todos los trastos y se ha cargado la escena final), entonces poder instanciar al "__Bicharraco__". Que porque no instanciarlo antes?? Simple. Porque a lo mejor, en esa escena queremos poder entrar para hacer cosas antes, y no por ello tiene que aparecer nuestro "__Bicharraco__". Lo pillas??
+
+Bueno, creo que ya con esto puede quedar mas clarito para que, cuando, como y donde emplear `OnLevelWasLoad`.
+
