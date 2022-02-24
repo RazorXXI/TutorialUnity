@@ -8,11 +8,11 @@ Por ello, en este capítulo, vamos a ver algunas cositas que podemos hacer, algu
 
 El cambio de escena en un juego, es algo muy rutinario, dado que cada escena representa o puede representar un nivel de nuestro juego, obviamente esto puede ser así, si tu juego va a tener varios niveles, en caso contrario, el cambio de escena, puede ser debido a que vayas a entrar en un sitio, presentar algo, el menú de juego es otra escena, los créditos, una fase bonus, todo eso son escenas.
 
-Para que nos enteremos. Un juego está compuesto de escenas. Cuando tu le das a un botón por ejemplo, para abrir las preferencias del juego (ya sabes, eso tipico que te pone activar desactivar sonido, poner o quitar la música del juego, configurar los controles, etc) lo que estas haciendo es mostrar otra escena, que no necesariamente una escena tiene que ser solo y exclusivamente el Game Play del juego. Cada cosa que le muestras al usuario, está contenido en una escena, por ello, los cambios de escena es algo que se hacen continuamente. Espero que te haya quedado mas claro con esta explicación magistral que te acabo de dar.
+Para que nos enteremos. Un juego está compuesto de escenas. Cuando tu le das a un botón por ejemplo, para abrir las preferencias del juego (ya sabes, eso típico que te pone activar desactivar sonido, poner o quitar la música del juego, configurar los controles, etc) lo que estas haciendo es mostrar otra escena, que no necesariamente una escena tiene que ser solo y exclusivamente el Game Play del juego. Cada cosa que le muestras al usuario, está contenido en una escena, por ello, los cambios de escena es algo que se hacen continuamente. Espero que te haya quedado mas claro con esta explicación magistral que te acabo de dar.
 
 Que nada, que como ya te he dicho, es un procedimiento rutinario, pero no por ello deja de ser importante.
 
-Ah!!! Leches, que se  me olvidaba decirtelo. Cada escena, tiene asociado un número por Unity, el cual es un indice que indica cual escena, es cual. Por ejemplo, supongamos que tenemos la pantalla de inicio del juego, pues bien, digamos que es nuestra escena 0, mientras que la parte del gameplay del juego, podria ser perfectamente la escena 3, mientras que la escena de la ventanas de opciones del juego sería tranquilamente la dos.
+Ah!!! Leches, que se  me olvidaba decírtelo. Cada escena, tiene asociado un número por Unity, el cual es un indice que indica cual escena, es cual. Por ejemplo, supongamos que tenemos la pantalla de inicio del juego, pues bien, digamos que es nuestra escena 0, mientras que la parte del gameplay del juego, podría ser perfectamente la escena 3, mientras que la escena de la ventanas de opciones del juego sería tranquilamente la dos.
 
 Para ver el número asociado de cada escena, tenemos que dirigirnos en el menú principal de Unity a `File`->`Build Setting`. 
 
@@ -36,19 +36,19 @@ Y una vez importada la directiva, podremos cargar la escena simplemente haciendo
 SceneManagement.LoadScene(0);//El numero es el indice de la escena que queremos cargar.
 ```
 
-Asi de facil y simple mis pequeños...
+Así de fácil y simple mis pequeños...
 
 Obviamente, esa instrucción ni que decir tiene, que será incluida dentro de nuestro código para que una vez haga una acción, cargue la escena que nosotros queramos.
 
-También podemos cargar la escena, indicandole el nombre de la escena en cuestión:
+También podemos cargar la escena, indicándole el nombre de la escena en cuestión:
 
 ```c#
-SceneManagement.LoadScene("Fase1"); //Este seria el nombre de la escena que fueramos a cargar
+SceneManagement.LoadScene("Fase1"); //Este seria el nombre de la escena que fuéramos a cargar
 ```
 
 Aunque como hemos visto, se puede hacer de las dos maneras, lo mas correcto es hacerlo usando el indice. Pero ya tu eres libre de elegir como lo vas a hacer, mi consejo es usar el valor del indice de la escena.
 
-Y si quisieramos darle un retardo a la hora de cargar una escena...?? __Facil!!!__ usamos una corrutina. Tal cual asi:
+Y si quisieramos darle un retardo a la hora de cargar una escena...?? __Fácil!!!__ usamos una corrutina. Tal cual así:
 
 ```c#
 void Update()
@@ -63,7 +63,7 @@ IEnumerator ChangeSceneWithDelay()
 }
 ```
 
-Magnífico!!! Aplaude Paolo!!! (Aplaude... que despues de todo lo que te estoy enseñando, no me agradeces nada...  XD)
+Magnífico!!! Aplaude Paolo!!! (Aplaude... que después de todo lo que te estoy enseñando, no me agradeces nada...  XD)
 
 
 De todas formas, ya veremos un poco mas adelante el cambio de escenas en profundidad. De momento, quedate con esto que te acabo de contar, que es lo básico.
@@ -84,13 +84,13 @@ void OnLevelWasLoaded(int level) //El parámetro level es el indice de la escena
 
 Como vemos en el ejemplo, simplemente estamos comprobando dentro del método `OnLevelWasLoaded`, que la escena que se haya cargado sea la escena número 4, en cuyo caso, si efectivamente se carga dicha escena, lo que hacemos es mostrar un mensaje por la consola de Unity, indicando que efectivamente se ha cargado.
 
-Ni que decir tiene a estas alturas, que esto, irá dentro de un `script`, el cual estará aplicado a un `GameObject` de nuestra escena. Y tu mi joven aprendiz, te estaras preguntando... (sino, piensalo con calma... tomaté tu tiempo) si voy a comprobar si la escena que he cargado es la 4, en que `GameObject` o en que escena tengo que aplicar el `script`?? Bien, ire por partes. En cuanto al `GameObject` al que aplicar el `script` te puedo decir, que al que te de a ti la gana... eso es a tu criterio. Y en cuanto a la segunda pregunta (en que escena debo aplicar el `script`?), te respondo con un ejemplo. 
+Ni que decir tiene a estas alturas, que esto, irá dentro de un `script`, el cual estará aplicado a un `GameObject` de nuestra escena. Y tu mi joven aprendiz, te estarás preguntando... (sino, piénsalo con calma... tómate tu tiempo) si voy a comprobar si la escena que he cargado es la 4, en que `GameObject` o en que escena tengo que aplicar el `script`?? Bien, iré por partes. En cuanto al `GameObject` al que aplicar el `script` te puedo decir, que al que te de a ti la gana... eso es a tu criterio. Y en cuanto a la segunda pregunta (en que escena debo aplicar el `script`?), te respondo con un ejemplo. 
 
-Imaginate, que estas en la escena de tu juego (pongamos que es la escena 2), y que si te metes en una cueva (la cual corresponde a una escena que diremos por ejemplo que es la 3) y si te metes en una casa se cargaría la escena de dentro de la casa (que sería por ejemplo la escena 4), pues bien para aplicar el `script` que usa `OnLevelWasLoad`, deberiamos aplicarlo en la escena actual (recuerda que hemos dicho que es la escena __2__), por lo que si accedemos a la cueva (escena __3__) no saltaria, pero si accedemos a la casa (escena __4__) si nos saltaria. 
+Imaginate, que estas en la escena de tu juego (pongamos que es la escena 2), y que si te metes en una cueva (la cual corresponde a una escena que diremos por ejemplo que es la 3) y si te metes en una casa se cargaría la escena de dentro de la casa (que sería por ejemplo la escena 4), pues bien para aplicar el `script` que usa `OnLevelWasLoad`, deberíamos aplicarlo en la escena actual (recuerda que hemos dicho que es la escena __2__), por lo que si accedemos a la cueva (escena __3__) no saltaría, pero si accedemos a la casa (escena __4__) si nos saltaría. 
 
 En resumen, el script lo aplicamos en la escena donde estemos, para que compruebe que cuando cambiemos de escena, la que se haya cargado sea la que nosotros queremos con nuestro `OnLevelWasLoad`.
 
-Se que ahora mismo quizas, estes hecho la picha un lío. Es normal. Pero voy a ver si consigo que te hagas una idea para que lo pilles mejor.
+Se que ahora mismo quizás, estés hecho la picha un lío. Es normal. Pero voy a ver si consigo que te hagas una idea para que lo pilles mejor.
 
 Imagina, que estas en la pantalla previa a un jefe final, pero que no aparece hasta que no consigas una serie de objetos. Bien, pues si pasamos de la escena previa a la del jefe, mediante `OnLevelWasLoaded` podemos hacer las comprobaciones pertinentes, primero, para verificar que estemos en la escena en concreto y segundo que llevamos todo lo necesario para que nos aparezca el Monstruaco gordo (_Bicho Gordo Cansino que te mata_), en ese caso (llevamos todos los trastos y se ha cargado la escena final), entonces poder instanciar al "__Bicharraco__". 
 
@@ -100,3 +100,10 @@ Lo pillas??
 
 Bueno, creo que ya con esto puede quedar mas clarito para que, cuando, como y donde emplear `OnLevelWasLoad`.
 
+## Fondo con efecto Scroll Paralax Infinito
+
+Si!!! Te voy a enseñar paso a paso y muy mascadito, como crear un efecto de fondo `Scroll Paralax Infinito`.
+
+Tan mascadito te lo voy a dar, que te lo voy a ir explicando pasito a pasito. Comenzemos.
+
+1 - Te vas a descargar los archivos que vas a encontrar en la carpeta [resources](../resources/background_paralax)
