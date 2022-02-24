@@ -106,4 +106,4 @@ Si!!! Te voy a enseñar paso a paso y muy mascadito, como crear un efecto de fon
 
 Tan mascadito te lo voy a dar, que te lo voy a ir explicando pasito a pasito. Comenzemos.
 
-1 - Te vas a descargar los archivos que vas a encontrar en la carpeta [resources](../resources/background_paralax)
+1 - Te vas a descargar los archivos que vas a encontrar en la carpeta [los fondos](../resources/background_paralax) y un [proyecto de ejemplo](../resources/proyectParalax)
