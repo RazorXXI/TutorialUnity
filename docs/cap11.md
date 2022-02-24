@@ -24,5 +24,10 @@ Ahí podremos ver en el apartado que pone **Scenes in Build**, todas las escenas
 * __Forma 1:__ Arrastramos desde el editor la escena que queramos añadir a `Scenes In Build`.
 * __Forma 2:__ Haciendo click en el botón que vemos en Build Setting (`Add Open Scenes`).
 
-A continuación vamos a ver un código, que permitirá realizar el cambio de escena en nuestro güego. "Al lio del montepío..."
+Para gestionar las escenas desde nuestros `scripts`, lo primero que debemos hacer es importar la directiva `UnityEngine.SceneManagement`.
+
+``c#
+using UnityEngine.SceneManagement;
+``
+
 
