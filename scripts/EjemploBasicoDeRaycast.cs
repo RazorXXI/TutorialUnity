@@ -42,7 +42,10 @@ public class EjemploBasicoDeRaycast : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                 }
             }
+            else Debug.Log("No ha impactado en nada");
         }
+
+        //Muestra el raycast en la ventana Scene, para ver como funciona
         Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
     }
 }
