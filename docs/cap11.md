@@ -30,4 +30,54 @@ Para gestionar las escenas desde nuestros `scripts`, lo primero que debemos hace
 using UnityEngine.SceneManagement;//Directiva a importar para manejar escenas
 ```
 
+Y una vez importada la directiva, podremos cargar la escena simplemente haciendo lo siguiente:
 
+```c#
+SceneManagement.LoadScene(0);//El numero es el indice de la escena que queremos cargar.
+```
+
+Asi de facil y simple mis pequeños...
+
+Obviamente, esa instrucción ni que decir tiene, que será incluida dentro de nuestro código para que una vez haga una acción, cargue la escena que nosotros queramos.
+
+También podemos cargar la escena, indicandole el nombre de la escena en cuestión:
+
+```c#
+SceneManagement.LoadScene("Fase1"); //Este seria el nombre de la escena que fueramos a cargar
+```
+
+Aunque como hemos visto, se puede hacer de las dos maneras, lo mas correcto es hacerlo usando el indice. Pero ya tu eres libre de elegir como lo vas a hacer, mi consejo es usar el valor del indice de la escena.
+
+Y si quisieramos darle un retardo a la hora de cargar una escena...?? __Facil!!!__ usamos una corrutina. Tal cual asi:
+
+```c#
+void Update()
+{
+	StartCoroutine(ChangeSceneWithDelay()); //Llamamos a la corrutina que hace el cambio de escena
+}
+
+IEnumerator ChangeSceneWithDelay()
+{
+	yield return new WaitForSeconds(4f); //La escena va a tardar 4 segundos en cargar
+	SceneManagement.LoadScene(0); 
+}
+```
+
+Magnífico!!! Aplaude Paolo!!! (Aplaude... que despues de todo lo que te estoy enseñando, no me agradeces nada...  XD)
+
+
+De todas formas, ya veremos un poco mas adelante el cambio de escenas en profundidad. De momento, quedate con esto que te acabo de contar, que es lo básico.
+
+Y siguiendo con las escenas, si cargamos una nueva escena y queremos que se hagan cosas al cargar, para ello tenemos el método `OnLevelWasLoaded`. Este es un método de `MonoBehavior` el cual se llama después de que una nueva escena haya sido cargada. Se le pasa como parámetro el indice de la escena en cuestión.
+
+Vamos a ver un ejemplo de como usarlo.
+
+```c#
+void OnLevelWasLoaded(int level) //El parámetro level es el indice de la escena que vamos a comprobar que se ha cargado
+{
+	if(level == 4) //Comprobamos si la escena que se ha cargado ha sido la escena 4
+	{
+		Debug.Log("Se ha cargado la escena número 4...");
+	}
+}
+```
