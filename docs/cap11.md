@@ -1,4 +1,4 @@
-# Cosas interesantes para hacer con C#
+# Capítulo 11 - Cosas interesantes para hacer con C#
 
 La infinidad de cosas que podemos hacer con C# para darle vida a nuestros juegos, es infinita, el único límite que tenemos es la propia imaginación del desarrollador.
 
@@ -100,23 +100,5 @@ Lo pillas??
 
 Bueno, creo que ya con esto puede quedar mas clarito para que, cuando, como y donde emplear `OnLevelWasLoad`.
 
-## Creación de nuestro primer escenario de juego
-
-Si, ya se que me vas a decir que esto que estas leyendo va sobre programación C# en Unity y tal, y creeme, no te falta razón... es más, te la doy, pero ahora piensa... de que te sirve saber programar si no sabes montarte tu juego para ponerle esos `scripts` tan guapos que te estoy enseñando para hacer experimentos?? Eehh... Ahí le he dado. Pues bien, vamos a ver como se crea nuestro primer escenario.
-
-Bien, para no complicar mucho la historia, de momento vamos a ver como hacerlo en 2D, que tiene su intringulis. Para ello vamos a ver lo siguiente:
-
-* Crear nuestro `Tileset` para el juego.
-* Crear nuestro `Tilemap`.
-
-Bien, para que no te compliques mucho te voy a dejar en la carpeta [Material_Juego_2D](../resources/Material_Juego_2D/tiles), asi que te voy a dar todo lo necesario para que te lo vayas montando. Asi que ya sabes, vete descargando los archivos que comenzamos (entiendo y asumo que tienes instalado Unity 3D, porque sino, no estamos haciendo nada).
-
-Comenzemos.
-
-Vamos a abrir nuestro Unity Hub y a crear un proyecto al que llamaremos "_JuegoPruebas_".
-
-![Unity Hub Tutorial](../img/11_UnityHubTutorial.png)
-
-Seguidamente, cuando se nos abra Unity, crearemos la siguiente carpeta.
 
 
