@@ -37,8 +37,11 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 
 ![Inspector Texture Type](../img/11_SpriteMode.png)
 
-3 - En el panel `Inspector` cambiamos la propiedad `Filter Mode` de `Bilinear` a `Point (No Filter)`. A continuación, cambiamos la propiedad `Compression` de `Normal Quality` a `None`. Si nos sale un cuadro indicando aplicar cambios, por supuesto, decimos `Apply`.
+3 - En el panel `Inspector` cambiamos la propiedad `Filter Mode` de `Bilinear` a `Point (No Filter)`. 
 
 ![Inspector Filter Mode](../img/11_FilterMode.png)
+
+4 - A continuación, cambiamos la propiedad `Compression` de `Normal Quality` a `None`. Si nos sale un cuadro indicando aplicar cambios, por supuesto, decimos `Apply`.
+
 ![Inspector Filter Mode](../img/11_Compression.png)
 
