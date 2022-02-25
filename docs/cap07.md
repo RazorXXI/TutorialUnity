@@ -1,4 +1,4 @@
-# Control de Componentes
+# Capítulo 7 - Control de Componentes
 
 En este capítulo vamos a ver muchas cosas, desde como se comunican entre si los `GameObjects`, como interactuan y mazo de cosillas chulas. Ponte cómodo, vete a tomar un refrigerio antes y vuelve, que aquí tenemos para un ratito. Asi que sin mas dilación, vamos ya a meternos en faena.
 
