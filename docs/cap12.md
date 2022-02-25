@@ -35,7 +35,7 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 
 2 - Seguidamente, en en el panel `Inspector` vamos a cambiar la propiedad `Sprite Mode` de `Single` a `Multiple`.
 
-![Inspector Texture Type](../img/11_SpriteMode.png)
+![Inspector Sprite Mode](../img/11_SpriteMode.png)
 
 3 - En el panel `Inspector` cambiamos la propiedad `Filter Mode` de `Bilinear` a `Point (No Filter)`. 
 
@@ -43,11 +43,11 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 
 4 - A continuación, cambiamos la propiedad `Compression` de `Normal Quality` a `None`. Si nos sale un cuadro indicando aplicar cambios, por supuesto, decimos `Apply`.
 
-![Inspector Filter Mode](../img/11_Compression.png)
+![Inspector Compression](../img/11_Compression.png)
 
 5 - Una vez hecho todo lo anterior, le damos al botón `Sprite Editor` del panel inspector y se nos abrira la siguiente ventana.
 
-![Inspector Filter Mode](../img/11_SpriteEditor.png)
+![Sprite Editor](../img/11_SpriteEditor.png)
 
 6 - Ahí le damos a donde pone `Slice` y se nos abre un desplegable, al cual vamos a cambiar los parámetros, tal y como te voy a comentar.
 	
@@ -55,41 +55,41 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 - En la propiedad `Pixel Size` introducimos los siguientes valores: `X` 32 e `Y` 32.
 - Por último, le damos al boton que pone `Slice` y seguidamente tendremos que tener, algo parecido a esto.
 
-![Inspector Filter Mode](../img/11_SpriteSlice.png)
+![Slice Sprites](../img/11_SpriteSlice.png)
 
 - Y ya, simplemente en la ventana del `Sprite Editor`, le damos al botón de la esquina superior derecha que pone `Apply` y listo, ya podemos cerrar la venta del `Sprite Editor`.
 
 Podemos ver en nuestra ventana `Proyect`, que se nos han creado fragmentos individuales con los `Sprites`. 
 
-![Inspector Filter Mode](../img/11_TileSet.png)
+![Tileset](../img/11_TileSet.png)
 
 7 - A continuación, vamos a ir a la barra de herramientas, en `Window` -> `2D` y le damos a `Tile Palette`. Esta la ubicamos, en un sitio que sea comodo y accesible, yo en mi caso, lo he puesto asi.
 
-![Inspector Filter Mode](../img/11_TilePalette.png)
+![Tile Palette](../img/11_TilePalette.png)
 
 8 - Lo siguiente que tenemos que hacer es, en nuestra ventana `Hierarchy`, le damos al botón derecho del ratón, para crear un nuevo `Tilemap` del siguiente modo.
 
-![Inspector Filter Mode](../img/11_TileMap.png)
+![Tilemap](../img/11_TileMap.png)
 
 Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene` donde iremos pintando nuestro mapa de juego, pero antes, debemos configurar unos cuantos de parámetros.
 
-![Inspector Filter Mode](../img/11_TileMapGrid.png)
+![Tilemap Grid](../img/11_TileMapGrid.png)
 
  - Primero y antes de nada, lo primero que vamos a hacer es cambiar el nombre de nuestro `Tile Map` al que pondremos `Plataformas`.
- ![Inspector Filter Mode](../img/11_TileMapName.png)
+ ![Tilemap Name](../img/11_TileMapName.png)
 
  - Lo siguiente es crear una nueva paleta, para ello, nos vamos a `Tile Palette` y le damos en `Create New Palette`, le damos como nombre `Terreno` y a continuación le damos a `Create`. A continuación, se nos abrirá una ventana, para indicarnos donde queremos guardar nuestra paleta, a lo que nosotros vamos a crear una carpeta dentro de la carpeta `Sprites` a la que le daremos de nombre `Palette`.
 
-![Inspector Filter Mode](../img/11_CreateNewPalette.png)
+![Create New Palette](../img/11_CreateNewPalette.png)
 
 - Ahora lo siguiente que tenemos que hacer, es ir arrastrando hacia dentro de la ventana `Tile Palette`, cada uno de los `Tiles` que nos ha generado nuestro `Sprite Editor`, quedando algo parecido a esto.
 
-![Inspector Filter Mode](../img/11_TilePaletteDone.png)
+![Tilemap Finished](../img/11_TilePaletteDone.png)
 
 - Pues bien, ya tenemos nuestra `Tile Palette` hecha, ahora solo nos queda seleccionar el pincel y a pintar tiles.
 
-![Inspector Filter Mode](../img/11_TileBrush.png)
+![Tile Brush](../img/11_TileBrush.png)
 
 - La idea es que nos quede algo tal que asi.
 
-![Inspector Filter Mode](../img/11_ScenaMap.png)
+![Scene Map](../img/11_ScenaMap.png)
