@@ -1,4 +1,4 @@
-# Estructuras de Control
+# Capítulo 6 - Estructuras de Control
 
 Las estructuras de control, nos van a permitir controlar y dirigir el flujo de ejecución de nuestros scripts. De ese modo podemos imponer condiciones, manejar el flujo de nuestro script mediante la comparación de valores, etc.
 
