@@ -4,9 +4,9 @@
 		"Vintage",
 	],
 
-	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-isotope.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-isotope.tmTheme", //Si no tienes el Esquema de Color Base16, bajatelo con el Package Managemente de Sublime
 
-	"font_face":"Anonymous Pro",
+	"font_face":"Anonymous Pro", //La fuente buscala en Google Fonts
 	"font_size": 10,
 
 	"highlight_line": true,
