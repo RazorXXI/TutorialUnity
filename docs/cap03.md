@@ -1,4 +1,4 @@
-# Mostrar Información por Consola
+# Capítulo 3 - Mostrar Información por Consola
 
 Este capítulo es mas bien corto, pues tampoco hay mucho que decir al respecto.
 
