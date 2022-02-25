@@ -1,4 +1,4 @@
-# Variables y Tipos de Datos
+# Capítulo 2 - Variables y Tipos de Datos
 
   ## Definición de Variable
 
