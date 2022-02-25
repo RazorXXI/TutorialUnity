@@ -1,4 +1,4 @@
-# Arrays
+# Capítulo 4 - Arrays
 
   Los `Arrays` son un tipo de estructura que permite almacenar un conjunto de datos.
 
