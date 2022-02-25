@@ -77,3 +77,19 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
  - Primero y antes de nada, lo primero que vamos a hacer es cambiar el nombre de nuestro `Tile Map` al que pondremos `Plataformas`.
  ![Inspector Filter Mode](../img/11_TileMapName.png)
+
+ - Lo siguiente es crear una nueva paleta, para ello, nos vamos a `Tile Palette` y le damos en `Create New Palette`, le damos como nombre `Terreno` y a continuación le damos a `Create`. A continuación, se nos abrirá una ventana, para indicarnos donde queremos guardar nuestra paleta, a lo que nosotros vamos a crear una carpeta dentro de la carpeta `Sprites` a la que le daremos de nombre `Palette`.
+
+![Inspector Filter Mode](../img/11_CreateNewPalette.png)
+
+- Ahora lo siguiente que tenemos que hacer, es ir arrastrando hacia dentro de la ventana `Tile Palette`, cada uno de los `Tiles` que nos ha generado nuestro `Sprite Editor`, quedando algo parecido a esto.
+
+![Inspector Filter Mode](../img/11_TilePaletteDone.png)
+
+- Pues bien, ya tenemos nuestra `Tile Palette` hecha, ahora solo nos queda seleccionar el pincel y a pintar tiles.
+
+![Inspector Filter Mode](../img/11_TileBrush.png)
+
+- La idea es que nos quede algo tal que asi.
+
+![Inspector Filter Mode](../img/11_ScenaMap.png)
