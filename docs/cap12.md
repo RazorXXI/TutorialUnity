@@ -20,3 +20,5 @@ Vamos a abrir nuestro Unity Hub y a crear un proyecto al que llamaremos "_JuegoP
 ![Unity Hub Tutorial](../img/11_UnityHubTutorial.png)
 
 Seguidamente, cuando se nos abra Unity, crearemos la siguiente carpeta.
+
+![Unity Editor](../img/11_UnityEditor.png)
