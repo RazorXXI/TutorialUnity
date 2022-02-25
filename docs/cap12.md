@@ -32,3 +32,13 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 1 - Nos vamos al panel `Proyect` y allí nos vamos dentro de la carpeta `Sprites`, hacemos un click encima del archivo y comprobamos en el panel `Inspector` que tiene la propiedad `Texture Type` como `Sprite (2D and UI)`.
 
 ![Inspector Texture Type](../img/11_TextureType.png)
+
+2 - Seguidamente, en en el panel `Inspector` vamos a cambiar la propiedad `Sprite Mode` de `Single` a `Multiple`.
+
+![Inspector Texture Type](../img/11_SpriteMode.png)
+
+3 - En el panel `Inspector` cambiamos la propiedad `Filter Mode` de `Bilinear` a `Point (No Filter)`. A continuación, cambiamos la propiedad `Compression` de `Normal Quality` a `None`. Si nos sale un cuadro indicando aplicar cambios, por supuesto, decimos `Apply`.
+
+![Inspector Filter Mode](../img/11_FilterMode.png)
+![Inspector Filter Mode](../img/11_Compression.png)
+
