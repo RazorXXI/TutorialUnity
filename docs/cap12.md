@@ -51,8 +51,8 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 
 6 - Ahí le damos a donde pone `Slice` y se nos abre un desplegable, al cual vamos a cambiar los parámetros, tal y como te voy a comentar.
 	
-	* Cambiamos el paràmetro `Type` de `Automatic` a `Grid By Cell Size`.
-	* En la propiedad `Pixel Size` introducimos los siguientes valores: `X` 32 e `Y` 32.
-	* Por último, le damos al boton que pone `Slice` y seguidamente tendremos que tener, algo parecido a esto.
+		* Cambiamos el paràmetro `Type` de `Automatic` a `Grid By Cell Size`.
+		* En la propiedad `Pixel Size` introducimos los siguientes valores: `X` 32 e `Y` 32.
+		* Por último, le damos al boton que pone `Slice` y seguidamente tendremos que tener, algo parecido a esto.
 
 
