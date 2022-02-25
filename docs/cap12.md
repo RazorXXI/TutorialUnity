@@ -19,6 +19,16 @@ Vamos a abrir nuestro Unity Hub y a crear un proyecto al que llamaremos "_JuegoP
 
 ![Unity Hub Tutorial](../img/11_UnityHubTutorial.png)
 
-Seguidamente, cuando se nos abra Unity, crearemos la siguiente carpeta.
+Seguidamente, cuando se nos abra Unity, crearemos la siguiente carpeta, a la que llamares `Sprites`.
 
 ![Unity Editor](../img/11_UnityEditor.png)
+
+En esa carpeta vas a poner el archivo que te has descargado antes. Bien lo puedes hacer arrastrando y soltando sobre la carpeta en Unity o bien, puedes importarlo.
+
+Para importarlo simplemente ponte encima de la carpeta y haz click derecho con el ratón y se te abriar un menú. Dale a la opción que te pone `Import New Asset`, se te abrirá un cuadro de dialogo para que busques donde hayas puesto el archivo descargado, lo buscas, le das al botón que pone `Import` y listo. Yo mi recomendación es que lo arrastres a la carpeta, pero bueno, también puedes hacerlo así.
+
+Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente que necesitamos es convertirlo para poderlo usar. Así que, vamos al lío.
+
+1 - Nos vamos al panel `Proyect` y allí nos vamos dentro de la carpeta `Sprites`, hacemos un click encima del archivo y comprobamos en el panel `Inspector` que tiene la propiedad `Texture Type` como `Sprite (2D and UI)`.
+
+![Inspector Texture Type](../img/11_TextureType.png)
