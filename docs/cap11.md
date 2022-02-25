@@ -114,6 +114,7 @@ Bien, para que no te compliques mucho te voy a dejar en la carpeta [Material_Jue
 Comenzemos.
 
 Vamos a abrir nuestro Unity Hub y a crear un proyecto al que llamaremos "_JuegoPruebas_".
+
 ![Unity Hub Tutorial](../img/11_UnityHubTutorial.png)
 
 Seguidamente, cuando se nos abra Unity, crearemos la siguiente carpeta.
