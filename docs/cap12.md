@@ -55,4 +55,25 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 - En la propiedad `Pixel Size` introducimos los siguientes valores: `X` 32 e `Y` 32.
 - Por último, le damos al boton que pone `Slice` y seguidamente tendremos que tener, algo parecido a esto.
 
+![Inspector Filter Mode](../img/11_SpriteSlice.png)
 
+- Y ya, simplemente en la ventana del `Sprite Editor`, le damos al botón de la esquina superior derecha que pone `Apply` y listo, ya podemos cerrar la venta del `Sprite Editor`.
+
+Podemos ver en nuestra ventana `Proyect`, que se nos han creado fragmentos individuales con los `Sprites`. 
+
+![Inspector Filter Mode](../img/11_TileSet.png)
+
+7 - A continuación, vamos a ir a la barra de herramientas, en `Window` -> `2D` y le damos a `Tile Palette`. Esta la ubicamos, en un sitio que sea comodo y accesible, yo en mi caso, lo he puesto asi.
+
+![Inspector Filter Mode](../img/11_TilePalette.png)
+
+8 - Lo siguiente que tenemos que hacer es, en nuestra ventana `Hierarchy`, le damos al botón derecho del ratón, para crear un nuevo `Tilemap` del siguiente modo.
+
+![Inspector Filter Mode](../img/11_TileMap.png)
+
+Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene` donde iremos pintando nuestro mapa de juego, pero antes, debemos configurar unos cuantos de parámetros.
+
+![Inspector Filter Mode](../img/11_TileMapGrid.png)
+
+ - Primero y antes de nada, lo primero que vamos a hacer es cambiar el nombre de nuestro `Tile Map` al que pondremos `Plataformas`.
+ ![Inspector Filter Mode](../img/11_TileMapName.png)
