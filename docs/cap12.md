@@ -92,4 +92,4 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
 - La idea es que nos quede algo tal que asi.
 
-![Scene Map](../img/11_ScenaMap.png)
+![Scene Map](img/11_SceneMap.png)
