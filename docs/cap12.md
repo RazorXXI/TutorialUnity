@@ -96,7 +96,7 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
 9 - Ahora lo siguiente que tenemos que hacer es ponerle a nuestro terreno un `Collider`, para ello seleccionamos en nuestro panel `Hierarchy`, el objeto `Plataformas` y seguidamente vamos al panel `Inspector`, para añadir un nuevo componente, concretamente un `Tilemap Collider 2D`, para ello le damos en `Add Component` en el panel `Inspector` y buscamos `Tilemap Collider 2D`.
 
-![Scene Map](/img/11_TilemapCollider.png)
+![Scene Map](../img/11_TilemapCollider2D.png)
 
 10 - Una vez añadido el `Tilemap Collider 2D`, tenemos que añadir tambien un `Composite Collider`, del mismo modo que añadimos el `Tilemap Collider 2D`. Una vez añadido este, nos vamos al componente `Tilemap Collider 2D`, en nuestro panel `Inspector` y le marcamos la casilla `Used by Composite`.
 
