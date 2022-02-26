@@ -93,3 +93,15 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 - La idea es que nos quede algo tal que asi.
 
 ![Scene Map](../img/11_SceneMap.png)
+
+9 - Ahora lo siguiente que tenemos que hacer es ponerle a nuestro terreno un `Collider`, para ello seleccionamos en nuestro panel `Hierarchy`, el objeto `Plataformas` y seguidamente vamos al panel `Inspector`, para añadir un nuevo componente, concretamente un `Tilemap Collider 2D`, para ello le damos en `Add Component` en el panel `Inspector` y buscamos `Tilemap Collider 2D`.
+
+![Scene Map](../img/11_TilemapCollider.png)
+
+10 - Una vez añadido el `Tilemap Collider 2D`, tenemos que añadir tambien un `Composite Collider`, del mismo modo que añadimos el `Tilemap Collider 2D`. Una vez añadido este, nos vamos al componente `Tilemap Collider 2D`, en nuestro panel `Inspector` y le marcamos la casilla `Used by Composite`.
+
+![Scene Map](../img/11_UsedByComposite.png)
+
+11 - Otra cosa que debemos hacer es, si nos hemos fijado, al añadir el `Composite Collider`, se nos ha añadido un componente `Rigidbody 2D`, pues es en este donde tenemos que cambier la propiedad `Body Type`, la cual nos viene como `Dinamic` por defecto, la vamos a cambiar a `Kinematic`. Ya que si la dejamos como `Dinamic`, todo nuestro mapa se ira a por tabaco cuando le demos al play (dale al play sin miedo para verlo... tranqui, que no pasa nada, cuando detengas el play todo vuelve a su sitio).
+
+12 - Vamos a colocar muestro muñeco del player, para ello, vamos a importar dos archivos uno para el [PlayerIdle](../resources/Material_Juego_2D/sprites/PlayerIdle.png) y el otro [PlayerWalking](../resources/Material_Juego_2D/sprites/PlayerWalking.png)
