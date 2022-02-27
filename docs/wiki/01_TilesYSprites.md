@@ -17,7 +17,7 @@ Comenzemos.
 
 Vamos a abrir nuestro Unity Hub y a crear un proyecto al que llamaremos "_JuegoPruebas_".
 
-![Unity Hub Tutorial](../img/11_UnityHubTutorial.png)
+![Unity Hub Tutorial](img/11_UnityHubTutorial.png)
 
 Seguidamente, cuando se nos abra Unity, crearemos la siguiente carpeta, a la que llamares `Sprites`.
 
