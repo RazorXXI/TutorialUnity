@@ -122,6 +122,11 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
  - Una vez hecho esto, agregamos a nuestro `Hero` un componente `Rigidbody 2D` para que le afecte la gravedad y un componente `Capsule Collider 2D`, para que pueda colisionar con el entorno.
 
-  * En el componente Capsule Collider 2D, hacemos click en `Edit Collider` para ajustar el `Collider` de nuestro personaje.
+ - En el componente Capsule Collider 2D, hacemos click en `Edit Collider` para ajustar el `Collider` de nuestro personaje.
 
-  ![Edit Collider](imgWiki/11_EditCollider.png)
+ ![Edit Collider](imgWiki/11_EditCollider.png)
+
+  Nos debe quedar parecido a esto...
+
+ ![Player Collider](imgWiki/11_PlayerCollider.png)
+
