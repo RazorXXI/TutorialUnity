@@ -17,11 +17,11 @@ Comenzemos.
 
 Vamos a abrir nuestro Unity Hub y a crear un proyecto al que llamaremos "_JuegoPruebas_".
 
-![Unity Hub Tutorial](img/11_UnityHubTutorial.png)
+![Unity Hub Tutorial](imgWiki/11_UnityHubTutorial.png)
 
 Seguidamente, cuando se nos abra Unity, crearemos la siguiente carpeta, a la que llamares `Sprites`.
 
-![Unity Editor](../img/11_UnityEditor.png)
+![Unity Editor](imgWiki/11_UnityEditor.png)
 
 En esa carpeta vas a poner el archivo que te has descargado antes. Bien lo puedes hacer arrastrando y soltando sobre la carpeta en Unity o bien, puedes importarlo.
 
@@ -31,23 +31,23 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 
 1 - Nos vamos al panel `Proyect` y allí nos vamos dentro de la carpeta `Sprites`, hacemos un click encima del archivo y comprobamos en el panel `Inspector` que tiene la propiedad `Texture Type` como `Sprite (2D and UI)`.
 
-![Inspector Texture Type](../img/11_TextureType.png)
+![Inspector Texture Type](imgWiki/11_TextureType.png)
 
 2 - Seguidamente, en en el panel `Inspector` vamos a cambiar la propiedad `Sprite Mode` de `Single` a `Multiple`.
 
-![Inspector Sprite Mode](../img/11_SpriteMode.png)
+![Inspector Sprite Mode](imgWiki/11_SpriteMode.png)
 
 3 - En el panel `Inspector` cambiamos la propiedad `Filter Mode` de `Bilinear` a `Point (No Filter)`. 
 
-![Inspector Filter Mode](../img/11_FilterMode.png)
+![Inspector Filter Mode](imgWiki/11_FilterMode.png)
 
 4 - A continuación, cambiamos la propiedad `Compression` de `Normal Quality` a `None`. Si nos sale un cuadro indicando aplicar cambios, por supuesto, decimos `Apply`.
 
-![Inspector Compression](../img/11_Compression.png)
+![Inspector Compression](imgWiki/11_Compression.png)
 
 5 - Una vez hecho todo lo anterior, le damos al botón `Sprite Editor` del panel inspector y se nos abrira la siguiente ventana.
 
-![Sprite Editor](../img/11_SpriteEditor.png)
+![Sprite Editor](imgWiki/11_SpriteEditor.png)
 
 6 - Ahí le damos a donde pone `Slice` y se nos abre un desplegable, al cual vamos a cambiar los parámetros, tal y como te voy a comentar.
 	
@@ -55,52 +55,52 @@ Pues bien, ya una vez que tenemos nuestro archivo con los `tiles`, lo siguiente 
 - En la propiedad `Pixel Size` introducimos los siguientes valores: `X` 32 e `Y` 32.
 - Por último, le damos al boton que pone `Slice` y seguidamente tendremos que tener, algo parecido a esto.
 
-![Slice Sprites](../img/11_SpriteSlice.png)
+![Slice Sprites](imgWiki/11_SpriteSlice.png)
 
 - Y ya, simplemente en la ventana del `Sprite Editor`, le damos al botón de la esquina superior derecha que pone `Apply` y listo, ya podemos cerrar la venta del `Sprite Editor`.
 
 Podemos ver en nuestra ventana `Proyect`, que se nos han creado fragmentos individuales con los `Sprites`. 
 
-![Tileset](../img/11_TileSet.png)
+![Tileset](imgWiki/11_TileSet.png)
 
 7 - A continuación, vamos a ir a la barra de herramientas, en `Window` -> `2D` y le damos a `Tile Palette`. Esta la ubicamos, en un sitio que sea comodo y accesible, yo en mi caso, lo he puesto asi.
 
-![Tile Palette](../img/11_TilePalette.png)
+![Tile Palette](imgWiki/11_TilePalette.png)
 
 8 - Lo siguiente que tenemos que hacer es, en nuestra ventana `Hierarchy`, le damos al botón derecho del ratón, para crear un nuevo `Tilemap` del siguiente modo.
 
-![Tilemap](../img/11_TileMap.png)
+![Tilemap](imgWiki/11_TileMap.png)
 
 Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene` donde iremos pintando nuestro mapa de juego, pero antes, debemos configurar unos cuantos de parámetros.
 
-![Tilemap Grid](../img/11_TileMapGrid.png)
+![Tilemap Grid](imgWiki/11_TileMapGrid.png)
 
  - Primero y antes de nada, lo primero que vamos a hacer es cambiar el nombre de nuestro `Tile Map` al que pondremos `Plataformas`.
- ![Tilemap Name](../img/11_TileMapName.png)
+ ![Tilemap Name](imgWiki/11_TileMapName.png)
 
  - Lo siguiente es crear una nueva paleta, para ello, nos vamos a `Tile Palette` y le damos en `Create New Palette`, le damos como nombre `Terreno` y a continuación le damos a `Create`. A continuación, se nos abrirá una ventana, para indicarnos donde queremos guardar nuestra paleta, a lo que nosotros vamos a crear una carpeta dentro de la carpeta `Sprites` a la que le daremos de nombre `Palette`.
 
-![Create New Palette](../img/11_CreateNewPalette.png)
+![Create New Palette](imgWiki/11_CreateNewPalette.png)
 
 - Ahora lo siguiente que tenemos que hacer, es ir arrastrando hacia dentro de la ventana `Tile Palette`, cada uno de los `Tiles` que nos ha generado nuestro `Sprite Editor`, quedando algo parecido a esto.
 
-![Tilemap Finished](../img/11_TilePaletteDone.png)
+![Tilemap Finished](imgWiki/11_TilePaletteDone.png)
 
 - Pues bien, ya tenemos nuestra `Tile Palette` hecha, ahora solo nos queda seleccionar el pincel y a pintar tiles.
 
-![Tile Brush](../img/11_TileBrush.png)
+![Tile Brush](imgWiki/11_TileBrush.png)
 
 - La idea es que nos quede algo tal que asi.
 
-![Scene Map](../img/11_SceneMap.png)
+![Scene Map](imgWiki/11_SceneMap.png)
 
 9 - Ahora lo siguiente que tenemos que hacer es ponerle a nuestro terreno un `Collider`, para ello seleccionamos en nuestro panel `Hierarchy`, el objeto `Plataformas` y seguidamente vamos al panel `Inspector`, para añadir un nuevo componente, concretamente un `Tilemap Collider 2D`, para ello le damos en `Add Component` en el panel `Inspector` y buscamos `Tilemap Collider 2D`.
 
-![Scene Map](../img/11_TilemapCollider2D.png)
+![Scene Map](imgWiki/11_TilemapCollider2D.png)
 
 10 - Una vez añadido el `Tilemap Collider 2D`, tenemos que añadir tambien un `Composite Collider`, del mismo modo que añadimos el `Tilemap Collider 2D`. Una vez añadido este, nos vamos al componente `Tilemap Collider 2D`, en nuestro panel `Inspector` y le marcamos la casilla `Used by Composite`.
 
-![Scene Map](../img/11_UsedByComposite.png)
+![Scene Map](imgWiki/11_UsedByComposite.png)
 
 11 - Otra cosa que debemos hacer es, si nos hemos fijado, al añadir el `Composite Collider`, se nos ha añadido un componente `Rigidbody 2D`, pues es en este donde tenemos que cambier la propiedad `Body Type`, la cual nos viene como `Dinamic` por defecto, la vamos a cambiar a `Kinematic`. Ya que si la dejamos como `Dinamic`, todo nuestro mapa se ira a por tabaco cuando le demos al play (dale al play sin miedo para verlo... tranqui, que no pasa nada, cuando detengas el play todo vuelve a su sitio).
 
@@ -110,10 +110,10 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
  - A continuación, vamos a recortar nuestros `Sprites`, para ello, hacemos igual. Le damos a `Slice`, seleccionamos `Grid By Cell Size` y como valores para __Pixel Size__ damos, para `X` 20 y para `Y` 24. Le damos a `Slice` y nos hará los recortes. Ahora nos toca ir eliminando los recortes sobre los huecos vacios y ajustando la posición de los recortes en nuesetro moñeco, hasta dejar algo como esto.
  
-![Scene Map](../img/11_PlayerSlice.png)
+![Scene Map](imgWiki/11_PlayerSlice.png)
 
  - Ya antes de terminar con nuestro personaje, seleccionamos dentro de nuestro panel `Proyect` el archivo `PlayerIdle` y nos vamos al `Inspector` y ajustamos la propiedad `Pixel Per Unit`, la cual estará en 100 por defecto, a lo que lo cambiamos por 20. Y una vez hecho esto, vamos abajo de `Inspector` y aplicamos los cambios.
 
  - Ahora ya podemos poner a nuestro personaje en el juego, para ello solamente nos vamos al archivo `PlayerIdle` de nuestro panel `Proyect`, los desplegamos para ver los `Sprites` que hemos recortado y arrastramos el primero hacia nuestra escena y lo ponemos tal que asi.
 
-![Scene Map](../img/11_PlayerPlace.png)
+![Scene Map](imgWiki/11_PlayerPlace.png)
