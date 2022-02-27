@@ -110,10 +110,10 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
  - A continuación, vamos a recortar nuestros `Sprites`, para ello, hacemos igual. Le damos a `Slice`, seleccionamos `Grid By Cell Size` y como valores para __Pixel Size__ damos, para `X` 20 y para `Y` 24. Le damos a `Slice` y nos hará los recortes. Ahora nos toca ir eliminando los recortes sobre los huecos vacios y ajustando la posición de los recortes en nuesetro moñeco, hasta dejar algo como esto.
  
- ![Scene Map](../img/11_PlayerSlice.png)
+![Scene Map](../img/11_PlayerSlice.png)
 
  - Ya antes de terminar con nuestro personaje, seleccionamos dentro de nuestro panel `Proyect` el archivo `PlayerIdle` y nos vamos al `Inspector` y ajustamos la propiedad `Pixel Per Unit`, la cual estará en 100 por defecto, a lo que lo cambiamos por 20. Y una vez hecho esto, vamos abajo de `Inspector` y aplicamos los cambios.
 
  - Ahora ya podemos poner a nuestro personaje en el juego, para ello solamente nos vamos al archivo `PlayerIdle` de nuestro panel `Proyect`, los desplegamos para ver los `Sprites` que hemos recortado y arrastramos el primero hacia nuestra escena y lo ponemos tal que asi.
- 
- ![Scene Map](../img/11_PlayerPlace.png)
+
+![Scene Map](../img/11_PlayerPlace.png)
