@@ -108,4 +108,7 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
  - Hacemos click con el ratón sobre `PlayerIdle` y tal y como hicimos con los `Tiles`, vamos al panel `Inspector`, cambiamos `Sprite Mode` de `Single` a `Multiple`, `Filter Model` de `Bilinear` a `Point (No Filter)` y `Compresion` de `Normal Quality` a `None` (Aquí no te pongo imagenes, porque es lo mismo que hicimos con los `Tiles` y si no te acuerdas, tira un poco mas arriba y veras todo esto). Una vez hecho esto, nos vamos abajo de los __Componentes__ y damos `Apply`. Posteriormente le damos al boton de `Sprite Editor`.
 
+ - A continuación, vamos a recortar nuestros `Sprites`, para ello, hacemos igual. Le damos a `Slice`, seleccionamos `Grid By Cell Size` y como valores para __Pixel Size__ damos, para `X` 20 y para `Y` 24. Le damos a `Slice` y nos hará los recortes. Ahora nos toca ir eliminando los recortes sobre los huecos vacios y ajustando la posición de los recortes en nuesetro moñeco, hasta dejar algo como esto.
  
+ ![Scene Map](../img/11_PlayerSlice.png)
+
