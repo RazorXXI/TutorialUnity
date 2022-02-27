@@ -124,4 +124,4 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
   * En el componente Capsule Collider 2D, hacemos click en `Edit Collider` para ajustar el `Collider` de nuestro personaje.
 
-  [Edit Collider](imgWiki/11_EditCollider.png)
+  ![Edit Collider](imgWiki/11_EditCollider.png)
