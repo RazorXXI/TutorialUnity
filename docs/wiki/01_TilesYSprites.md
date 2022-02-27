@@ -116,4 +116,12 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
  - Ahora ya podemos poner a nuestro personaje en el juego, para ello solamente nos vamos al archivo `PlayerIdle` de nuestro panel `Proyect`, los desplegamos para ver los `Sprites` que hemos recortado y arrastramos el primero hacia nuestra escena y lo ponemos tal que asi.
 
-![Scene Map](imgWiki/11_PlayerPlace.png)
+ ![Scene Map](imgWiki/11_PlayerPlace.png)
+
+ - Lo siguiente que vamos a hacer, es cambiar el nombre a nuestro personaje, así que hacemos click sobre el panel `Hierarchy` en nuestro player y nos vamos al panel `Inspector` y cambiamos el nombre `PlayerIdle` por `Hero`.
+
+ - Una vez hecho esto, agregamos a nuestro `Hero` un componente `Rigidbody 2D` para que le afecte la gravedad y un componente `Capsule Collider 2D`, para que pueda colisionar con el entorno.
+
+  * En el componente Capsule Collider 2D, hacemos click en `Edit Collider` para ajustar el `Collider` de nuestro personaje.
+
+  [Edit Collider](imgWiki/11_EditCollider.png)
