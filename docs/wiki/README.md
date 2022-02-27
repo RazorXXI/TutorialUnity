@@ -6,3 +6,4 @@ En esta parte, vamos a hacer muchas cosas, la primera parte consistirá en const
 ## Haciendo un juego 2D con Unity
 
  * [01 - Tiles y Sprites](01_TilesYSprites.md)
+ * [02 - Moviendo al Personaje](02_MovingPlayer.md)

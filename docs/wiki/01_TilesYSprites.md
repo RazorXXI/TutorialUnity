@@ -130,3 +130,5 @@ Esto lo que nos va a hacer, es crearnos una rejilla en nuestra ventana de `Scene
 
  ![Player Collider](imgWiki/11_PlayerCollider.png)
 
+
+Bueno, como habras podido ver, esto de crear un escenario de juego y poner al "moñeco", tampoco ha sido para tanto verdad? Quizas me haya colado y extendido un poco, pero creo que lo mejor es ir explicandote todo pasito a pasito, porque así no se quedan cabos sueltos y vas a tener menos dudas a la hora de hacertelo tu solito.
