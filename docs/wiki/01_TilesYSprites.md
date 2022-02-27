@@ -11,7 +11,7 @@ Bien, para no complicar mucho la historia, de momento vamos a ver como hacerlo e
 * Crear nuestro `Tileset` para el juego.
 * Crear nuestro `Tilemap`.
 
-Bien, para que no te compliques mucho te voy a dar para que te descargues los [Tiles del Juego](../resources/Material_Juego_2D/tiles), asi que te voy a dar todo lo necesario para que te lo vayas montando. Asi que ya sabes, vete descargando los archivos que comenzamos (entiendo y asumo que tienes instalado Unity 3D, porque sino, no estamos haciendo nada).
+Bien, para que no te compliques mucho te voy a dar para que te descargues los [Tiles del Juego](resources/tileset.png), asi que te voy a dar todo lo necesario para que te lo vayas montando. Asi que ya sabes, vete descargando los archivos que comenzamos (entiendo y asumo que tienes instalado Unity 3D, porque sino, no estamos haciendo nada).
 
 Comenzemos.
 
