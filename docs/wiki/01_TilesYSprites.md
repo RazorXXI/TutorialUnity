@@ -8,8 +8,8 @@ Pues bien, vamos a ver como se crea nuestro primer escenario.
 
 Bien, para no complicar mucho la historia, de momento vamos a ver como hacerlo en 2D, que tiene su intringulis. Para ello vamos a ver lo siguiente:
 
-* Crear nuestro `Tileset` para el juego.
-* Crear nuestro `Tilemap`.
+ * Crear nuestro `Tileset` para el juego.
+ * Crear nuestro `Tilemap`.
 
 Bien, para que no te compliques mucho te voy a dar para que te descargues los [Tiles del Juego](resources/Tileset.png), asi que te voy a dar todo lo necesario para que te lo vayas montando. Asi que ya sabes, vete descargando los archivos que comenzamos (entiendo y asumo que tienes instalado Unity 3D, porque sino, no estamos haciendo nada).
 

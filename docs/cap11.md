@@ -21,8 +21,8 @@ Para ver el número asociado de cada escena, tenemos que dirigirnos en el menú 
 Ahí podremos ver en el apartado que pone **Scenes in Build**, todas las escenas que componen nuestro juego, y justamente al lado derecho, podremos ver el indice que nos indica que número de escena es. Antes de seguir, voy a comentar, que para añadir nuevas escenas, lo podemos hacer de dos formas.
 
 
-* __Forma 1:__ Arrastramos desde el editor la escena que queramos añadir a `Scenes In Build`.
-* __Forma 2:__ Haciendo click en el botón que vemos en Build Setting (`Add Open Scenes`).
+ * __Forma 1:__ Arrastramos desde el editor la escena que queramos añadir a `Scenes In Build`.
+ * __Forma 2:__ Haciendo click en el botón que vemos en Build Setting (`Add Open Scenes`).
 
 Para gestionar las escenas desde nuestros `scripts`, lo primero que debemos hacer es importar la directiva `UnityEngine.SceneManagement`.
 
