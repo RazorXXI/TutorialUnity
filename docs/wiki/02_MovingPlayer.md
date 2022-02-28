@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
 ```
 
-Lo siguiente que tenemos que hacer es referenciar al `Rigidbody2D` de nuestro Player. Para ello haremos el siguiente código.
+Lo siguiente que tenemos que hacer es referenciar al `Rigidbody2D` de nuestro Player. Para ello haremos lo siguiente. Dentro del método `Star`, vamos a asignar nuestra variable `rbPlayer`, la cual la definimos anteriormente y mediante `GetComponent` vamos a acceder al componente `Rigidbody2D` de nuestro Player.
 
 ```c#
 public class PlayerController : MonoBehaviour
@@ -61,3 +61,25 @@ public class PlayerController : MonoBehaviour
         rbPlayer = gameObject.GetComponent<Rigidbody2D>();
     }
 ```
+
+A continuación, lo siguiente que tenemos que hacer, es crear una función para mover horizontalmente a nuestro Player. Así que vamos a crear un método privado al que vamos a llamar `MoveHorizontalPlayer`, el cual basicamente lo va a hacer es aplicar una fuerza horizontal al personaje para moverlo por el terreno. Asi que, sin mas dilación vamos a definir nuestra función.
+
+```c#
+void MoveHorizontalPlayer()
+    {
+        //Aplicamos una fuerza para desplazar al personaje horizontalmente
+        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+    }
+```
+
+Antes de continuar, vamos a explicar un poco que hace esta función.
+
+En primer lugar, accedemos al método `AddForce` del `Rigidbody2D` de nuestro player, al que hemos llamado `rbPlayer`. Despues, le pasamos como parámetros una ristra que basicamente lo que hace es:
+
+ - Un `Vector2.right` que lo que hace es indicar que el desplazamiento será en sentido horizontal.
+ - Multiplicamos lo anterior por la propiedad `Velocity` la cual la hemos definido previamente como variable de clase.
+ - Multiplicamos por el valor devuelto por la función `Input.GetAxisRaw`, la cual nos devuelve un `float`, que vendrá dado por lo que indique según pulsemos las teclas de manejo `Horizontal`.
+ - Y por ultimo, multiplicamos por `Time.deltaTime`, para que así el movimiento resultante sea dependiente de la actualización entre frames.
+
+No se si te queda claro, pero basicamente y en resumidas cuentas, para mover un objeto 2D lo que haces es aplicar fuerza, que iran en un sentido, que estara definido por una velocidad, un tiempo y el valor que devuelva según pulses la tecla para moverte. Se que es un poco lioso, pero con practica lo iras pillando sin muchas complicaciones. Asi que, seguimos.
+
