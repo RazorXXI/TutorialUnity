@@ -53,7 +53,7 @@ Lo siguiente que tenemos que hacer es referenciar al `Rigidbody2D` de nuestro Pl
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float velocity;	//Para la velocidad de movimiento horizontal
-    Rigidbody2D rbPlayer;				//Para referenciar el Rigidbody2D del player
+    Rigidbody2D rbPlayer;		//Para referenciar el Rigidbody2D del player
 
 	private void Start()
     {
