@@ -85,3 +85,132 @@ No se si te queda claro, pero basicamente y en resumidas cuentas, para mover un 
 
 Antes de que se me olvide, también podriamos haber usado `Transform.position` para mover al personaje, pero es mas correcto el uso de las físicas, ademas es bastante mas eficiente, pero si te hace ilusión, cuando llegue al final, te enseñaré la forma de hacer usando `Transform.position`. Tu eres libre de usar la que te de la real gana.
 
+A continuación, vamos a incluir este método dentro del `FixedUpdate` de Unity, dejando el codigo asi:
+
+```c#
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
+    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+
+    private void Start()
+    {
+        //Referenciamos el Rigidbody2D del player
+        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveHorizontalPlayer(); //Con esto conseguimos que nuestro player se mueva
+    }
+
+    void MoveHorizontalPlayer()
+    {
+        //Aplicamos una fuerza para desplazar al personaje horizontalmente
+        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+    }
+}
+```
+
+Lo siguente que podemos hacer, es aplicar el `Script` a nuestro personaje y probar como se comporta. Te vas a llevar alguna que otra sorpresa, pero como soy muy chungo, te las voy a contar antes de que las veas:
+
+ * Si movemos el personaje, veras que se desplaza como si fuera en patines, tardando asi en frenar aun despues de dejar de pulsar a izquierda o derecha. Esto es debido a que lleva mucha inercia, pero ya lo solucionaremos.
+
+ * Si movemos a nuestro muñeco a izquierda y derecha, siempre mira hacia la derecha.
+
+Bien, despues del `Spoiler` que te acabo de hacer de los pequeños fallos (y ademas cosa normal), te voy a contar como vamos a solucionarlos.
+
+### Hacer que el muñeco mire a izquierda o derecha segun vaya en un sentido o en otro.
+
+Este es un problema relativamente sencillo de solucionar. Para ello, simplemente vamos a crear una funcion que llamaremos `ChangeLook` la cual se encargará de cambiar hacia donde mira nuestro personaje, y ademas, crearemos una variable de clase a la cual llamaremos `lookRight` la cual nos servirá de interruptor para comprobar si está mirando hacia la derecha o no, y de ese modo ajustar si valor.
+
+Asi que bien, vamos a comenzar declarando la variable de clase `lookRight` del siguiente modo:
+
+```c#
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
+    bool lookRight = true;      //Por defecto vamos a hacerla true
+    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+
+```
+
+Lo siguiente que haremos será crear nuestra función `ChangeLook`.
+
+```c#
+void ChangeLook()
+{
+    float horizontal = Input.GetAxisRaw("Horizontal");
+        
+    //Comprobamos a donde se desplaza el personaje y donde mira
+    if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
+    {
+        //Cambiamos la condición de hacia donde mira
+        lookRight = !lookRight;
+
+        //Cambiamos la escala horizontal, para que mire a derecha o izquierda
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+}
+```
+
+Creo que la función queda bastante claro lo que hace no? Por un lado, creamos una variable local, que hemos llamado `horizontal`, la cual guardará el valor devuelto (`Tipo float`) de si pulsamos a izquierda o derecha. A continuación comprobamos si el valor de horizontal es `positivo` (se desplaza hacia la derecha) y si no mira a la derecha, o si el valor horizontal es `negativo` y mira hacia la derecha.
+
+Vamos a entenderlo poco a poco:
+ 
+ - Si el valor horizontal es positivo, indica que nos movemos hacia la derecha (todo desplazamiento del 0 hacia la derecha es positivo) y ademas, vemos si al movernos a la derecha el valor de lookRight es falso, con lo cual quiere decir, que te mueves a la derecha pero mira a la izquierda (cosa que esta mal).
+
+ - Si el valor horizontal es negativo, indidca que nos movemos hacia la izquierda (todo desplazamiento del 0 hacia la izquierda es negativo) y ademas, comprobamos si al movernos a la izquierda, el valor de lookRight es verdadero, lo cual indica que mira hacia la derecha (cosa que esta mal)
+
+Pues bien, si vamos hacia la derecha pero miramos a la izquierda o si vamos hacia la izquierda pero miramos hacia la derecha (estoy explicandote la condición del `if`), lo que hacemos es:
+
+ 1 - Asignar a lookRight su valor contrario (`lookRight = !lookRight`).
+ 
+ 2 - Usar el `transform.localScale` del player para hacer que mire a un sitio u otro. Para ello, simplemente declaramos un `Vector3`, al cual le pasamos como parámetro un `transform.localScale.x * -1`, que lo que hace es cambiar el valor de la escala horizontal del personaje, haciendo asi que se refleje a izquierda o derecha, segun sea positivo o negativo, para el resto de parámetros del `Vector3` indicamos que las `localScale` de `Y` y de `Z`, se mantengan igual.
+
+Bien, pues ya que tenemos la función que nos pone a nuestro player mirando a izquierda o derecha, solo nos queda aplicarla en nuestro código. Para ello la vamos a incluir dentro de la función `Update` de Unity, dado que esta comprobación se realiza a nivel de `frames` y no se emplean fisicas para ello. Asi que se nos queda el codigo de nuestro `script` de momento tal que así:
+
+```c#
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
+    bool lookRight = true;      //Por defecto vamos a hacerla true
+    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+
+    private void Start()
+    {
+        //Referenciamos el Rigidbody2D del player
+        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        ChangeLook();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveHorizontalPlayer(); //Con esto conseguimos que nuestro player se mueva
+    }
+
+    void MoveHorizontalPlayer()
+    {
+        //Aplicamos una fuerza para desplazar al personaje horizontalmente
+        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+    }
+
+    void ChangeLook()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        
+        //Comprobamos a donde se desplaza el personaje y donde mira
+        if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
+        {
+            //Cambiamos la condición de hacia donde mira
+            lookRight = !lookRight;
+
+            //Cambiamos la escala horizontal, para que mire a derecha o izquierda
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
+    }
+}
