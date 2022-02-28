@@ -24,6 +24,10 @@ Además, vamos a ajustar el `Collider` que le hemos puesto a nuestro player, par
 
 ![EditCollider](imgWiki/11_EditCollider.png)
 
+Ajustaremos el `Collider` del player, para que nos quede algo parecido a esto.
+
+![PlayerCollider](imgWiki/11_PlayerCollider.png)
+
 Una vez hecho todo lo anterior, nos vamos a la carpeta `Scripts`, seleccionamos nuestro archivo y hacemos doble click o le damos a Intro para que nos abra `Visual Studio` y aquí es donde vamos a hacer cosicas ya para mover al "moñeco". Y aquí es donde empieza el Rock 'n' Roll.
 
 ### Preparando propiedades y métodos
