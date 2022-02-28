@@ -24,4 +24,4 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
  * [Capítulo 10: Otros aspectos de la programación en C#](/docs/cap10.md)
  * [Capítulo 11: Cosas interesantes para hacer con C#](/docs/cap11.md)
 
- * [Appendix I: Construyendo cosas con Unity](/docs/wiki/README.md)
+ * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
