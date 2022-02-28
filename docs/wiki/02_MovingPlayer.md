@@ -20,7 +20,9 @@ Ya aplicado el `Rigidbody2D` a nuestro Player, donde pone `Constraints` abrimos 
 
 Aun no tenemos del todo preparado a nuestro querido amigo, asi que lo siguiente que vamos a hacer, es añadirle un `Capsule Collider 2D`, asi que ya sabes, ponselo para que no se caiga.
 
+Además, vamos a ajustar el `Collider` que le hemos puesto a nuestro player, para ello hacemos click en `Edit Collider`.
 
+![EditCollider](imgWiki/11_EditCollider.png)
 
 Una vez hecho todo lo anterior, nos vamos a la carpeta `Scripts`, seleccionamos nuestro archivo y hacemos doble click o le damos a Intro para que nos abra `Visual Studio` y aquí es donde vamos a hacer cosicas ya para mover al "moñeco". Y aquí es donde empieza el Rock 'n' Roll.
 
@@ -39,4 +41,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float velocity;
     Rigidbody2D rbPlayer;
 
+```
+
+Lo siguiente que tenemos que hacer es referenciar al `Rigidbody2D` de nuestro Player. Para ello haremos el siguiente código.
+
+```c#
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float velocity;	//Para la velocidad de movimiento horizontal
+    Rigidbody2D rbPlayer;				//Para referenciar el Rigidbody2D del player
+
+	private void Start()
+    {
+    	//Referenciamos el Rigidbody2D del player
+        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+    }
 ```
