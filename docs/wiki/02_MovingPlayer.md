@@ -22,7 +22,7 @@ Aun no tenemos del todo preparado a nuestro querido amigo, asi que lo siguiente 
 
 
 
-Una vez hecho todo lo anterior, hacemos doble click o le damos a Intro para que nos abra `Visual Studio` y aquí es donde vamos a hacer cosicas ya para mover al "moñeco". Y aquí es donde empieza el Rock 'n' Roll.
+Una vez hecho todo lo anterior, nos vamos a la carpeta `Scripts`, seleccionamos nuestro archivo y hacemos doble click o le damos a Intro para que nos abra `Visual Studio` y aquí es donde vamos a hacer cosicas ya para mover al "moñeco". Y aquí es donde empieza el Rock 'n' Roll.
 
 ### Preparando propiedades y métodos
 
@@ -34,3 +34,9 @@ Para ello vamos a crear dos propiedades:
  - La segunda será para refernciar el `Rigidbody` de este.
 
 ```c#
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float velocity;
+    Rigidbody2D rbPlayer;
+
+```
