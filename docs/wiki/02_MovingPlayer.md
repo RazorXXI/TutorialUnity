@@ -214,3 +214,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
+```
+
+Ahora si que si, ya cuando movemos a nuestro pixelado amigo, vemos que mira al lado donde se mueve. Problema solucionado... Si es que somos buenos a rabiar!!! Echaté un Cola-Cao que te lo has ganado Michael!!! mas aun despues de haber llegado aquí sin mandarme a freir monas. Se que esto es un pelín densito, pero es que no hay otra forma mi joven amigo, se que soy muy cansino, pero trato de explicartelo de manera que lo entiendas lo mas clarito posible. Esto solo es una pequeña base para que tu puedas hacer cosas mas complejas. Asi que paciencia, tomate el Cola-Cao, que vamos a seguir.
+
+Por cierto, que se me olvidaba, para que se mueva el muñeco, en el editor de Unity, en el panel `Inspector`, donde está la propiedad `Velocity` de nuestro maravilloso `Script`, debes aplicarle un valor de 300 como minimo para que se mueva. Esto es porque dado el valor por defecto de la masa proporcionada por el `Rigidbody2D` y las dimensiones de nuesto amigo, necesita mucha `Velocidad` para poderse mover, dado que con 24 pixels de altura y una masa de 1, es increiblemente pesado, dado que Unity contempla las fisicas para 1 Kg/m con lo cual, para lo poco que mide nuestro amigo, es increiblemente pesado. Y dado que ya he estado yo haciendo pruebas para ajustar el valor, te lo digo de ya, pon en `Velocity` 300 y vas bien. De todas maneras, si quieres hacer tu, tus pruebas con dicho valor, es una buena cosa que experimentes hasta ajustar al que mas te guste.
+
