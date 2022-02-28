@@ -83,3 +83,5 @@ En primer lugar, accedemos al método `AddForce` del `Rigidbody2D` de nuestro pl
 
 No se si te queda claro, pero basicamente y en resumidas cuentas, para mover un objeto 2D lo que haces es aplicar fuerza, que iran en un sentido, que estara definido por una velocidad, un tiempo y el valor que devuelva según pulses la tecla para moverte. Se que es un poco lioso, pero con practica lo iras pillando sin muchas complicaciones. Asi que, seguimos.
 
+Antes de que se me olvide, también podriamos haber usado `Transform.position` para mover al personaje, pero es mas correcto el uso de las físicas, ademas es bastante mas eficiente, pero si te hace ilusión, cuando llegue al final, te enseñaré la forma de hacer usando `Transform.position`. Tu eres libre de usar la que te de la real gana.
+
