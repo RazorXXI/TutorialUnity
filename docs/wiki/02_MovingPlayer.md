@@ -413,3 +413,7 @@ public class PlayerController : MonoBehaviour
     }
 }
 ```
+
+Pues bien, hasta aquí hemos visto como hacer que nuestro muñeco se mueva y salte, creo que ha sido bastante instructivo y espero que te haya quedado claro como hacer esto. En principio y recapitulando, veras que no es excesivamente dificil hacer mover o saltar a nuestro personaje, basicamente se trata de añadir fuerzas y poco mas. Quedate con esto en tu cerebro mi joven padawan, porque te va a ser de gran utilidad.
+
+Para la siguiente parte veremos algunas cosas mas interesantes, como animar a nuestro querido personaje, pero eso ya es harina de otro costal, asi que me piro ya, que por hoy esta bien.
