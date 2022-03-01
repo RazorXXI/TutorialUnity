@@ -51,21 +51,41 @@ Aquí es donde se van a meter la condiciones y propiedades necesarias para contr
 
  2 - Hacemos lo mismo que en el punto 1, pero esta vez desde `PlayerWalking` hacia `PlayerIdle`.
 
- 3 - Le damos a `Parameters` y añadimos un nuevo parámetro de tipo `Float` al que llamaremos `VelocidadH`.
+ 3 - Le damos a `Parameters` y añadimos un nuevo parámetro de tipo `Bool` al que llamaremos `walk`.
 
  ![AddParameter](imgWiki/11_AddParameter.png)
 
- ![HorizontalVelocity](imgWiki/11_VelocidadH.png)
+ ![HorizontalVelocity](imgWiki/11_WalkParameter.png)
 
- 4 - Seleccionamos cada transición (_las lineas con las flechas de Animator_, _la de Entry a PlayerIdle NO_) y en las propiedades del panel `Inspector`, desmarcamos `Has Exit Time` y ponemos como valor en `Transition Duration` 0.01.
+ 4 - Seleccionamos cada transición (_las lineas con las flechas de Animator_, _la de Entry a PlayerIdle NO_) y en las propiedades del panel `Inspector`, desmarcamos `Has Exit Time` y ponemos como valor en `Transition Duration` 0.
 
  ![Transition Parameters](imgWiki/11_TransitionParameters.png)
 
- 5 - Añadimos a cada transición una condición, la cual será en función del valor de VelocidadH.
+ 5 - Añadimos a cada transición una condición, la cual será en función del valor de la variable `walk`.
  
  ![Idle To Walking](imgWiki/11_IdleWalkingCondition.png)
 
  ![Walking To Idle](imgWiki/11_WalkingIdleCondition.png)
 
  6 - Una vez añadidas las condiciones, debemos modificar nuestro `script PlayerController` para que dichas condiciones actuen.
-  *  
+  * Agregamos a nuestro `script` una variable de clase nueva para referenciar al componente `Animator`.
+  `Animator anPlayer;` 
+
+  * Referenciamos al componente en el metodo `Start` con instrucción:
+  `anPlayer = gameObject.GetComponent<Animator>();`
+
+  * A continuación modificamos el método `MoveHorizontalPlayer`:
+  ```c#
+    void MoveHorizontalPlayer()
+    {
+        //Aplicamos una fuerza para desplazar al personaje horizontalmente
+        rbPlayer.AddForce(Vector2.right * speedPlayer * Input.GetAxisRaw("Horizontal") * Time.deltaTime );
+    
+        if (Mathf.Round(rbPlayer.velocity.x) > 0 || Mathf.Round(rbPlayer.velocity.x) < 0)
+        {
+            anPlayer.SetBool("walk", true); //Cambia el valor de la variable del Animator
+            Debug.Log(Mathf.Round(rbPlayer.velocity.x)); 
+        }
+        else if (Mathf.Round(rbPlayer.velocity.x) == 0) anPlayer.SetBool("walk", false);
+    }
+  ``` 
