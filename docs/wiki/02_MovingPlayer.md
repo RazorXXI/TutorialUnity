@@ -228,12 +228,11 @@ Otra cosa que debes hacer es modificar algunos valores, comenzando por el valor 
 
 Y lo siguiente a cambiar son los parametros de masa, gravedad y linear drag del `Rigidbody2D` del player, los cuales ajustaremos según los siguientes valores:
  
+ | Parámetro | Valor |
+ |:---|:---|
  | Mass | 0.01 |
- |:---|:---|
  | Linear Drag | 10 |
- |:---|:---|
  | Gravity | 1 |
- |:---|:---|
  | Collision Detection | Continuous | 
 
 De todas maneras, si quieres hacer tu, tus pruebas con dicho valor, es una buena cosa que experimentes hasta ajustar al que mas te guste.
