@@ -63,4 +63,9 @@ Aquí es donde se van a meter la condiciones y propiedades necesarias para contr
 
  5 - Añadimos a cada transición una condición, la cual será en función del valor de VelocidadH.
  
+ ![Idle To Walking](imgWiki/11_IdleWalkingCondition.png)
 
+ ![Walking To Idle](imgWiki/11_WalkingIdleCondition.png)
+
+ 6 - Una vez añadidas las condiciones, debemos modificar nuestro `script PlayerController` para que dichas condiciones actuen.
+  *  
