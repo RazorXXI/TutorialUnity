@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 ```
 
 
-### Moviendo el Personaje
+## Moviendo el Personaje
 
 A continuación, lo siguiente que tenemos que hacer, es crear una función para mover horizontalmente a nuestro Player. Así que vamos a crear un método privado al que vamos a llamar `MoveHorizontalPlayer`, el cual basicamente lo va a hacer es aplicar una fuerza horizontal al personaje para moverlo por el terreno. Asi que, sin mas dilación vamos a definir nuestra función.
 
@@ -123,7 +123,7 @@ Lo siguente que podemos hacer, es aplicar el `Script` a nuestro personaje y prob
 
 Bien, despues del `Spoiler` que te acabo de hacer de los pequeños fallos (y ademas cosa normal), te voy a contar como vamos a solucionarlos.
 
-### Hacer que el muñeco mire a izquierda o derecha segun vaya en un sentido o en otro.
+## Hacer que el muñeco mire a izquierda o derecha segun vaya en un sentido o en otro.
 
 Este es un problema relativamente sencillo de solucionar. Para ello, simplemente vamos a crear una funcion que llamaremos `ChangeLook` la cual se encargará de cambiar hacia donde mira nuestro personaje, y ademas, crearemos una variable de clase a la cual llamaremos `lookRight` la cual nos servirá de interruptor para comprobar si está mirando hacia la derecha o no, y de ese modo ajustar si valor.
 
@@ -240,7 +240,7 @@ Y lo siguiente a cambiar son los parametros de masa, gravedad y linear drag del 
 
 De todas maneras, si quieres hacer tu, tus pruebas con dicho valor, es una buena cosa que experimentes hasta ajustar al que mas te guste.
 
-### Haciendo que nuestro personaje salte
+## Haciendo que nuestro personaje salte
 
 Lo que vamos a hacer a continuación, es crear una función, la cual permitira a nuestro personaje saltar. Para ello lo primero que vamos a crear es una propiedad para darle valor a la fuerza de salto, y la vamos a llamar `jumpForce`.
 
