@@ -36,3 +36,28 @@ Una vez hecho esto, vamos a ver que la ventana `Animation` a cambiado para permi
 Ya tenemos creada nuestra primera animación, asi que como yo sabemos como hacerlo, vamos a crear otra a la cual vamos a llamar `PlayerWaling`, para la cual usaremos nuestros `sprites` que descargamos en el capítulo 1 y que se llamaban igual. Si no tienes los `sprites` cortados (`slice`), no te voy a volver a explicar como se hace, si no los tienes, recortalos y create una nueva animación como ya te he comentado.
 
 ![CreateNewAnimation](imgWiki/11_CreateNewAnimation.png) 
+
+Bueno, supongo que ya habras montado tu animación de `PlayerWalking`, verdad?? Pues sigamos.
+
+### Creando cambios y transiciones con Animator
+
+Bien, lo siguiente que vamos a hacer, es que nuestro personaje cambie de la animación de estarse quieto (`PlayerIdle`) a caminar (`PlayerWalking`), para ello vamos a usar `Animator`. 
+
+Aquí es donde se van a meter la condiciones y propiedades necesarias para controlar los cambios entre animaciones. Tranquilo, te lo voy a dar muy mascado, para que no te lies demasiado.
+
+ 1 - Vamos a crear una transición entre `PlayerIdle` y `PlayerWalking`. Nos situamos encima de `PlayerIdle` y le damos click derecho, a continuación damos a `Make Transition`.
+
+ ![MakeTransition](imgWiki/11_MakeTransition.png)
+
+ 2 - Hacemos lo mismo que en el punto 1, pero esta vez desde `PlayerWalking` hacia `PlayerIdle`.
+
+ 3 - Le damos a `Parameters` y añadimos un nuevo parámetro de tipo `Float` al que llamaremos `VelocidadH`.
+
+ ![AddParameter](imgWiki/11_AddParameter.png)
+
+ ![HorizontalVelocity](imgWiki/11_VelocidadH.png)
+
+ 4 - Seleccionamos cada transición (_las lineas con las flechas de Animator_, _la de Entry a PlayerIdle NO_) y en las propiedades del panel `Inspector`, desmarcamos `Has Exit Time` y ponemos como valor en `Transition Duration` 0.01.
+
+ ![Transition Parameters](imgWiki/11_TransitionParameters.png)
+
