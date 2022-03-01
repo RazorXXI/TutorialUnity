@@ -31,4 +31,8 @@ Una vez hecho esto, vamos a ver que la ventana `Animation` a cambiado para permi
 
  * Vamos colocando los `sprites` anteriores segun el orden 1, 2 y 3 tal y como se muestra en la imagen de acontinuación.
 
- ![sprites sorted](imgWiki/11_SpritesOrder.png) 
+ ![sprites sorted](imgWiki/11_SpritesOrder.png)
+
+Ya tenemos creada nuestra primera animación, asi que como yo sabemos como hacerlo, vamos a crear otra a la cual vamos a llamar `PlayerWaling`, para la cual usaremos nuestros `sprites` que descargamos en el capítulo 1 y que se llamaban igual. Si no tienes los `sprites` cortados (`slice`), no te voy a volver a explicar como se hace, si no los tienes, recortalos y create una nueva animación como ya te he comentado.
+
+![CreateNewAnimation](imgWiki/11_CreateNewAnimation.png) 
