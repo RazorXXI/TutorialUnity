@@ -61,3 +61,6 @@ Aquí es donde se van a meter la condiciones y propiedades necesarias para contr
 
  ![Transition Parameters](imgWiki/11_TransitionParameters.png)
 
+ 5 - Añadimos a cada transición una condición, la cual será en función del valor de VelocidadH.
+ 
+
