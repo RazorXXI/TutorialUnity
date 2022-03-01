@@ -84,7 +84,6 @@ Aquí es donde se van a meter la condiciones y propiedades necesarias para contr
         if (Mathf.Round(rbPlayer.velocity.x) > 0 || Mathf.Round(rbPlayer.velocity.x) < 0)
         {
             anPlayer.SetBool("walk", true); //Cambia el valor de la variable del Animator
-            Debug.Log(Mathf.Round(rbPlayer.velocity.x)); 
         }
         else if (Mathf.Round(rbPlayer.velocity.x) == 0) anPlayer.SetBool("walk", false);
     }
