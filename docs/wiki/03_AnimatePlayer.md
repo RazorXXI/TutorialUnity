@@ -89,3 +89,9 @@ Aquí es donde se van a meter la condiciones y propiedades necesarias para contr
         else if (Mathf.Round(rbPlayer.velocity.x) == 0) anPlayer.SetBool("walk", false);
     }
   ``` 
+
+Así, simplemente con esos pequeños cambios, conseguimos que nuestro personaje tenga su animación a la hora de caminar.
+
+Podriamos hacer lo mismo para la animación del salto, asi que si te animas, te voy a dejar por aquí los sprites para que te montes tu animación de salto. Yo voy a hacer lo propio, y te dejo que lo intentes. Aquí tienes [PlayerJump](resources/PlayerJump.png), descargate el `sprite` para el salto y trata de de hacer tu la animación.
+
+Si no te sale, tranquilo, mas adelante te dire como hacerlo, pero al menos intentalo.
