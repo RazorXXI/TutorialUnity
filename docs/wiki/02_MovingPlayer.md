@@ -222,5 +222,19 @@ Por cierto, que se me olvidaba, para que se mueva el muñeco, en el editor de Un
 
 Esto es porque dado el valor por defecto de la masa proporcionada por el `Rigidbody2D` y las dimensiones de nuesto amigo, necesita mucha `Velocidad` para poderse mover, dado que con 24 pixels de altura y una masa de 1, es increiblemente pesado, dado que Unity contempla las fisicas para 1 Kg/m con lo cual, para lo poco que mide nuestro amigo, es increiblemente pesado. Y dado que ya he estado yo haciendo pruebas para ajustar el valor, te lo digo de ya, pon en `Velocity` 300 y vas bien. 
 
+Otra cosa que debes hacer es modificar algunos valores, comenzando por el valor de la gravedad. Para ello nos vamos a `Edit` -> `Project Settings` y vamos al apartado del `Physics 2D`, cambiamos el valor de la gravedad de -9.81 a -981. Esto es ya te explicaré porque es, de momento tu cambia eso.
+
+![Physics2D](imgWiki/11_Physics2D.png)
+
+Y lo siguiente a cambiar son los parametros de masa, gravedad y linear drag del `Rigidbody2D` del player, los cuales ajustaremos según los siguientes valores:
+ 
+ | Mass | 0.01 |
+ |:---|:---|
+ | Linear Drag | 10 |
+ |:---|:---|
+ | Gravity | 1 |
+ |:---|:---|
+ | Collision Detection | Continuous | 
+
 De todas maneras, si quieres hacer tu, tus pruebas con dicho valor, es una buena cosa que experimentes hasta ajustar al que mas te guste.
 
