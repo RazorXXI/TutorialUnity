@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
     }
 ```
 
+
+### Moviendo el Personaje
+
 A continuación, lo siguiente que tenemos que hacer, es crear una función para mover horizontalmente a nuestro Player. Así que vamos a crear un método privado al que vamos a llamar `MoveHorizontalPlayer`, el cual basicamente lo va a hacer es aplicar una fuerza horizontal al personaje para moverlo por el terreno. Asi que, sin mas dilación vamos a definir nuestra función.
 
 ```c#
@@ -237,3 +240,176 @@ Y lo siguiente a cambiar son los parametros de masa, gravedad y linear drag del 
 
 De todas maneras, si quieres hacer tu, tus pruebas con dicho valor, es una buena cosa que experimentes hasta ajustar al que mas te guste.
 
+### Haciendo que nuestro personaje salte
+
+Lo que vamos a hacer a continuación, es crear una función, la cual permitira a nuestro personaje saltar. Para ello lo primero que vamos a crear es una propiedad para darle valor a la fuerza de salto, y la vamos a llamar `jumpForce`.
+
+`[SerializeField] float jumpForce;`
+
+A continuación pasaremos a crear la función, la cual será tal que así:
+
+```c#
+void JumpPlayer()
+{
+    if (Input.GetKeyDown("space"))
+    {
+        rbPlayer.AddForce(Vector2.up * jumpForce);
+    }
+}
+```
+
+Básicamente nuestra función lo que hace es, comprobar si se ha pulsado la tecla `Espacio`, y si es así, se le aplica al personaje una fuerza hacia arriba la cual será multiplicada por el valor de `jumpForce`.
+
+A continuación, procedemos a colocar la función que hemos creado dentro del `Update`, quedando nuestro código del siguiente modo:
+
+```c#
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
+    bool lookRight = true;      //Por defecto vamos a hacerla true
+    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+
+    private void Start()
+    {
+        //Referenciamos el Rigidbody2D del player
+        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        ChangeLook();
+        JumpPlayer();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveHorizontalPlayer(); //Con esto conseguimos que nuestro player se mueva
+    }
+
+    void MoveHorizontalPlayer()
+    {
+        //Aplicamos una fuerza para desplazar al personaje horizontalmente
+        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+    }
+
+    void ChangeLook()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        
+        //Comprobamos a donde se desplaza el personaje y donde mira
+        if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
+        {
+            //Cambiamos la condición de hacia donde mira
+            lookRight = !lookRight;
+
+            //Cambiamos la escala horizontal, para que mire a derecha o izquierda
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    void JumpPlayer()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            rbPlayer.AddForce(Vector2.up * jumpForce);
+        }
+    }
+}
+```
+
+Ahora vamos a asignar en el panel `Inspector` un valor de __100__ a la propiedad `Jump Force` y vamos a darle a __Play__ para ver como se comporta.
+
+Si nos fijamos, si le damos varias veces al __Espacio__ nuestro personaje sigue saltando en el aire, lo cual no es lo suyo, salvo que queramos hacer una versión bastarda de _Flappy Bird_ (que por ahora no es la idea). Para solucionar esto, lo primero que vamos a hacer es crear un nuevo __Tag__ al cual llamaremos `Terrain` y que asignaremos a nuestro `Tile Map`.
+
+Primero y antes que nada, vamos a crear una nueva propiedad la cual vamos a llamar `canJump` y que sera de tipo `bool`.
+
+`bool canJump;`
+
+Lo siguiente que vamos a hacer es modificar el `if` de nuestro método `JumpPlayer` dejandolo así:
+
+```c#
+if (Input.GetKeyDown("space") && canJump)
+{
+    canJump = false;
+    rbPlayer.AddForce(Vector2.up * jumpForce);
+}
+```
+
+A continuación, vamos a emplear el método de __Unity__ `OnCollisionEnter2D`.
+
+```c#
+void OnCollisionEnter2D(Collision2D collision)
+{
+    if(collision.transform.tag == "Terrain") 
+    {
+        canJump = true;
+    }
+}
+```
+
+Quedandonos el código del siguiente modo:
+
+```c#
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
+    bool lookRight = true;      //Por defecto vamos a hacerla true
+    bool canJump;               //Para controlar el salto
+    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+
+    private void Start()
+    {
+        //Referenciamos el Rigidbody2D del player
+        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        ChangeLook();
+        JumpPlayer();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveHorizontalPlayer(); //Con esto conseguimos que nuestro player se mueva
+    }
+
+    void MoveHorizontalPlayer()
+    {
+        //Aplicamos una fuerza para desplazar al personaje horizontalmente
+        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+    }
+
+    void ChangeLook()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        
+        //Comprobamos a donde se desplaza el personaje y donde mira
+        if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
+        {
+            //Cambiamos la condición de hacia donde mira
+            lookRight = !lookRight;
+
+            //Cambiamos la escala horizontal, para que mire a derecha o izquierda
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    void JumpPlayer()
+    {
+        if (Input.GetKeyDown("space") && canJump)
+        {
+            canJump = false;
+            rbPlayer.AddForce(Vector2.up * jumpForce);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Terrain") 
+        {
+            canJump = true;
+        }
+    }
+}
+```
