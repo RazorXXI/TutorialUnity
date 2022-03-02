@@ -66,7 +66,7 @@ El atributo `Range` nos muestra un deslizador el cual limita el rango mínimo y 
 ```c#
 [Header("Forces")]
 [Range(1f, 50f)][SerializeField] float JumpForce = 10f;
-[Range(150f, 500f)][SerializeField] float HorizontalVelocity = 10f;
+[Range(150f, 500f)][SerializeField] float HorizontalVelocity = 180f;
 ```
 
 ![Range](../img/12_Range.png)
