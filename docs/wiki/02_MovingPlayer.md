@@ -224,3 +224,26 @@ Esto es porque dado el valor por defecto de la masa proporcionada por el `Rigidb
 
 De todas maneras, si quieres hacer tu, tus pruebas con dicho valor, es una buena cosa que experimentes hasta ajustar al que mas te guste.
 
+## Haciendo saltar a nuestro personaje
+
+Bien, ya por último y para cerrar con este capítulo, vamoa a hacer saltar a nuestro querido amigo.
+
+Realmente la rutina de salto es realmente sencilla, al igual que hemos podido ver con la de movimiento, la cual básicamente no es otra cosa que añadir una fueraza al `rigidbody` de nuestro player, en función de la velocidad y del valor devuelto por el mètodo `GetAxisRaw`.
+
+Para el salto, ademas de darle una fuerza, vamos a limitar la velocidad de nuestro player, para que no se pase saltando.
+
+```c#
+ void JumpPlayer()
+    {
+        if (Input.GetKeyDown("space") && canJump)
+        {
+
+            //rbPlayer.AddForce(Vector2.up * jumpForce * 10f * Time.deltaTime);
+            rbPlayer.velocity = Vector2.up * jumpForce;
+            //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, 0);
+            //rbPlayer.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            anPlayer.SetFloat("VelocityY", rbPlayer.velocity.y);
+            anPlayer.SetBool("jump", true);
+        }
+        else anPlayer.SetBool("jump", false);
+    }
