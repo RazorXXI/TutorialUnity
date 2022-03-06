@@ -12,7 +12,7 @@ Comenzemos por crear una carpeta dentro de nuestro proyecto a la que pondremos e
 
 De momento y para empezar, vamos a crear el primero de todos ellos, para mover a nuestro "moñeco". Pues bien, ya tienes la carpeta creada (entiendo que eres un buen chico y la has creado cuando te lo he dicho no...???? En caso contrario, ya estas tardando en crearla), nos vamos dentro de ella y con el boton derecho del raton dentro de la carpeta, le damos a `Create` -> `C# Script` y nos creara un archivo C# que serà donde pongamos nuestro script. A este archivo lo vamos a llamar `PlayerController`. 
 
-Muy importante!! Debemos cargar a nuestro personaje, un componente `Rigidbody2D` que será el que nos sirva para moverlo y hacer otras cosas, asi que si aun no lo tiene, ponselo.
+Muy importante!! Debemos cargar a nuestro personaje, un componente `Rigidbody2D` que será el que nos sirva para moverlo y hacer otras cosas (es el que va a controlar las físicas de nuestro personaje), asi que si aun no lo tiene, ponselo.
 
 Ya aplicado el `Rigidbody2D` a nuestro Player, donde pone `Constraints` abrimos y marcamos la casilla que pone `Z`. De este modo, bloqueamos cualquier giro o rotación del personaje. Esto es muy importante, porque sino, el muñeco se pondrá a hacer cosas rarisimas.
 
@@ -34,16 +34,20 @@ Una vez hecho todo lo anterior, nos vamos a la carpeta `Scripts`, seleccionamos 
 
 Lo primero que vamos a crear, son una serie de propiedades, las cuales nos van a servir para poder mover inicialmente a nuestro personaje horizontalmente.
 
-Para ello vamos a crear dos propiedades:
+Para ello vamos a crear tres variables:
 
  - La primera para ajustar la velocidad a la que se va a mover el personaje.
- - La segunda será para refernciar el `Rigidbody` de este.
+ - La segunda para indicar la velocidad máxima a la cual se moverá el personaje
+ - La tercera será para refernciar el `Rigidbody` de este.
+ - La cuarta será para guardar hacia donde va nuestro player (-1 Izquierda, 0 Parado o 1 Derecha)
 
 ```c#
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float velocity;
+    [SerializeField] float playerSpeed;
+    [SerializeField] float playerSpeedMax;
     Rigidbody2D rbPlayer;
+    float horDisplace;
 
 ```
 
@@ -70,35 +74,39 @@ A continuación, lo siguiente que tenemos que hacer, es crear una función para 
 ```c#
 void MoveHorizontalPlayer()
     {
-        //Aplicamos una fuerza para desplazar al personaje horizontalmente
-        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+        horDisplace = Input.GetAxisRaw("Horizontal");
+
+        rbPlayer.velocity =new Vector2(playerSpeedMax * horDisplace,rbPlayer.velocity.y);
+        rbPlayer.AddForce(Vector2.right * playerSpeed * horDisplace);
     }
 ```
 
 Antes de continuar, vamos a explicar un poco que hace esta función.
 
-En primer lugar, accedemos al método `AddForce` del `Rigidbody2D` de nuestro player, al que hemos llamado `rbPlayer`. Despues, le pasamos como parámetros una ristra que basicamente lo que hace es:
+Primero, vamos a ajustar la velocidad de nuestro player. Esto lo vamos a hacer, accediendo a la propiedad `velocity` de su `Rigidbodo`. Le pasaremos como parámetros a un `Vector2`, `playerSpeedMax`, la cual ser la que indicará de manera fija que velocidad alcanzará como máximo y este lo multiplicaremos por la variable `horDisplace` cuyos valores estaran entre -1 y 1, de este modo, tendremos una velocidad fija para cuando vayamos a la izquiera o la derecha. El siguiente parámetro del `Vector2`, será e valor de `velocity` en el eje `y` actual del player.
+
+En segundo lugar, accedemos al método `AddForce` del `Rigidbody2D` de nuestro player, al que hemos llamado `rbPlayer`. Despues, le pasamos como parámetros una ristra que basicamente lo que hace es:
 
  - Un `Vector2.right` que lo que hace es indicar que el desplazamiento será en sentido horizontal.
- - Multiplicamos lo anterior por la propiedad `Velocity` la cual la hemos definido previamente como variable de clase.
- - Multiplicamos por el valor devuelto por la función `Input.GetAxisRaw`, la cual nos devuelve un `float`, que vendrá dado por lo que indique según pulsemos las teclas de manejo `Horizontal`.
- - Y por ultimo, multiplicamos por `Time.deltaTime`, para que así el movimiento resultante sea dependiente de la actualización entre frames.
+ - Multiplicamos lo anterior por la variable `playerSpeed` la cual la hemos definido previamente como variable de clase.
+ - En  último lugar multiplicamos por el valor de `horDisplace`, de este modo, la fuerza a aplicar será positiva o negativa.
 
 No se si te queda claro, pero basicamente y en resumidas cuentas, para mover un objeto 2D lo que haces es aplicar fuerza, que iran en un sentido, que estara definido por una velocidad, un tiempo y el valor que devuelva según pulses la tecla para moverte. Se que es un poco lioso, pero con practica lo iras pillando sin muchas complicaciones. Asi que, seguimos.
 
-Antes de que se me olvide, también podriamos haber usado `Transform.position` para mover al personaje, pero es mas correcto el uso de las físicas, ademas es bastante mas eficiente, pero si te hace ilusión, cuando llegue al final, te enseñaré la forma de hacer usando `Transform.position`. Tu eres libre de usar la que te de la real gana.
+Antes de que se me olvide, también podriamos haber usado `transform.position` para mover al personaje, pero es mas correcto el uso de las físicas, ademas es bastante mas eficiente, pero si te hace ilusión, cuando llegue al final, te enseñaré la forma de hacer usando `transform.position`. Tu eres libre de usar la que te de la real gana.
 
 A continuación, vamos a incluir este método dentro del `FixedUpdate` de Unity, dejando el codigo asi:
 
 ```c#
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
-    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+    [SerializeField] float playerSpeed;
+    [SerializeField] float playerSpeedMax;
+    Rigidbody2D rbPlayer;
+    float horDisplace;
 
     private void Start()
-    {
-        //Referenciamos el Rigidbody2D del player
+    {        
         rbPlayer = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -109,19 +117,19 @@ public class PlayerController : MonoBehaviour
 
     void MoveHorizontalPlayer()
     {
-        //Aplicamos una fuerza para desplazar al personaje horizontalmente
-        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+        horDisplace = Input.GetAxisRaw("Horizontal");
+
+        rbPlayer.velocity =new Vector2(playerSpeedMax * horDisplace,rbPlayer.velocity.y);
+        rbPlayer.AddForce(Vector2.right * playerSpeed * horDisplace);
     }
 }
 ```
 
-Lo siguente que podemos hacer, es aplicar el `Script` a nuestro personaje y probar como se comporta. Te vas a llevar alguna que otra sorpresa, pero como soy muy chungo, te las voy a contar antes de que las veas:
-
- * Si movemos el personaje, veras que se desplaza como si fuera en patines, tardando asi en frenar aun despues de dejar de pulsar a izquierda o derecha. Esto es debido a que lleva mucha inercia, pero ya lo solucionaremos.
+Lo siguente que podemos hacer, es aplicar el `Script` a nuestro personaje y probar como se comporta. Te vas a llevar alguna sorpresa, pero como soy muy chungo, te la voy a contar antes de que la veas:
 
  * Si movemos a nuestro muñeco a izquierda y derecha, siempre mira hacia la derecha.
 
-Bien, despues del `Spoiler` que te acabo de hacer de los pequeños fallos (y ademas cosa normal), te voy a contar como vamos a solucionarlos.
+Bien, despues del `Spoiler` que te acabo de hacer de este pequeño fallo (y ademas cosa normal), te voy a contar como vamos a solucionarlo.
 
 ## Hacer que el muñeco mire a izquierda o derecha segun vaya en un sentido o en otro.
 
@@ -132,9 +140,17 @@ Asi que bien, vamos a comenzar declarando la variable de clase `lookRight` del s
 ```c#
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
-    bool lookRight = true;      //Por defecto vamos a hacerla true
-    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+    [SerializeField] float playerSpeed;
+    [SerializeField] float playerSpeedMax;
+    Rigidbody2D rbPlayer;
+    float horDisplace;
+    bool lookRight;
+
+    void Start()
+    {
+        rbPlayer = GetComponent<Rigidbody2D>();
+        lookRight = true;
+    }
 
 ```
 
@@ -145,13 +161,9 @@ void ChangeLook()
 {
     float horizontal = Input.GetAxisRaw("Horizontal");
         
-    //Comprobamos a donde se desplaza el personaje y donde mira
     if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
     {
-        //Cambiamos la condición de hacia donde mira
         lookRight = !lookRight;
-
-        //Cambiamos la escala horizontal, para que mire a derecha o izquierda
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 }
@@ -176,14 +188,18 @@ Bien, pues ya que tenemos la función que nos pone a nuestro player mirando a iz
 ```c#
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
-    bool lookRight = true;      //Por defecto vamos a hacerla true
-    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+    [SerializeField] float playerSpeed;
+    [SerializeField] float playerSpeedMax;
+    
+    Rigidbody2D rbPlayer;
+    
+    float horDisplace;
+    bool lookRight;
 
-    private void Start()
+    void Start()
     {
-        //Referenciamos el Rigidbody2D del player
-        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+        rbPlayer = GetComponent<Rigidbody2D>();
+        lookRight = true;
     }
 
     private void Update()
@@ -198,21 +214,19 @@ public class PlayerController : MonoBehaviour
 
     void MoveHorizontalPlayer()
     {
-        //Aplicamos una fuerza para desplazar al personaje horizontalmente
-        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+        horDisplace = Input.GetAxisRaw("Horizontal");
+
+        rbPlayer.velocity =new Vector2(playerSpeedMax * horDisplace,rbPlayer.velocity.y);
+        rbPlayer.AddForce(Vector2.right * playerSpeed * horDisplace);
     }
 
     void ChangeLook()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         
-        //Comprobamos a donde se desplaza el personaje y donde mira
         if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
         {
-            //Cambiamos la condición de hacia donde mira
             lookRight = !lookRight;
-
-            //Cambiamos la escala horizontal, para que mire a derecha o izquierda
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
     }
@@ -221,24 +235,12 @@ public class PlayerController : MonoBehaviour
 
 Ahora si que si, ya cuando movemos a nuestro pixelado amigo, vemos que mira al lado donde se mueve. Problema solucionado... Si es que somos buenos a rabiar!!! Echaté un Cola-Cao que te lo has ganado Michael!!! mas aun despues de haber llegado aquí sin mandarme a freir monas. Se que esto es un pelín densito, pero es que no hay otra forma mi joven amigo, se que soy muy cansino, pero trato de explicartelo de manera que lo entiendas lo mas clarito posible. Esto solo es una pequeña base para que tu puedas hacer cosas mas complejas. Asi que paciencia, tomate el Cola-Cao, que vamos a seguir.
 
-Por cierto, que se me olvidaba, para que se mueva el muñeco, en el editor de Unity, en el panel `Inspector`, donde está la propiedad `Velocity` de nuestro maravilloso `Script`, debes aplicarle un valor de 300 como minimo para que se mueva. 
+Bien, antes de seguir, para las pruebas vamos a aplicar los siguientes valores en la ventana `Inspector` a las variables `playerSpeed` y `playerSpeedMax`
 
-Esto es porque dado el valor por defecto de la masa proporcionada por el `Rigidbody2D` y las dimensiones de nuesto amigo, necesita mucha `Velocidad` para poderse mover, dado que con 24 pixels de altura y una masa de 1, es increiblemente pesado, dado que Unity contempla las fisicas para 1 Kg/m con lo cual, para lo poco que mide nuestro amigo, es increiblemente pesado. Y dado que ya he estado yo haciendo pruebas para ajustar el valor, te lo digo de ya, pon en `Velocity` 300 y vas bien. 
-
-Otra cosa que debes hacer es modificar algunos valores, comenzando por el valor de la gravedad. Para ello nos vamos a `Edit` -> `Project Settings` y vamos al apartado del `Physics 2D`, cambiamos el valor de la gravedad de -9.81 a -981. Esto es ya te explicaré porque es, de momento tu cambia eso.
-
-![Physics2D](imgWiki/11_Physics2D.png)
-
-Y lo siguiente a cambiar son los parametros de masa, gravedad y linear drag del `Rigidbody2D` del player, los cuales ajustaremos según los siguientes valores:
- 
- | Parámetro | Valor |
- |:---|:---|
- | Mass | 0.01 |
- | Linear Drag | 10 |
- | Gravity | 1 |
- | Collision Detection | Continuous | 
-
-De todas maneras, si quieres hacer tu, tus pruebas con dicho valor, es una buena cosa que experimentes hasta ajustar al que mas te guste.
+| Variable | Valor |
+|:---|:---|
+| playerSpeed | 10 |
+| playerSpeedMax | 5 |
 
 ## Haciendo que nuestro personaje salte
 
@@ -251,9 +253,9 @@ A continuación pasaremos a crear la función, la cual será tal que así:
 ```c#
 void JumpPlayer()
 {
-    if (Input.GetKeyDown("space"))
+    if (Input.GetButtonDown("space"))
     {
-        rbPlayer.AddForce(Vector2.up * jumpForce);
+        rbPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 }
 ```
@@ -265,14 +267,19 @@ A continuación, procedemos a colocar la función que hemos creado dentro del `U
 ```c#
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
-    bool lookRight = true;      //Por defecto vamos a hacerla true
-    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+    [SerializeField] float playerSpeed;
+    [SerializeField] float playerSpeedMax;
+    [SerializeField] float jumpForce;
 
-    private void Start()
+    Rigidbody2D rbPlayer;
+    
+    float horDisplace;
+    bool lookRight;
+
+    void Start()
     {
-        //Referenciamos el Rigidbody2D del player
-        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+        rbPlayer = GetComponent<Rigidbody2D>();
+        lookRight = true;
     }
 
     private void Update()
@@ -288,61 +295,61 @@ public class PlayerController : MonoBehaviour
 
     void MoveHorizontalPlayer()
     {
-        //Aplicamos una fuerza para desplazar al personaje horizontalmente
-        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+        horDisplace = Input.GetAxisRaw("Horizontal");
+
+        rbPlayer.velocity =new Vector2(playerSpeedMax * horDisplace,rbPlayer.velocity.y);
+        rbPlayer.AddForce(Vector2.right * playerSpeed * horDisplace);
     }
 
     void ChangeLook()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         
-        //Comprobamos a donde se desplaza el personaje y donde mira
         if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
         {
-            //Cambiamos la condición de hacia donde mira
             lookRight = !lookRight;
-
-            //Cambiamos la escala horizontal, para que mire a derecha o izquierda
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
     }
 
     void JumpPlayer()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("space"))
         {
-            rbPlayer.AddForce(Vector2.up * jumpForce);
+            rbPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 }
 ```
 
-Ahora vamos a asignar en el panel `Inspector` un valor de __100__ a la propiedad `Jump Force` y vamos a darle a __Play__ para ver como se comporta.
+Ahora vamos a asignar en el panel `Inspector` un valor de __5__ a la propiedad `Jump Force` y vamos a darle a __Play__ para ver como se comporta.
 
-Si nos fijamos, si le damos varias veces al __Espacio__ nuestro personaje sigue saltando en el aire, lo cual no es lo suyo, salvo que queramos hacer una versión bastarda de _Flappy Bird_ (que por ahora no es la idea). Para solucionar esto, lo primero que vamos a hacer es crear un nuevo __Tag__ al cual llamaremos `Terrain` y que asignaremos a nuestro `Tile Map`.
+Si nos fijamos, si le damos varias veces al __Espacio__ nuestro personaje sigue saltando en el aire, lo cual no es lo suyo, salvo que queramos hacer una versión bastarda de _Flappy Bird_ (que por ahora no es la idea). 
 
-Primero y antes que nada, vamos a crear una nueva propiedad la cual vamos a llamar `canJump` y que sera de tipo `bool`.
+Para arreglar esto, podriamos usar los métodos `OnColliderEnter` o `OnColliderExit`, pero despues de pensar un poco, he tomado la decisión de hacerlo mediante el uso de `Raycast`. Básicamente lo que vamos a hacer, es lanzar un rayo contra el suelo para detectar si estamos encima o estamos en el aire. Creeme, esto es mucho efectivo y nos dará menos dolores de cabeza, que el uso de `OnCollider...`
 
-`bool canJump;`
+Lo primero que vamos a hacer, es crear una variable de tipo `bool` a la que llamaremos `OnGround`, la cual almacera `true` o `false` si esta o no el personaje en el suelo.
 
-Lo siguiente que vamos a hacer es modificar el `if` de nuestro método `JumpPlayer` dejandolo así:
+Lo siguiente es crear una función a la que llamaremos `CheckGround` y que comprobará si está o no en el suelo, para ello lanzaremos un rayo (`raycast`) que si impacta en el suelo devolvera `true`.
 
-```c#
-if (Input.GetKeyDown("space") && canJump)
-{
-    canJump = false;
-    rbPlayer.AddForce(Vector2.up * jumpForce);
-}
-```
+Antes de nada, vamos a crear una variable de clase a la que llamaremos:
 
-A continuación, vamos a emplear el método de __Unity__ `OnCollisionEnter2D`.
+`[SerializeField] float distanceRay;`
+
+Seguidamente escribiremos la función:
 
 ```c#
-void OnCollisionEnter2D(Collision2D collision)
+void CheckGround()
 {
-    if(collision.transform.tag == "Terrain") 
+    Debug.DrawRay(transform.position, Vector2.down*distanceRay, Color.red);
+
+    if (Physics2D.Raycast(transform.position, Vector2.down, distanceRay))
     {
-        canJump = true;
+        OnGround = true;
+    }
+    else
+    {
+        OnGround = false;
     }
 }
 ```
@@ -350,22 +357,27 @@ void OnCollisionEnter2D(Collision2D collision)
 Quedandonos el código del siguiente modo:
 
 ```c#
-public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float velocity;    //Para la velocidad de movimiento horizontal
-    bool lookRight = true;      //Por defecto vamos a hacerla true
-    bool canJump;               //Para controlar el salto
-    Rigidbody2D rbPlayer;       //Para referenciar el Rigidbody2D del player
+    [SerializeField] float playerSpeed;
+    [SerializeField] float playerSpeedMax;
+    [SerializeField] float jumpForce;
+    [SerializeField] float distanceRay;
 
-    private void Start()
+    Rigidbody2D rbPlayer;
+    
+    float horDisplace;
+    bool lookRight;
+
+    void Start()
     {
-        //Referenciamos el Rigidbody2D del player
-        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+        rbPlayer = GetComponent<Rigidbody2D>();
+        lookRight = true;
     }
 
     private void Update()
     {
         ChangeLook();
+        CheckGround();
         JumpPlayer();
     }
 
@@ -376,45 +388,58 @@ public class PlayerController : MonoBehaviour
 
     void MoveHorizontalPlayer()
     {
-        //Aplicamos una fuerza para desplazar al personaje horizontalmente
-        rbPlayer.AddForce(Vector2.right * velocity * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+        horDisplace = Input.GetAxisRaw("Horizontal");
+
+        rbPlayer.velocity =new Vector2(playerSpeedMax * horDisplace,rbPlayer.velocity.y);
+        rbPlayer.AddForce(Vector2.right * playerSpeed * horDisplace);
     }
 
     void ChangeLook()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         
-        //Comprobamos a donde se desplaza el personaje y donde mira
         if((horizontal>0 && !lookRight)||(horizontal<0 && lookRight))
         {
-            //Cambiamos la condición de hacia donde mira
             lookRight = !lookRight;
-
-            //Cambiamos la escala horizontal, para que mire a derecha o izquierda
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
     }
 
     void JumpPlayer()
     {
-        if (Input.GetKeyDown("space") && canJump)
+        if (Input.GetButtonDown("space"))
         {
-            canJump = false;
-            rbPlayer.AddForce(Vector2.up * jumpForce);
+            rbPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void CheckGround()
     {
-        if(collision.transform.tag == "Terrain") 
+        Debug.DrawRay(transform.position, Vector2.down*distanceRay, Color.red);
+
+        if (Physics2D.Raycast(transform.position, Vector2.down, distanceRay))
         {
-            canJump = true;
+            OnGround = true;
+        }
+        else
+        {
+            OnGround = false;
         }
     }
 }
 ```
 
+Como valor de la variable `distanceRay`, le aplicaremos en el `Inspector` un valor de 0.6
+
+Asi que nos queda los valores de las variables del siguiente modo:
+
+| Variable | Valor |
+|:---|:---|
+| playerSpeed | 10 |
+| playerSpeedMax | 5 |
+| jumpForce | 5 |
+| distanceRay | 0.6 |
+
 Pues bien, hasta aquí hemos visto como hacer que nuestro muñeco se mueva y salte, creo que ha sido bastante instructivo y espero que te haya quedado claro como hacer esto. En principio y recapitulando, veras que no es excesivamente dificil hacer mover o saltar a nuestro personaje, basicamente se trata de añadir fuerzas y poco mas. Quedate con esto en tu cerebro mi joven padawan, porque te va a ser de gran utilidad.
 
 Para la siguiente parte veremos algunas cosas mas interesantes, como animar a nuestro querido personaje, pero eso ya es harina de otro costal, asi que me piro ya, que por hoy esta bien.
-
