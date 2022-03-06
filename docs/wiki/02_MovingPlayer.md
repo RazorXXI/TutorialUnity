@@ -442,6 +442,10 @@ Asi que nos queda los valores de las variables del siguiente modo:
 | jumpForce | 5 |
 | distanceRay | 0.6 |
 
+Un dato muy importante. Para que esto funcione, debemos irnos a `Edit` -> `Project Settings` -> `Physics2D` y desactivamos la casilla `Queries Start In Collider`. Lo que hace esto, es que cuando salga el `raycast` de nuestro personaje, omitirá el `collider` de este, ya que sino, nos daria una falsa lectura al pasar por dicho `collider`. Asi que tu ponlo como yo te digo y listo.
+
+![Physics2](imgWiki/11_Physics2D.png)
+
 Pues bien, hasta aquí hemos visto como hacer que nuestro muñeco se mueva y salte, creo que ha sido bastante instructivo y espero que te haya quedado claro como hacer esto. En principio y recapitulando, veras que no es excesivamente dificil hacer mover o saltar a nuestro personaje, basicamente se trata de añadir fuerzas y poco mas. Quedate con esto en tu cerebro mi joven padawan, porque te va a ser de gran utilidad.
 
 Para la siguiente parte veremos algunas cosas mas interesantes, como animar a nuestro querido personaje, pero eso ya es harina de otro costal, asi que me piro ya, que por hoy esta bien.
