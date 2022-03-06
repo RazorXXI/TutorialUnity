@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rbPlayer;
     float horDisplace;
 
-	private void Start()
+    private void Start()
     {
     	//Referenciamos el Rigidbody2D del player
         rbPlayer = GetComponent<Rigidbody2D>();
