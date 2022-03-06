@@ -56,13 +56,15 @@ Lo siguiente que tenemos que hacer es referenciar al `Rigidbody2D` de nuestro Pl
 ```c#
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float velocity;	//Para la velocidad de movimiento horizontal
-    Rigidbody2D rbPlayer;		//Para referenciar el Rigidbody2D del player
+    [SerializeField] float playerSpeed;
+    [SerializeField] float playerSpeedMax;
+    Rigidbody2D rbPlayer;
+    float horDisplace;
 
 	private void Start()
     {
     	//Referenciamos el Rigidbody2D del player
-        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+        rbPlayer = GetComponent<Rigidbody2D>();
     }
 ```
 
@@ -107,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {        
-        rbPlayer = gameObject.GetComponent<Rigidbody2D>();
+        rbPlayer = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
