@@ -87,9 +87,11 @@ Si nos fijamos en el `Mesh Collider` de la imagen, veremos que está formado por
 Como dicen que una imagen vale mas que mil palabras, y yo estoy bastante vago para escribir, te lo voy a mostrar con imágenes.
 
  1 - La figura chunga en cuestión.
+
  ![Figura Chunga](../img/13_FiguraChunga.png)
 
  2 - Eliminamos el `Mesh Collider` y creamos tres Box Colliders, vamos ajustando cada uno a la figura chunga hasta tener algo parecido a esto.
+ 
  ![Colliders Bien Trabajados](../img/13_CollidersBien.png)
 
 Asi ya de esta forma, nos vamos a quitar un montón de dolores de cabeza que nos puede dar el `Mesh Collider`.
