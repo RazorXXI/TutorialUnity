@@ -20,3 +20,11 @@ El componente `Rigidbody` tiene una serie de parámetros que serán los que modi
  - **Angular Drag**: Es la resistencia al aire cuando el objeto es girado por una fuerza.
  - **Use Gravity**: Permite que la gravedad afecte al objeto, si esta activada esta opción.
  - **Is Kinematic**: Si la opción está activada, las físicas del motor dejaran de afectar a nuestro `GameObject`, el cual solo podrá moverse, empleando su componente `Transform`.
+ - **Interpolate**: Sirve para que cuando estemos usando físicas, al mover el objeto, notemos un comportamiento extraño, como por ejemplo ir a tirones o que vibra al desplazarse, podemos usarlo para suavizar esto. Este parámetro, tiene 3 valores que podemos aplicar:
+     - **None**: Interpolación desactivada.
+     - **Interpolate**: El movimiento será suavizado basandose en la posición del *Transform* del frame anterior.
+     - **Extrapolate**: El movimiento será suavizado basandose en la posición del *Transform* del frame siguiente.
+ - **Collision Detection**: Sirve para que los objetos que se mueven a mucha velocidad (mediante la aplicación de fuerzas físicas), no atraviesen otros objetos, al no detectar la colisión. Sus valores son:
+     - **Discrete**
+     - **Continuous**
+     - **Continuous Dynamic**
