@@ -73,6 +73,14 @@ Antes de seguir, te voy a dejar un [ejemplo](../scripts/ControlRigidBody.cs) de 
 
 Este componente es el que va a definir el volumen o envoltura del objeto con el que otros objetos podrán colisionar, apoyarse o realizar otras acciones.
 
+Los `Colliders` mas sencillos son:
+
+ * Box Collider: El cual es una Caja (vamos a ser más tecnicos, un Hexaedro).
+ * Sphere Collider: El cual es una esfera (Te has dado cuenta por el nombre eehh... si es que eres un crack!!)
+ * Capsule Collider: El cual es una capsula.
+ * Mesh Collider: El cual es una malla adaptada al volumen de un cuerpo irregular. (**Ojo con este tipo de collider, pues puede dar problema a la hora de detectar colisiones, si no tiene activado su parámetro CONVEX**).
+
+ ![Ejemplo de Colliders Simples](../img/13_Colliders.png)
 
 
 [^1]: Este modo de detectar las colisiones, es el más rapido y el que normalmente se usa.
