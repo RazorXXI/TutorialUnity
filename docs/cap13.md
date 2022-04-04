@@ -82,6 +82,19 @@ Los `Colliders` mas sencillos son:
 
  ![Ejemplo de Colliders Simples](../img/13_Colliders.png)
 
+Si nos fijamos en el `Mesh Collider` de la imagen, veremos que está formado por mogollon de caras, mallas y demas chascas. Si quisieramos resolver esto de una manera mas óptima, lo primero que hariamos sería eliminar el componente `Mesh Collider` y crear varios colliders mas simples para el mismo objeto.
+
+Como dicen que una imagen vale mas que mil palabras, y yo estoy bastante vago para escribir, te lo voy a mostrar con imágenes.
+
+ 1 - La figura chunga en cuestión.
+ ![Figura Chunga](../img/13_FiguraChunga.png)
+
+ 2 - Eliminamos el `Mesh Collider` y creamos tres Box Colliders, vamos ajustando cada uno a la figura chunga hasta tener algo parecido a esto.
+ ![Colliders Bien Trabajados](../img/13_CollidersBien.png)
+
+Asi ya de esta forma, nos vamos a quitar un montón de dolores de cabeza que nos puede dar el `Mesh Collider`.
+
+Si bien es lo suyo usar colliders simples, habra veces que tendremos que recurrir a otras cosas como el `Mesh Collider`, pero si puedes, yo te recomiendo "Michael" que uses los colliders simples.
 
 [^1]: Este modo de detectar las colisiones, es el más rapido y el que normalmente se usa.
 [^2]: Este método de detectar colisiones es el mas lento y solo se deberá usar en objetos que se tengan que mover muy rápido
