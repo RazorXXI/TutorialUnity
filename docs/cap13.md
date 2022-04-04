@@ -28,6 +28,7 @@ El componente `Rigidbody` tiene una serie de parámetros que serán los que modi
      - **Discrete**: Es el valor por defecto, para detectar colisiones. Es utilizado para colisiones normales.
      - **Continuous**: Se emplea para la detección de colisión contra colisionadores dinámicos (aquellos que tienen Rigidbody).
      - **Continuous Dynamic**: Se emplea para evitar que el objeto con el Rigidbody, pueda atravesar el `Mesh Renderer` y a través de otros objetos con `Rigidbody` los cuales tienen configurada su `Collision Detection` como `Continuous`, cuando se mueven muy rápido. 
+     
      | **IMPORTANTE** |
      |---|
      | Este método de detectar colisiones es el mas lento y solo se deberá usar en objetos que se tengan que mover muy rápido |
