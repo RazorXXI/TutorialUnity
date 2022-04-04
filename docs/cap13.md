@@ -80,7 +80,7 @@ Los `Colliders` mas sencillos son:
  * Capsule Collider: El cual es una capsula.
  * Mesh Collider: El cual es una malla adaptada al volumen de un cuerpo irregular. (**Ojo con este tipo de collider, pues puede dar problema a la hora de detectar colisiones, si no tiene activado su parámetro CONVEX**).
 
- [Ejemplo de Colliders Simples](../img/13_Colliders.png)
+ ![Ejemplo de Colliders Simples](../img/13_Colliders.png)
 
 
 [^1]: Este modo de detectar las colisiones, es el más rapido y el que normalmente se usa.
