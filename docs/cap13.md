@@ -25,10 +25,17 @@ El componente `Rigidbody` tiene una serie de parámetros que serán los que modi
      - **Interpolate**: El movimiento será suavizado basandose en la posición del *Transform* del frame anterior.
      - **Extrapolate**: El movimiento será suavizado basandose en la posición del *Transform* del frame siguiente.
  - **Collision Detection**: Sirve para que los objetos que se mueven a mucha velocidad (mediante la aplicación de fuerzas físicas), no atraviesen otros objetos, al no detectar la colisión. Sus valores son:
-     - **Discrete**: Es el valor por defecto, para detectar colisiones. Es utilizado para colisiones normales.
-     - **Continuous**: Se emplea para la detección de colisión contra colisionadores dinámicos (aquellos que tienen Rigidbody).
-     - **Continuous Dynamic**[^1]: Se emplea para evitar que el objeto con el Rigidbody, pueda atravesar el `Mesh Renderer` y a través de otros objetos con `Rigidbody` los cuales tienen configurada su `Collision Detection` como `Continuous`, cuando se mueven muy rápido. 
-     
+     - **Discrete**[^1]: Es el valor por defecto, para detectar colisiones. Es utilizado para colisiones normales.
+     - **Continuous**: Se detectarán colisiones para cualquier `Mesh Collider` que no tenga un `Rigidbody` y que se encuentre en la trayectoria del nuestro. También sirve, para evitar que otros `Rigidbodys` configurados con el modo `Continuous Dynamic` puedan atravesar nuestro `Rigidbody`
+     - **Continuous Dynamic**[^2]: Se emplea para evitar que el objeto con el Rigidbody, pueda atravesar el `Mesh Collider` y a través de otros objetos con `Rigidbody` los cuales tienen configurada su `Collision Detection` como `Continuous`, cuando se mueven muy rápido. 
 
-     
-     [^1]: Este método de detectar colisiones es el mas lento y solo se deberá usar en objetos que se tengan que mover muy rápido
+ - **Constraints**: Se utiliza para aplicar restricciónes de movimiento y rotación a nuestro `Rigidbody`.
+     - **Freeze Position**: Bloquea el movimiento del `Rigidbody` en los ejes que seleccionemos.
+     - **Freeze Rotation**: Bloquea la rotación del `Rigidbody` en los ejes que seleccionemos.
+
+Una vez que apliquemos el componente `Rigidbody` a un **GameObject** de nuestra escena, vamos a tratar con el mediante el uso de las físicas. Por ello, ya vamos a emplear el componente `Transform` para mover nuestro objeto, sino que haremos uso de las fuerzas y demás físicas para este y otros fines.
+
+
+
+[^1]: Este modo de detectar las colisiones, es el más rapido y el que normalmente se usa.
+[^2]: Este método de detectar colisiones es el mas lento y solo se deberá usar en objetos que se tengan que mover muy rápido
