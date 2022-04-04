@@ -30,12 +30,48 @@ El componente `Rigidbody` tiene una serie de parámetros que serán los que modi
      - **Discrete**[^1]: Es el valor por defecto, para detectar colisiones. Es utilizado para colisiones normales.
      - **Continuous**: Se detectarán colisiones para cualquier `Mesh Collider` que no tenga un `Rigidbody` y que se encuentre en la trayectoria del nuestro. También sirve, para evitar que otros `Rigidbodys` configurados con el modo `Continuous Dynamic` puedan atravesar nuestro `Rigidbody`
      - **Continuous Dynamic**[^2]: Se emplea para evitar que el objeto con el Rigidbody, pueda atravesar el `Mesh Collider` y a través de otros objetos con `Rigidbody` los cuales tienen configurada su `Collision Detection` como `Continuous`, cuando se mueven muy rápido. 
+     - **Continuous Speculative**: 
 
  - **Constraints**: Se utiliza para aplicar restricciónes de movimiento y rotación a nuestro `Rigidbody`.
      - **Freeze Position**: Bloquea el movimiento del `Rigidbody` en los ejes que seleccionemos.
      - **Freeze Rotation**: Bloquea la rotación del `Rigidbody` en los ejes que seleccionemos.
 
 Una vez que apliquemos el componente `Rigidbody` a un **GameObject** de nuestra escena, vamos a tratar con el mediante el uso de las físicas. Por ello, ya vamos a emplear el componente `Transform` para mover nuestro objeto, sino que haremos uso de las fuerzas y demás físicas para este y otros fines.
+
+Como ya sabemos, para poder usar un componente, primero deberemos referenciarlo. Pues bien, con el caso de `Rigidbody` mas de lo mismo. 
+
+Ya vimos con la parte de [Control de Componentes](cap07.md), al principio como acceder a un componente `Rigidbody`. Ahora vamos a ver una manera de hacerlo bien, para que en el caso de que al diseñador se le olvide referenciar al componente, el código lo haga por el y no nos de un fallo de `Null Reference`
+
+```c#
+public class RigidBodyReferencia : Monobehaviour
+{
+    [SerializeField] Rigidbody rb;
+    //Aqui vendrian mas variables
+
+    void Start()
+    {
+        if(rb == null) 
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+        //Otras cosas a inicializar
+    }
+
+    //Mas codigo haciendo otras cosas
+}
+```
+
+Bien, no voy a explicar al dedillo lo que hace esto, ya que en teoría, si estas aquí es que primero te has empapado bien la parte anterior sobre `Scripts` y si no, pues parate aquí y vete a leerte antes todo lo anterior relativo a `Scripts` en Unity y esos menesteres, y ya si eso cuando acabes, vuelve aquí para que te quede claro.
+
+Pues bien, tal y como hemos visto en el código anterior, esta es una forma muy correcta de evitar que si el diseñador se olvida de referenciar el componente que nos interesa, directamente en la función `Start` lo comprobamos y se lo referenciamos.
+
+No voy a entrar en detalle de como acceder a los atributos del `Rigidbody` pues es algo que vimos y que te he puesto antes al comienzo de este código. Te lo vuelvo a repetir... Si no te acuerdas, ve al enlace y echale un vistazo, Torpedin!!
+
+Antes de seguir, te voy a dejar un [ejemplo](../scripts/ControlRigidBody.cs) de cosas que toquetear al `Rigidbody`, para que vayas viendo como se hacen cierto tipo de cosas.
+
+## El Componente Collider
+
+Este componente es el que va a definir el volumen o envoltura del objeto con el que otros objetos podrán colisionar, apoyarse o realizar otras acciones.
 
 
 
