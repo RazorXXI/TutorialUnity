@@ -102,7 +102,53 @@ Bueno, que me enrollo... vamos a seguir.
 
 Ahora vamos a ver como detectar colisiones desde el código, que aunque ya lo hemos visto de pasada en capítulos anteriores, ahora si le vamos a meter fuerte y flojo al tema. Por un lado, vamos a ver una serie de reglas "**OBLIGATORIAS**" a la hora de poder detectar colisiones mediante `script`, también vamos a ver como detectar colisiones o tratar colisiones mediante `Layers`.
 
+Básicamente, hay dos reglas fundamentales que deben cumplirse para detectar colisiones:
+ 
+ 1 - Dos objetos tienen que tener añadido un `Rigidbody`.
+ 2 - Dos objetos tienen que tener añadido un `Collider`.
 
+Estas dos reglas, son fundamentales si lo que queremos es detectar colisiones, ya que si no se cumple uno de los dos puntos, no vamos a poder ejecutar por código las acciones asociadas a la detección de colisiones.
+
+Ya anteriormente, vimos algunas funciones para dectar colisiones. Cabe indicar, que en la detección de colisiones, hay tres acciones que se producen en una colision:
+
+ - OnCollisionEnter: Esta se activa cuando se ha producido una colisión en ese Frame.
+ - OnCollisionStay: Esta se activa una vez por Frame, mientras el objeto está colisionando con otro.
+ - OnCollisionExit: Se activa, cuando la colisión ha terminado.
+
+Vamos a poner un ejemplo de estos tres métodos:
+
+```c#
+//Aquí vendría código relativo a otras cosas que ahora no nos importan
+
+void OnCollisionEnter(Collision collision)
+{
+    //El mensaje se lanzaría en el momento de colisionar
+    Debug.Log("Se acaba de producir una colision");
+}
+
+void OnCollisionStay(Collision collision)
+{
+    //El mensaje se lanzaría mientras durase la colisión
+    Debug.Log("Se está colisionando actualmente");
+}
+
+void OnCollisionExit(Collision collision)
+{
+    Debug.Log("Se ha terminado la colisión");
+}
+```
+
+Este, sería un ejemplo muy básico de lanzar una acción en los diferentes estados de la colisión. Esto se puede complicar y extender tanto como queramos. Por ejemplo, podemos lanzar una explosión en el momento de colisionar, también podemos destruir un objeto, a la hora de salir de una colision o activar un mecanismo (trampa que mata, bicho que te persigue, etc...).
+
+Debemos tener en cuenta una cosilla muy sencilla, que una colisión, es un evento que desencadena una serie de acciones. Metete esto muy bien en la sesera, pues es importante.
+
+Bien, ya que hemos visto el evento de colisión y como manejar sus diferentes estados, vamos a ver el evento `Trigger`. Este es, otro evento de colisión, pero un poco particular. En el caso de las colisiones vistas antes, hemos dicho que deben tener un `Rigidbody` y un `Collider`, ¿Te acuerdas o no?, pues bien, esto es importante, ya que si un objeto no tuviera estos dos componentes, podría ser traspasado. Pues bien, el `Trigger` hace justamente esto, que un objeto sea traspasado, pero, en este caso concreto, los `triggers` se suelen aplicar a *objetos vacios*, los cuales no poseen `Rigidbody` y cuyo `collider` esta marcado como `Is Trigger`.
+
+Tranqui colega, que si no te enteras, ahora te lo voy a explicar con fotos.
+
+![Objeto Trigger](../img/13_TriggerEvent.png)
+
+Si nos fijamos en la imagen, veremos el objeto que pone `TriggerPorteriaA`, dicho elemento no es otra cosa que un `Empty Object` con un `Box Collider`, como se puede ver en el panel Inspector. Pues bien, si nos fijamos en el panel inspector, veremos la casilla que está apuntada por la flecha roja y que pone `Is Trigger`. Esta es la que se le debe activar al `collider` del objeto vacio, para que se comporte como un trigger. Ya que si no está marcada la casi
 
 
 
