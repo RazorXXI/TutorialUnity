@@ -167,6 +167,11 @@ private void OnTriggerEnter(Collider other)
         }
     }
 ```
+He de indicar, que los métodos para controlar las fases de los `Triggers` son iguales que los que tenemos para `Collisions`, los cuales son:
+
+ - OnTriggerEnter.
+ - OnTriggerStay.
+ - OnTriggerExit.
 
 Si prestamos atención al código de este ejemplo, veremos que, vamos a identificar el objeto `trigger` mediante su tag, el cual se lo habremos definido previamente. Así, de esta forma y mediante el uso de una condición `if`, podemos disparar una acción u otra, dependiendo del trigger que traspasemos.
 
@@ -203,6 +208,7 @@ Este mensaje, podria haber sido sustituido por una acción `Destroy` que destroz
 
 Por cierto, se me olvidaba decirte. Solo disponemos de 32 `Layers` para emplear en Unity. Porque te digo esto...? Sencillo, para que no te vayas de loco creando layer para cada chorrada, si tienes edificios con paredes, aunque tengas 1000 edificios, tu solo necesitas un `Layer` que llamaras pared y que se aplicará a todas las paredes que necesites contemplar en colisiones. Para con el resto, igual. Asi que ya sabes mi joven aprendiz, agrupa y optimiza el uso de tus `layers`.
 
+Bueno, creo que esto es todo por el momento. Se que ha sido espesote, pero creeme es tremendamente necesario entenderlo bien y increiblemente util para hacer cosas en tus juegos. Asi que, asimila todo este compendio de conocimiento que te he brindado y para el próximo capítulo seguimos con mas.
 
 [^1]: Este modo de detectar las colisiones, es el más rapido y el que normalmente se usa.
 [^2]: Este método de detectar colisiones es el mas lento y solo se deberá usar en objetos que se tengan que mover muy rápido
