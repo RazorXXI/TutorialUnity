@@ -148,7 +148,30 @@ Tranqui colega, que si no te enteras, ahora te lo voy a explicar con fotos.
 
 ![Objeto Trigger](../img/13_TriggerEvent.png)
 
-Si nos fijamos en la imagen, veremos el objeto que pone `TriggerPorteriaA`, dicho elemento no es otra cosa que un `Empty Object` con un `Box Collider`, como se puede ver en el panel Inspector. Pues bien, si nos fijamos en el panel inspector, veremos la casilla que está apuntada por la flecha roja y que pone `Is Trigger`. Esta es la que se le debe activar al `collider` del objeto vacio, para que se comporte como un trigger. Ya que si no está marcada la casi
+Si nos fijamos en la imagen, veremos el objeto que pone `TriggerPorteriaA`. Dicho elemento no es otra cosa que un `Empty Object` con un `Box Collider`, como se puede ver en el panel Inspector. Pues bien, si prestamos atención, veremos la casilla que está apuntada por la flecha roja y que pone `Is Trigger`. Esta es la que se le debe activar al `collider` del objeto vacio, para que se comporte como un trigger. Ya que si no está marcada la casilla, no se detectará el evento de colisión al ser traspasado.
+
+La imagen anterior, corresponde a un ejemplo, donde el `Empty Object` se comporta como una porteria. Cuando un objeto, el cual vemos en la imagen en color naranja, que es el que porta el script, traspasa el objeto vacio, activará un evento controlado por el `trigger` el cual nos va a decir que hemos marcado gol en la porteria A.
+
+Te voy a dejar aquí un fragmento del código que hace eso.
+
+```c#
+private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "PorteriaA")
+        {
+            Debug.Log("Gol en la porteria A");
+        }
+        else if (other.tag == "PorteriaB")
+        {
+            Debug.Log("Gol en la porteria B");
+        }
+    }
+```
+
+Si prestamos atención al código de este ejemplo, veremos que, vamos a identificar el objeto `trigger` mediante su tag, el cual se lo habremos definido previamente. Así, de esta forma y mediante el uso de una condición `if`, podemos disparar una acción u otra, dependiendo del trigger que traspasemos.
+
+Creo que se entiende hasta el momento como funcionan los `triggers` y los `colliders`, no Michael?? Bueno, espero si porque seguimos con mas colisiones que el Destruction Derby...
+
 
 
 
