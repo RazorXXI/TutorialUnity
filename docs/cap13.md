@@ -172,7 +172,34 @@ Si prestamos atención al código de este ejemplo, veremos que, vamos a identifi
 
 Creo que se entiende hasta el momento como funcionan los `triggers` y los `colliders`, no Michael?? Bueno, espero si porque seguimos con mas colisiones que el Destruction Derby...
 
+El uso de tags para identificar elementos con los que se colisiona, es bastante comodo, pero no por ello es excesivamente util. Y porque?? Te estaras preguntando... pues bien, te pongo un ejemplo...
 
+Imaginate que en tu juego hay 10000 objetos, y queremos buscar todos aquellos con un tag para comprobar colisiones. Primero, tendriamos que tener una lista de tags que ni la Biblia... Segundo, tendriamos que contemplar que tags pueden colisionar con que objeto, cuales serán traspasados... etc... y eso es un follón mastodontico de controlar. Para evitarnos todos estos dolores de cabeza, en `Unity` se emplean los `Layers` para las condiciones de las colisiones, para controlar que colisiona con quien, y demas historias.
+
+Esto que te acabo de decir, se controla desde una cosa que se llama `Matriz de Colisiones` y a la cual accedemos desde Edit -> Project Settings -> Physics. Es desde aquí donde se configura que colisiona con que o que no...
+
+![Matriz de Colisiones](../img/13_MatrizColisiones.png)
+
+Por lo tanto, lo mas común para trabajar con colisiones en Unity, son los `Layers`.
+
+Voy a poner un ejemplo para entender como trabajar con `Layers` para detectar colisión y hacer cosas. Vamos a ver el siguiente código:
+
+```c#
+//Voy a indicar que el Layer 6, corresponde a un objeto de tipo Muro.
+
+private void OnCollisionEnter(Collision collision)
+    {
+        //Controlo lo que hace segun con la capa que colisione
+        if (collision.gameObject.layer == 6)
+        {
+            Debug.Log("Has Colisionado contra un Muro");
+        }
+    }
+```
+
+Aunque es bastante simple el ejemplo, no por ello deja de ser muy aclarador... Basicamente lo que hace es, que si el objeto que porta el script, colisiona contra un objeto, que es pasado por el parámetro de la función como `collision` (tranquilo, que esto no debes tocarlo, Unity lo gestina para que sepa con que se ha chocado). A continuación lo que hacemos, es comprobar si el objeto `collision` pertenece al layer 6 (En nuestro ejemplo el layer que tendran los muros y paredes...), y si es asi, pues entonces mandará un mensaje por consola indicando que ha chocado contra un muro. Este mensaje, podria haber sido sustituido por una acción `Destroy` que destrozara la pared al chocar con esta, o que eliminara al player si chocaba contra ella, o que le restase vida, etc... no voy a seguir poniendo mas ejemplos, te dejo que te partas tu un ratito la cabecita, pensando en que cosas podrias hacer con las colisiones.
+
+Por cierto, se me olvidaba decirte. Solo disponemos de 32 `Layers` para emplear en Unity. Porque te digo esto...? Sencillo, para que no te vayas de loco creando layer para cada chorrada, si tienes edificios con paredes, aunque tengas 1000 edificios, tu solo necesitas un `Layer` que llamaras pared y que se aplicará a todas las paredes que necesites contemplar en colisiones. Para con el resto, igual. Asi que ya sabes mi joven aprendiz, agrupa y optimiza el uso de tus `layers`.
 
 
 [^1]: Este modo de detectar las colisiones, es el más rapido y el que normalmente se usa.
