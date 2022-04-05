@@ -98,5 +98,13 @@ Asi ya de esta forma, nos vamos a quitar un montón de dolores de cabeza que nos
 
 Si bien es lo suyo usar colliders simples, habra veces que tendremos que recurrir a otras cosas como el `Mesh Collider`, pero si puedes, yo te recomiendo "Michael" que uses los colliders simples.
 
+Bueno, que me enrollo... vamos a seguir.
+
+Ahora vamos a ver como detectar colisiones desde el código, que aunque ya lo hemos visto de pasada en capítulos anteriores, ahora si le vamos a meter fuerte y flojo al tema. Por un lado, vamos a ver usa serie de reglas "**OBLIGATORIAS**" a la hora de poder detectar colisiones mediante `script`, también vamos a ver como detectar colisiones o tratar colisiones mediante `Layers`.
+
+
+
+
+
 [^1]: Este modo de detectar las colisiones, es el más rapido y el que normalmente se usa.
 [^2]: Este método de detectar colisiones es el mas lento y solo se deberá usar en objetos que se tengan que mover muy rápido
