@@ -1,4 +1,4 @@
-# Capítulo 1 - Físicas en Unity 3D
+# Capítulo 1 - Físicas en Unity 3D. Rigidbody y Colisiones Varias
 
 Que tal mi querido Einstein!! Hoy toca hablar de física... pero no cualquier física... no te voy a contar mierdas sobre la teoría de la relatividad, mecánica cuántica o la teoría de cuerdas. Te voy a contar sobre Física en Unity. Así que acomodate, pillate algo fresquito para meter al estomago, que arrancamos.
 
