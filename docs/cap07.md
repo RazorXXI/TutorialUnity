@@ -4,9 +4,15 @@ En este capítulo vamos a ver muchas cosas, desde como se comunican entre si los
 
   ## Como se comunican los Objetos a través del código
   
-  Un detalle importante para poder acceder a un componente, es que es necesario tener una referencia al mismo.
+  Bien, para tener claro como se comunican los objetos desde el código, primero debemos tener claro el concepto de referencia de un `GameObject`. Esto no es otra cosa, que la declaración de una variable de tipo `GameObject` por ejemplo, la cual indicaremos en nuestro script como `[SerializeField]`, para poder se accesible desde el editor de Unity, y de ese modo, poder arrastrar el objeto que queramos referenciar.
   
-  Para obtener una referencia a un componente, debemos acceder a este, del siguiente modo:
+  Pues bien, teniendo claro esto, y si no te queda claro ahora, tu tranqui, que a medida que avances en este capítulo, vas a ir entendiendo esto en tu mollera.
+  
+  Seguimos con la cosa de, como se comunican los objetos a través de código. Pues para que te quede claro muchacho, los objetos se comunican a traves de sus componentes... Y que es un componente, te estaras preguntando... Pues resumiendo mucho, un componente todo aquello que podamos agregar a un GameObject en Unity... UN SCRIPT ES UN COMPONENTE, UN MATERIAL ES UN COMPONENTE, y asi podemos llevarno un buen rato... así que ya sabes, un componente es cualquier cosa que podamos agregar a un GameObject en Unity... Metete esto en la mollera a maza y martillo, pa´ siempre.
+  
+  Pues tal y como hemos dicho ya, para poder acceder a las cosas en Unity, debemos obtener una referencia, para los componentes, podemos conseguir una referencia directamente a traves del editor de Unity, mediante una variable publica o serializada, o a traves del código.
+  
+  Para obtener una referencia a un componente desde código, debemos acceder a este, del siguiente modo:
   
   ```c#
   GetComponent<Componente>();
@@ -15,6 +21,7 @@ En este capítulo vamos a ver muchas cosas, desde como se comunican entre si los
   Lo vamos a entender mejor con un ejemplo:
   
   ```c#
+  //Aqui lo podemos referenciar arrastrando el Objeto desde el editor de Unity
   public Rigidbody rig = GetComponent<Rigidbody>();
   ```
   
@@ -22,7 +29,23 @@ En este capítulo vamos a ver muchas cosas, desde como se comunican entre si los
   
   Por lo tanto y para que quede completamente claro, la manera de comunicarse con los `GameObjects` es mediante **referencias**.
   
-  La manera mas común de referenciar un GameObject, es mediante su asignación (arrastrarlo) en el editor de Unity. Aunque también se pueden referenciar mediante código, eso lo veremos mas adelante, la mas común y cómoda es mediante el arrastrar en el editor.
+  La manera mas común de referenciar un GameObject, es mediante su asignación (arrastrarlo) en el editor de Unity, como ya te he dicho al principio. Aunque también se pueden referenciar mediante código, que también te lo he dicho al principio, la mas común y cómoda es mediante el arrastrar en el editor. Pero como soy buena persona, te voy a enseñar como se haría desde el código sin arrastrar desde el editor.
+  
+  ```c#
+  //Supongamos que tenemos una clase llamada mover, lo cual mueve un objeto
+  //El script deberá ser aplicado al objeto que vayamos a mover... Arrastralo hasta el objeto que quieras mover
+  
+  public class mover : Monobehaviour 
+  {
+    Rigidbody rb; //Variable para referenciar el componente Rigidbody del objeto que porta el script
+    
+    void Start() 
+    {
+      rb = GetComponent<Rigidbody>(); //Asi referenciamos el componente rigidbodoy del objeto desde el código.
+      rb.mass = 2.5f;                 //Accediendo al atributo mass del componente rigidbodoy del objeto y cambiando su valor de masa.
+    }
+  }
+  ```
   
   | **OJO AL MANOJO** |
   |:---|
