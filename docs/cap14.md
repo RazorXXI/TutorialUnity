@@ -31,4 +31,4 @@ Los tipos de `Joints` que tenemos son:
  - Character Joint: Aquí no te voy a traducir esto, y mejor te explico de que va esta unión. `Character Joint` básicamente su función es relajar completamente las articulaciones de un personaje 3D, haciendo el `efecto Ragdoll`[^1]. Y para que sirve? Pues un ejemplo sería cuando muere el personaje. Igualmente, puedes consultar toda su información, en la [documentación de Unity](https://docs.unity3d.com/Manual/class-CharacterJoint.html).
  - Configurable Joint:
 
- [^1] Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
+ [^1]: Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
