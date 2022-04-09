@@ -29,6 +29,7 @@ Los tipos de `Joints` que tenemos son:
  - Spring Joint: Pues `Spring` es muelle en inglés, asi que esta unión se comporta como un muelle, ya está, así de simple. Te lo vuelvo a repetir, se que soy muy pesado, pero revisa la [documentación de Unity](https://docs.unity3d.com/Manual/class-SpringJoint.html) para enterarte bien de los parámetros de esta unión. Que si, que está en ingles. Pero es que en informática la gran mayoría de las cosas están en inglés, así que ya sabes, toca ponerse las pilas con el inglés o tirar del traductor de Google.
 
  - Character Joint: Aquí no te voy a traducir esto, y mejor te explico de que va esta unión. `Character Joint` básicamente su función es relajar completamente las articulaciones de un personaje 3D, haciendo el `efecto Ragdoll`[^1]. Y para que sirve? Pues un ejemplo sería cuando muere el personaje. Igualmente, puedes consultar toda su información, en la [documentación de Unity](https://docs.unity3d.com/Manual/class-CharacterJoint.html).
- - Configurable Joint:
+
+ - Configurable Joint: Este `joint` se usa para tocarle los bajos al motor de Unity para personalizar a tope el `joint`. No lo voy a explicar aquí, pero si te dejo un enlace a la [documentación de Unity](https://docs.unity3d.com/Manual/class-ConfigurableJoint.html), para que lo veas y conozcas mas en profundidad.
 
  [^1]: Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
