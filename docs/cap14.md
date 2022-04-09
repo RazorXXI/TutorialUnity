@@ -23,8 +23,12 @@ Los tipos de `Joints` que tenemos son:
 
  - Fixed Joint: Este tipo de `Joint`, sirve para mantener unidos dos objetos. Este `joint` restringe el movimiento de un objeto al ser dependiente de otro. Obviamente, podemos conseguir que ambos objetos rompan la unión del `fixed joint` si se da un cierto suceso, como puede ser una colisión u otra cosa.
   En la [documentación de Unity](https://docs.unity3d.com/Manual/class-FixedJoint.html), podemos conocer todas las opciones de este tipo de unión. Aunque te pondré un ejemplito to guay para que lo pilles mejor.
-  
- - Hinge Joint:
- - Spring Joint:
- - Character Joint:
+
+ - Hinge Joint: Este `Joint` su traducción significa `Unión Bisagra`. Así que partiendo de esto, en definitiva lo que hace, es conectar a dos `Rigidbody` y limitar su movimiento como si estuvieran unidos por una bisagra. En mogollón de juegos se usan para puertas, pendulos de la muerte, cadenas, trampillas... en fin, en un montón de cosas. Y al igual que en el anterior, te voy a invitar a que te acostumbres a visitar la [documentación de Unity](https://docs.unity3d.com/Manual/class-HingeJoint.html), para saber que opciones tiene, que todo no te lo voy a dar mascado no??.
+
+ - Spring Joint: Pues `Spring` es muelle en inglés, asi que esta unión se comporta como un muelle, ya está, así de simple. Te lo vuelvo a repetir, se que soy muy pesado, pero revisa la [documentación de Unity](https://docs.unity3d.com/Manual/class-SpringJoint.html) para enterarte bien de los parámetros de esta unión. Que si, que está en ingles. Pero es que en informática la gran mayoría de las cosas están en inglés, así que ya sabes, toca ponerse las pilas con el inglés o tirar del traductor de Google.
+
+ - Character Joint: Aquí no te voy a traducir esto, y mejor te explico de que va esta unión. `Character Joint` básicamente su función es relajar completamente las articulaciones de un personaje 3D, haciendo el `efecto Ragdoll`[^1]. Y para que sirve? Pues un ejemplo sería cuando muere el personaje. Igualmente, puedes consultar toda su información, en la [documentación de Unity](https://docs.unity3d.com/Manual/class-CharacterJoint.html).
  - Configurable Joint:
+
+ [^1] Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
