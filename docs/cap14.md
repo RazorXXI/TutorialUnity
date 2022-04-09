@@ -23,6 +23,7 @@ Los tipos de `Joints` que tenemos son:
 
  - Fixed Joint: Este tipo de `Joint`, sirve para mantener unidos dos objetos. Este `joint` restringe el movimiento de un objeto al ser dependiente de otro. Obviamente, podemos conseguir que ambos objetos rompan la unión del `fixed joint` si se da un cierto suceso, como puede ser una colisión u otra cosa.
   En la [documentación de Unity](https://docs.unity3d.com/Manual/class-FixedJoint.html), podemos conocer todas las opciones de este tipo de unión. Aunque te pondré un ejemplito to guay para que lo pilles mejor.
+  
  - Hinge Joint:
  - Spring Joint:
  - Character Joint:
