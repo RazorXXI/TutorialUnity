@@ -36,10 +36,26 @@ Los tipos de `Joints` que tenemos son:
 
 Y seguimos metiendo conceptos en tu cerebro, asi a cascoporro. Ahora es el turno del componente `Character Controller`.
 
-Este componente básicamente es usado para los controles de jugador en tercera o primera persona y que no usa la física del `Rigidbody`.
+Este componente básicamente es usado para los controles de jugador en tercera o primera persona y que no usa la física del `Rigidbody`. Nos va a permitir, configurar como se va a mover y comportar dicho movimiento del personaje, gracias a una serie de parámetros, los cuales van a limitar y modelar dicho comportamiento.
 
+En esencia, el `Character Controller`, es simplemente una capsula con forma de `collider` a la que se le puede decir que se mueva en alguna dirección desde nuestro script. De este modo, el controller llevará a cabo el movimiento, el cual será limitado por las colisiones.
+
+Una cosa que debemos tener presente, es que el `controller` no reacciona a fuerzas por sí mismo (ya te dije al principio, que no usaba físicas), por lo que si queremos aplicar fuerzas a otro objeto con el que coliones, deberemos hacerlos a través de código mediante la función `OnControllerColliderHit` (no te la voy a explicar ahora, pero puedes consultar la [documentación de Unity](https://docs.unity3d.com/es/2020.2/ScriptReference/30_search.html?q=OnControllerColliderHit) si tienes curiosidad).
 Sus parámetros son:
   
- - [Slope Limit]: 
+ - **Slope Limit**: Indica el límite de inclinación de las pendientes, permitiendo que solo se puedan subir aquellas cuyo angulo de inclinación sea inferior al valor indicado.
+ - **Step Offset**: Sirve para definir el desplazamiento del personaje asociado a su altura (*valores comprendidos entre 0.1 y 0.4 hacen referencia a un humano con una altura de 2m*).
+ - **Skin Width**: Sirve para controlar el grado de intersección de dos colliders. Se suele recomendar, que este valor sea el 10% del radio asociado al collider. Valores altos de este parámetro, permiten controlar mejor las colisones, y los valores bajos puede ocasionar que el personaje se atasque en alguna deformación del terreno.
+ - **Min Move Distance**: Sirve para definier la distancia mínima de movimiento. Si el player se mueve a una distancia menor que la indicada en este parámetro, no se moverá. Según Unity, se recomienda dejar este valor en 0.
+ - **Center**: Posiciona el `collider` del `controller` con respecto a los ejes X, Y, Z.
+ - **Radius**: Establece el radio del `capsule collider` del `controller`. El ancho del `collider`.
+ - **Height**: Establece la altura del `capsule collider` del `controller`. Si modificamos este valor, el `collider` se escalara en ambos sentidos de Y (positivo y negativo).
 
- [^1]: Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
+Si somos un poco puristas, atenderemos a las recomendaciones que nos hace Unity en relación al uso de este componente, las cuales son:
+
+ - *Ajustar la propiedad Skin Width si notamos que el objeto se queda atascado en el escenario*.
+ - *Modificar la altura y radio para ajustar el `capsule collider` a la malla del personaje*.
+ - *Se recomienda el uso de una altura de dos metros para el uso de personajes humanos*.
+ - *No utilizar un valor excesivamente bajo para la propiedad `Slope Limit`*.
+
+[^1]: Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
