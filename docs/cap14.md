@@ -32,4 +32,14 @@ Los tipos de `Joints` que tenemos son:
 
  - Configurable Joint: Este `joint` se usa para tocarle los bajos al motor de Unity para personalizar a tope el `joint`. No lo voy a explicar aquí, pero si te dejo un enlace a la [documentación de Unity](https://docs.unity3d.com/Manual/class-ConfigurableJoint.html), para que lo veas y conozcas mas en profundidad.
 
+## Character Controller
+
+Y seguimos metiendo conceptos en tu cerebro, asi a cascoporro. Ahora es el turno del componente `Character Controller`.
+
+Este componente básicamente es usado para los controles de jugador en tercera o primera persona y que no usa la física del `Rigidbody`.
+
+Sus parámetros son:
+  
+ - [Slope Limit]: 
+
  [^1]: Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
