@@ -32,6 +32,10 @@ Los tipos de `Joints` que tenemos son:
 
  - Configurable Joint: Este `joint` se usa para tocarle los bajos al motor de Unity para personalizar a tope el `joint`. No lo voy a explicar aquí, pero si te dejo un enlace a la [documentación de Unity](https://docs.unity3d.com/Manual/class-ConfigurableJoint.html), para que lo veas y conozcas mas en profundidad.
 
+ Aquí te dejo algo que te va a resultar mas ilustrativo para acordarte de los principales `joints`.
+
+ ![Joints Importantes](../img/14_Joints.png)
+
 ## Character Controller
 
 Y seguimos metiendo conceptos en tu cerebro, asi a cascoporro. Ahora es el turno del componente `Character Controller`.
