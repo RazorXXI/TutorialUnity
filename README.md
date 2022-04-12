@@ -29,4 +29,6 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
  * **Físicas, Inputs y Otros Menesteres**
      * [Capítulo 1: Físicas en Unity 3D. Rigidbody y Colisiones Varias](/docs/cap13.md)
      * [Capítulo 2: Mas Física. Joint que te Joint y Character Controller](/docs/cap14.md)
+
+     
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
