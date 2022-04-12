@@ -99,7 +99,9 @@ public class ChControllerScript : MonoBehaviour
 }
 ```
 
-Si te fijas mi joven aprendiz, verás que el script en si no tiene mucho. Primero y antes que nada hemos referenciado al `CharacterController` y en el método `Update` he ido asignando a la variable **movimiento** la cual es un *Vector3* donde vamos actualizando sus posiciones en X,Z mediante el valor devuelto por la entrada `Input Horizontal` e `Input Vertical`, ambas multiplicadas por la variable de velocidad, la cual la ajustaremos desde el editor de Unity. Por último, pasamos el valor del Vector3 `movimiento` y lo multiplicamos por `deltaTime` para ir actualizando la posición frame a frame.
+Si te fijas mi joven aprendiz, verás que el script en si no tiene mucho. Primero y antes que nada hemos referenciado al `CharacterController` y en el método `Update` he ido asignando a la variable **movimiento**, la cual es un *Vector3* donde vamos actualizando sus posiciones en X,Z mediante el valor devuelto por la entrada `Input Horizontal` e `Input Vertical`, ambas multiplicadas por la variable de *speed*, la cual la ajustaremos desde el editor de Unity. 
+
+Por último, pasamos el valor del Vector3 `movimiento` y lo multiplicamos por `deltaTime` para ir actualizando la posición frame a frame.
 
 Como veras, ha sido relativamente simple el aplicar movimiento mediante nuestro nuevo componente `Character Controller`.
 
