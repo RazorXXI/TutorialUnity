@@ -58,4 +58,48 @@ Si somos un poco puristas, atenderemos a las recomendaciones que nos hace Unity 
  - *Se recomienda el uso de una altura de dos metros para el uso de personajes humanos*.
  - *No utilizar un valor excesivamente bajo para la propiedad `Slope Limit`*.
 
+Yo se que todo esto que te acabo de soltar aquí en forma de losa marmorea, es bastante densote y que tu eres como yo, que te enteras mejor con un ejemplo. Tranquilo que te lo voy a poner, pero antes tenia que darte un poco de teoría para que le pilles el rollete, porque sino, por muchos ejemplos que te ponga, no le vas a pillar la esencia.
+
+Sin mas dilación, vamos con el ejemplo.
+
+Para este ejemplo, yo me he construido una escena en plan cutre con un cubo con algo que parecen brazos, en el cual he puesto la cámara principal como hija del cubo y así conseguir una visión en tercera persona, un plano para el suelo y unos cilindros imitando columnas para así a la hora de mover el cubo apreciar mejor el movimiento de este. En definitiva, esto de aquí.
+
+![Escena Controller](../img/14_EscenaCharacterController.png)
+
+Pues bien; con esto ya tenemos mas que de sobra para probar nuestro `Character Controller`. Primero y antes de darle vida a nuestro cubo, le he añadido el componente `Character Controller` con sus opciones configuradas tal que así.
+
+![Opciones Character Controller](../img/14_CharacterControllerOpciones.png)
+
+Y para rematar, he hecho el siguiente script:
+
+```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChControllerScript : MonoBehaviour
+{
+    [SerializeField] CharacterController controller;
+    [SerializeField] float speed;
+    Vector3 movimiento;
+    
+    void Awake()
+    {
+        controller = GetComponent<CharacterController>();
+    }
+
+    
+    void Update()
+    {
+        movimiento = new Vector3(Input.GetAxis("Horizontal") * speed, 0, Input.GetAxis("Vertical") * speed);
+        controller.Move(movimiento * Time.deltaTime);
+    }
+}
+```
+
+Si te fijas mi joven aprendiz, verás que el script en si no tiene mucho. Primero y antes que nada hemos referenciado al `CharacterController` y en el método `Update` he ido asignando a la variable **movimiento** la cual es un *Vector3* donde vamos actualizando sus posiciones en X,Z mediante el valor devuelto por la entrada `Input Horizontal` e `Input Vertical`, ambas multiplicadas por la variable de velocidad, la cual la ajustaremos desde el editor de Unity. Por último, pasamos el valor del Vector3 `movimiento` y lo multiplicamos por `deltaTime` para ir actualizando la posición frame a frame.
+
+Como veras, ha sido relativamente simple el aplicar movimiento mediante nuestro nuevo componente `Character Controller`.
+
+
 [^1]: Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
