@@ -105,5 +105,7 @@ Por último, pasamos el valor del Vector3 `movimiento` y lo multiplicamos por `d
 
 Como veras, ha sido relativamente simple el aplicar movimiento mediante nuestro nuevo componente `Character Controller`.
 
+Y bueno, hasta aquí el capítulo de hoy, espero que te haya resultado util y didactico Michael. Se que ha sido un pelín largo y con mucha literatura y pocos dibujos, pero chato, que quieres... esto es así, si tuviera mas dibujos, sería un comic. De todas formas, lo que mas importa es que hayas pillado bien todo esto, ya en tu mano dejo, el pensar en que o como usarlo, eso ya te lo dejo a ti Michael.
+
 
 [^1]: Efecto que se utiliza para animar de forma no manual a personajes, generalmente cuando mueren. Sirve para darles un efecto como de muñeco de trapo, de manera que al caer muertos, caigan de diferentes maneras. Un ejemplo de esto, lo podemos ver en las muertes de los personajes de los juegos GTA a partir del IV.
