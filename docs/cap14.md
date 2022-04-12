@@ -66,7 +66,9 @@ Para este ejemplo, yo me he construido una escena en plan cutre con un cubo con 
 
 ![Escena Controller](../img/14_EscenaCharacterController.png)
 
-Pues bien; con esto ya tenemos mas que de sobra para probar nuestro `Character Controller`. Primero y antes de darle vida a nuestro cubo, le he añadido el componente `Character Controller` con sus opciones configuradas tal que así.
+Pues bien; con esto ya tenemos mas que de sobra para probar nuestro `Character Controller`. 
+
+Primero y antes de darle vida a nuestro cubo, le he añadido el componente `Character Controller` con sus opciones configuradas tal que así.
 
 ![Opciones Character Controller](../img/14_CharacterControllerOpciones.png)
 
