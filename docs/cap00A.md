@@ -10,6 +10,6 @@ Bueno, a lo que estamos... antes de nada, lo primero que tienes que hacer para a
  3 - Aquí, le rellenamos los campos con el correo electrónico nuestro, la constraseña que le vayamos a poner, nombre de usuario y tu nombre, luego chequeamos todo y le damos a **Crear una Unity ID**, y hasta aquí todo facil.
      ![Registro01](/img/00A_1_UnityRegistrePage.png)
  4 - Una vez completado el registro, volvemos a la página principal de Unity y le damos en el menú a **Developer Tools**, el cual nos llevará a otra página a la que tenemos que darle en **Download Unity Hub**. El Hub de Unity es lo que vamos a emplear tanto para instalar los nucleos de Unity como otras opciones, pero bueno, eso es agua de otro cantar, aquí vamos al grano.
- 
+
  5 - Una vez descargado el Hub de Unity, lo instalamos (Como estoy bastante vago, y además que lo tengo instalado, te voy a dejar un vídeo donde te viene muy bien explicado como se instala, para que no tengas ni que buscar el vídeo.) Aquí tienes el vídeo, el cual está sacado del canal de YouTube de LuisCanary, donde viene explicado super bien.
-[![Instalation](/img/00A_1_UnityHubVideo.png)](https://www.youtube.com/watch?v=moNwhFQ-uig)
+[![Instalation](/img/00A_1_UnityHubVideo1.png)](https://www.youtube.com/watch?v=moNwhFQ-uig)
