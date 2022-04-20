@@ -12,6 +12,10 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
 
 ## Indice de Capítulos
 
+ * **Unity Instalación y Presentación**
+     * [Capítulo 1: Instalación de Unity](/docs/cap00A.md)
+     * [Capítulo 2: Entorno de Unity](/docs/cap00B.md)
+     * [Capítulo 3: Unity Asset Store](/docs/cap00C.md)
  * **Scripting en Unity**
      * [Capítulo 1: Una breve introducción](/docs/cap01.md)
      * [Capítulo 2: Variables y Tipos de datos](/docs/cap02.md)
@@ -29,6 +33,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
  * **Físicas, Inputs y Otros Menesteres**
      * [Capítulo 1: Físicas en Unity 3D. Rigidbody y Colisiones Varias](/docs/cap13.md)
      * [Capítulo 2: Mas Física. Joint que te Joint y Character Controller](/docs/cap14.md)
+     * [Capítulo 3: Materiales, Texturas y Shaders](/docs/cap15.md)
 
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
