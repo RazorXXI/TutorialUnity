@@ -75,7 +75,7 @@ Por defecto Unity, trae una serie de `Shaders` incluidos cuando se instala. Esto
  - Unlit: Para renderizados donde se ignora toda luz y sombreado.
  - Legacy: Shaders antiguos de Unity.
 
-## Coasa sobre la luz
+## Información sobre la luz
 
 Ya para acabar este capítulo vamos a tratar dos puntos que creo son importantes estos son:
 
