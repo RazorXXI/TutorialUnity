@@ -129,3 +129,103 @@ Pues bien, si en el panel `animation` creabamos nuestras animaciones según ibam
 Para abrir el `panel animator` ve a `Window -> Animations -> Animator` y se nos abrirá la ventana de `Animator`. Yo un consejo que te doy, es acoplarlo en un sitio donde lo puedas tener accesible, del mismo modo que te digo lo mismo para el panel `Animation`. Te dejo una imagen de como lo tengo yo, que para mi es bastante comodo tenerlo así. Tu puedes ponerlo como mejor te venga en gana.
 
 ![MyLayoutToAnimate](/img/16_MyDesktopForAnimate.png)
+
+Pues bien, en el panel `animator` vamos a encontrar varias partes y cosas. Tranquilo que ahora te digo que es cada una de ellas, o al menos las que nosotros vamos a usar.
+
+![PanelAnimator_Detail](/img/16_PanelAnimator_00.png)
+
+Si nos fijamos en la imagen, veremos que tenemos dos partes muy diferenciadas. Por un lado está el área donde estan las animaciones y los diferentes estados, y por el otro tenemos la columna donde encontramos `Layers` y `Parameters`, siendo este último el que nos va a servir para definir variables, las cuales se comunicarán con nuestro código.
+
+Actualmente, tal y como están las animaciones en nuestro `animator`, no van a hacer demasiado. Si le damos a `Play Mode`, veremos que se nos activa la animación `ReaperIdle`, pero `ReaperRun` no hace nada. Ello es porque no hemos definido una transición entre ellas para que puedan cambiar de una a otra. Para hacer esto, vamos a crear estas transiciones. 
+
+Nos colocamos encima de la animación que está en nuestro `animmator` como `ReaperIdle`y le damos al botón derecho del ratón, y a continuación seleccionamos `Make Transition` y arrastramos hasta `ReaperRun`, hacemos click encima de `ReaperRun` y listo. Ya tenemos creada nuestra primera transición, la cual irá desde `ReaperIdle` a `ReaperRun` o siendo un poco mas claros, vamos a pasar de estar parados a estar moviendonos. Del mismo modo, haremos el proceso contrario, pero desde `ReaperRun` hasta `ReaperIdle`, asi crearemos el cambio de estar moviendonos a pararnos.
+
+![MakeTransitionOne](/img/16_Animator_MakeTransition_01.png)
+
+Si has seguido mis pasos, mi joven aprendiz, te ha tenido que quedar algo muy parecido a esto.
+
+![MakeTransitionTwo](/img/16_Animator_MakeTransition_02.png)
+
+Este proceso, lo haremos con todas las animaciones que tengamos, eso si, con la lógica que queramos que tengan nuestras animaciones, por ejemplo: queremos que nuestro personaje pase de estar parado a estar corriendo (eso es una transición), que de estar corriendo este parado (otra transición), que ataque cuando este parado (seria otra transición), que si esta corriendo salte (otra transición mas), y así con todas las que tengas y que tenga el comportamiento que quieras.
+
+Para este ejemplo, no nos vamos a complicar mucho y vamos a tener solo dos, Quieto y Moviendose, pero podriamos tener mas...
+
+Pues bien, una vez definidas las transiciones, debemos configurarles a estas una serie de parámetros para que no se vean raras ni tengan comportamientos extraños. Para ello, vamos a hacer click encima de una de las líneas de las transiciones y nos vamos a ir al panel `Inspector`.
+
+![MakeTransitionThree](/img/16_Animator_MakeTransition_03.png)
+
+Para ello, primero daremos click en el desplegable de *Settings*, para acceder a sus parámetros. A continuación, vamos a desmarcar la casilla superior que pone `Has Exit Time`, ya que vamos a hacer que pase de un estado a otro mediante código. El siguiente parámetro a modificar será `Transition Duration`, el cual cambiaremos su valor a 0. Si has seguido estos pasos al pie de la letra, te debería quedar tal que así.
+
+![MakeTransitionFour](/img/16_Animator_MakeTransition_04.png)
+
+Pues lo mismo que hemos hecho con la transicion de parado a moverse, haremos exactamente igual con la que va de `ReaperRun` a `ReaperIdle`.
+
+Bueno, esto va cogiendo forma. Lo siguiente que vamos a hacer es crear parámetros para cambiar de una animación a otra. Para ello seguiremos los siguientes pasos:
+
+ 1 - Iremos al apartado `Parameters` del `Animator` y daremos sobre el signo mas para que se nos despliegue el menu.
+
+ ![Parameters01](/img/16_Animator_Parameters_01.png)
+
+ 2 - Elegiremos un tipo `bool` y le daremos el nombre de `EstaQuieto`.
+
+ ![Parameters02](/img/16_Animator_Parameters_02.png)
+
+ 3 - A continuación, vamos a indicar que valor debe tener dicho valor en cada una de las transiciones. Para eso vamos a plantear lo siguiente:
+     
+     * De quieto -> En movimiento => EstaQuieto = Falso
+     * En Movimiento -> Quedarse quieto => EstaQuieto = Verdadero.
+
+Como vemos, la logica es bastante sencilla no?? Si estas parado y te empiezas a mover, el parámetro EstaQuieto serà falso y si te estas moviendo y te paras, pues EstaQuieto pasa a verdadero. 
+
+Pero, te estaras preguntando como le damos esa información a nuestras animaciones. Pues bien. Recuerdas que desactivamos el parámetro `Has Exit Time`, pues es llegado a este punto que vamos a definir nuestra propia condición de salida. Para ello:
+ 
+ 1 - Hacemos click primero en la transición de `ReaperIdle` a `ReaperRun` y vamos a donde nos aparece `Conditions`. Aquí le damos al `+` para crear una nueva condición. Te dejo una imagen de como debe quedar.
+
+  ![Parameters03](/img/16_Animator_MakeTransition_03.png)
+
+  ![Parameters03](/img/16_Animator_MakeTransition_04.png)
+  
+  ![Parameters03](/img/16_Animator_MakeTransition_05.png)
+
+ 2 - Haremos los mismos pasos para con la transición de `ReaperRun` a `ReaperIdle`, pero en este caso, definiremos el valor de `EstaQuieto` a `true`.
+
+  ![Parameters03](/img/16_Animator_MakeTransition_06.png)
+
+Pues llegados a este punto, ya hemos definido las condiciones mediante las cuales pasaremos de una animación a otra. Lo que queda ahora, es hacerlo a traves del código.
+
+Para ello, vamos a realizar un cambio de un estado a otro, cuando presionemos una tecla. Esto será igualmente valido para el caso en el que hagamos una función que mueva al personaje, cosa que no vamos a hacer en este ejemplo y que te lo dejo a ti a fin de que uses tu materia gris. Yo te voy a explicar como se activa una animación u otra.
+
+Supongamos que creamos un script al cual llamaremos AnimarPersonaje:
+
+```c#
+using UnityEngine;
+
+public class AnimarPersonaje : MonoBehaviour
+{
+    [SerializeField] Animator anPlayer;
+
+
+    void Start()
+    {
+        anPlayer = GetComponent<Animator>();    //Referencia al Animator del Personaje
+    }
+
+    
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.A)) anPlayer.SetBool("EstaQuieto", false);
+        else anPlayer.SetBool("EstaQuieto", true);
+    }
+}
+```
+
+Si vemos el código, es bastante sencillo. Lo primero que hacemos es referenciar el componente `Animator` del personaje. Este se crea, en el momento que creamos la primera animación y se le asigna automaticamente.
+
+A continuación y dentro del método `Update`, hemos definido que, si pulsamos la tecla `A`, se supone que esto haría que nuestro muñeco ande, con lo cual, a traves del `Animator` referenciado, le asigno un valor al parámetro `EstaQuieto`, mediante el método `SetBool`, haciendo que este sea falso (con lo que haria la animación de moverse) y si dejamos de pulsar la tecla `A`, hariamos `EstaQuieto` verdadero, pasando de ese modo a la animación `ReaperIdle`.
+
+Si has seguido el proceso, y lo has ido haciendo conmigo, puedes darle al `Play` para que veas como cambia de uno a otro.
+
+*IMPORTANTE: EL SCRIPT QUE HEMOS CREADO, LO TIENES QUE AÑADIR AL MUÑECO, SI NO, NO FUNCIONA. CREO QUE LLEGADOS A ESTAS ALTURAS, NO TENGO QUE DECIRLO. PERO POR SI ACASO*
+
+
+
