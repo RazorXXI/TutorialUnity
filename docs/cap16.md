@@ -183,13 +183,13 @@ Pero, te estaras preguntando como le damos esa información a nuestras animacion
 
   ![Parameters03](/img/16_Animator_MakeTransition_03.png)
 
-  ![Parameters03](/img/16_Animator_MakeTransition_04.png)
+  ![Parameters04](/img/16_Animator_MakeTransition_04.png)
   
-  ![Parameters03](/img/16_Animator_MakeTransition_05.png)
+  ![Parameters05](/img/16_Animator_MakeTransition_05.png)
 
  2 - Haremos los mismos pasos para con la transición de `ReaperRun` a `ReaperIdle`, pero en este caso, definiremos el valor de `EstaQuieto` a `true`.
 
-  ![Parameters03](/img/16_Animator_MakeTransition_06.png)
+  ![Parameters06](/img/16_Animator_MakeTransition_06.png)
 
 Pues llegados a este punto, ya hemos definido las condiciones mediante las cuales pasaremos de una animación a otra. Lo que queda ahora, es hacerlo a traves del código.
 
