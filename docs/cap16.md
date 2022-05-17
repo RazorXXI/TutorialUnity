@@ -52,3 +52,12 @@ Bueno, vamos a pringarnos las manos y vamos con la animación.
 
         ![SingleToMultiple](/img/16_SpriteSingleToMultiple.png)
 
+     * A continuación cambiamos el valor de Pixels Per Unit de 100 a 16, ya que nuestros sprites tienen esa proporción. Este no es un valor fijo, vendrá determinado por tus sprites, pero para este ejemplo, este es el valor optimo.
+
+        ![PixelsPerUnit](/img/16_SpritesPixelsPerUnit.png)
+
+     * El siguiente parámetro que debemos cambiar es `Filter Mode`, dado que nuestro sprite es de tipo pixel art, tenemos que cambiar su propiedad de `Bilinear` a `Point No Filter`, a modo que no nos suavice los bordes. Si por el contrario, tu imagen es diferente y quieres los bordes suavizados, puedes dejarlo como está, pero en este ejemplo lo vamos a cambiar.
+     
+        ![PointNoFilter](/img/16_SpritesPointNoFilter.png)
+
+
