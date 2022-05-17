@@ -225,7 +225,7 @@ A continuación y dentro del método `Update`, hemos definido que, si pulsamos l
 
 Si has seguido el proceso, y lo has ido haciendo conmigo, puedes darle al `Play` para que veas como cambia de uno a otro.
 
-*IMPORTANTE: EL SCRIPT QUE HEMOS CREADO, LO TIENES QUE AÑADIR AL MUÑECO, SI NO, NO FUNCIONA. CREO QUE LLEGADOS A ESTAS ALTURAS, NO TENGO QUE DECIRLO. PERO POR SI ACASO*
+*IMPORTANTE: EL SCRIPT QUE HEMOS CREADO, LO TIENES QUE AÑADIR AL MUÑECO, SI NO, NO FUNCIONA. CREO QUE LLEGADOS A ESTAS ALTURAS, NO TENGO QUE DECIRLO. PERO POR SI ACASO.*
 
 
 
