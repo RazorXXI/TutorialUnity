@@ -17,7 +17,7 @@ Antes de proseguir, hemos de contar lo siguiente. Para crear animaciones, Unity 
 
 Serán estas dos partes las que nos van a permitir poder crear nuestras animaciones, así como el comportamiento de estas. Se que ahora mismo suena a chino, pero pronto cobrará mas sentido.
 
-## Animation
+## Panel Animation
 
 En `Animation` será donde se vayan generando nuestro clips de animación a partir de un modelo 3D o bien de otro objeto.
 
@@ -116,3 +116,16 @@ Bueno, vamos a pringarnos las manos y vamos con la animación.
 
  - Llegados a este punto, habremos creado nuestra primera animación. Felicidades Igor, si has llegado hasta aquí has logrado darle vida a tu criatura.
 
+Pues bien, ya sabemos como crear nuestra primera animación, asi que vamos a crear la siguiente que será la de nuestro amigo corriendo. Obviamente no voy a repetir todo el proceso, pero si te voy a decir como hacerlo. Para crear una nueva animación para nuestro simpatico personaje, le daremos a `Create New Clip`, tal y como nos muestra la imagen que tienes a continuación. A esta animación, ponle el nombre de ReaperRun. La idea es que puedas seguir estos pasos hasta que tu te hagas las tuyas ya solito. Pero como esto es para que aprendas, ponle como te digo, porque será como me vaya a referir a ellas en los ejemplos que vayamos viendo.
+
+![New Animation Clip](/img/16_Sprite_Animacion_Create_NewClip.png)
+
+Pues bien, supongo que habras sido buen chico y te habrás creado la última animación, tal y como te he dicho no?? verdad?? A que has sido un chico aplicado y lo has hecho...?? En caso contrario, ya estas tardando en hacerla, puesto que vamos al siguiente punto que es `El Panel Animator`, y a partir de aquí agarrate que vienen curvas, porque vamos con el código.
+
+## Panel Animator
+
+Pues bien, si en el panel `animation` creabamos nuestras animaciones según ibamos necesitando para nuestro personaje, en el panel `animator` vamos a definir cuando se van a activar y por ello, vamos a definir el comportamiento de las animaciones en nuestro pequeño amigo pixelado.
+
+Para abrir el `panel animator` ve a `Window -> Animations -> Animator` y se nos abrirá la ventana de `Animator`. Yo un consejo que te doy, es acoplarlo en un sitio donde lo puedas tener accesible, del mismo modo que te digo lo mismo para el panel `Animation`. Te dejo una imagen de como lo tengo yo, que para mi es bastante comodo tenerlo así. Tu puedes ponerlo como mejor te venga en gana.
+
+![MyLayoutToAnimate](/img/16_MyDesktopForAnimate.png)
