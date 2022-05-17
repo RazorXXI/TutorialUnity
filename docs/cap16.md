@@ -47,6 +47,8 @@ Bueno, vamos a pringarnos las manos y vamos con la animación.
 
  - Lo siguiente que tendremos que hacer es recortar los sprites, ya que estos vienen como una unica imagen en los archivos. Para ver el ejemplo, lo haremos sobre el archivo HostileIdleReaper-Shet, pero el mismo proceso habria que repetirlo con el otro archivo o con cuantos archivos tengamos.
 
+ - Antes de nada, tenemos que configurar los sprites, para poderlos recortar:
+
      * Seleccionamos con un click el archivo en el panel project y nos vamos al Inspector. Aquí tendremos que modificar algunas cosas para preparar el archivo de sprites.
      * Primero cambiaremos la propiedad *Sprite Mode* de `Single`a `Multiple`.
 
@@ -60,4 +62,57 @@ Bueno, vamos a pringarnos las manos y vamos con la animación.
      
         ![PointNoFilter](/img/16_SpritesPointNoFilter.png)
 
+     * El penultimo paso es cambiar el parámetro `Compression` de `Normal Quality` a `None`. El motivo, es exactamente que el del paso anterior, ya que no queremos que le aplique compresión a la imagen, ya que queremos que tenga ese aspecto de pixel art.
+
+        ![SpriteCompression](/img/16_SpritesCompression.png)
+
+     * A continuación, le damos al botón `Apply` para aplicar todos los cambios. No se te olvide de hacerlo o no se aplicaran los cambios que hayas hecho. De todas formas, como Unity es muy seguido el se encargará de recordarte que tienes cambios por aplicar, pero de cualquier forma, no te cuesta nada acordarte y darle.
+
+        ![SpritesApplyChanges](/img/16_SpriteApplyChanges.png)
+
+     * Cuando tengamos hecho todo lo anterior, le damos al botón `Sprite Editor`, el cual nos abrirá la ventana del editor de Sprites, que será donde vayamos a recortar nuestro sprite.
+
+        ![OpenSpriteEditor](/img/16_OpenSpriteEditor.png)
+ 
+ - En la ventana de Sprite Editor, tendremos que configurar una serie de parámetros para recortar nuestros sprites:
+
+    ![WindowSpriteEditor](/img/16_SpriteEditorWindow.png)
+    
+     * Lo primero que haremos será darle a `Slice` y cambiaremos el valor de `Automatic` a `Grid By Cell Size` aquí le daremos un valor de 32 x 48 y donde pone `Slice` para poder generar el recorte de las imagenes.
+    
+     ![Automatic_TO_GridSize](/img/16_SpriteEditor_SliceSprite.png)
+
+     ![Size Slide](/img/16_SpriteSizeSlide.png)
+
+     * Ahora se nos habrán creado los marcos de recorte, los cuales tendrán un aspecto semejante a esto.
+
+     ![SliceFrames](/img/16_SpriteSliceFrame.png)
+
+     * Lo que tendremos que hacer es cuadrar los marcos con las imagenes y eliminar aquellos que no nos sirvan. Para cuadrar los marcos, los seleccionaremos con el raton y los iremos moviendo hasta dejar algo parecido a la imagen de a continuación. Y para eliminar aquellos que nos sobran, los seleccionamos con el raton y le damos a Suprimir.
+
+     ![SliceAndSorted](/img/16_SpritesSlicesAndSorted.png)
+
+     * Una vez que ya los tengamos listos, le damos al boton que esta en la parte superior y que pone Apply para aplicar los cambios y ya con esto, podemos cerrar la ventana `Sprite Editor`.
+
+ - Si nos vamos al panel project, veremos que se nos han generado 5 imágenes dentro de nuestro archivo. Estas serán las imagenes que vamos a usar para poder crear nuestra animación.
+
+    ![SpritesInProject](/img/16_SpritesReadyToAnimate.png)
+
+ - Ya con todo esto listo, vamos a elegir el primer sprite, el que termina en Sheet_0 y lo vamos a arrastrar a la ventana de escena.
+
+    ![Sprite In Scene](/img/16_Sprite_In_Scene.png)
+
+ - Con nuestro sprite seleccionado, vamos a abrir la ventana Animation tal y como dijimos (`Ctrl+6`) y le vamos a dar al botón `Create` que nos aparece en la zona central, para crear nuestra primera animación.
+ - Esto nos abrirá una ventana donde nos preguntará donde se van a guardar las animaciones. Yo te aconsejo que te crees una carpeta dentro de nuestro proyecto a la cual yo le suelo poner `Animations`.
+ - A esta animación le daremos el nombre de `ReaperIdel.anim`.
+ - Si has hecho todo esto bien, verás que tienes activa la parte central del panel `animation` que será donde tengamos que soltar nuestros frames.
+ - Asi que lo siguiente que vamos a hacer es seleccionar las imagenes que recortamos con nuestro sprite editor y las arrastraremos a la zona central.
+
+    ![Sprites Drops](/img/16_Sprites_DropInAnimation.png)
+
+ - Una vez hecho esto, podemos darle al botor play del control de animación para ver como se comporta. En nuestro caso, esto irá demasiado rapido, por ello con todos los key frames seleccionados estiraremos del control del final del último keyframe hasta conseguir que la animación sea mas o menos coherente. En nuestro caso, ha quedado así.
+
+    ![Key Frames in Position](/img/16_Sprites_KeyFrames_InPosition.png)
+
+ - Llegados a este punto, habremos creado nuestra primera animación. Felicidades Igor, si has llegado hasta aquí has logrado darle vida a tu criatura.
 
