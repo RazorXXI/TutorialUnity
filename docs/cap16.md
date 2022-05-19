@@ -227,5 +227,59 @@ Si has seguido el proceso, y lo has ido haciendo conmigo, puedes darle al `Play`
 
 *IMPORTANTE: EL SCRIPT QUE HEMOS CREADO, LO TIENES QUE AÑADIR AL MUÑECO, SI NO, NO FUNCIONA. CREO QUE LLEGADOS A ESTAS ALTURAS, NO TENGO QUE DECIRLO. PERO POR SI ACASO.*
 
+## Eventos en animaciones
 
+El poder disparar eventos en animaciones, es algo que vamos a usar mogollón de veces, bien sea para hacer sonar cuando nuestro muñeco dispare, o cuando salte, o si quiere decir eso de AYUUUUKEN!!
 
+Pues bien, aunque aun no hemos llegado a sonidos, vamos a verlo por encima porque vamos a disparar sonidos a la hora de que nuestro amigo se mueva.
+
+Para ello, yo voy a usar un sonido de pasos que he buscado para el ejemplo, pero tu puedes usar lo que se te venga en gana, la idea es que te quedes con la copla de como se hace.
+
+Vamos al lio.
+
+Lo primero que voy a hacer es crear un script, el cual le aplicare a mi player y que tendrá esta pinta.
+
+```c#
+using UnityEngine;
+
+public class PlayerSounds : MonoBehaviour
+{
+    [SerializeField] AudioSource asPlayer;
+    [SerializeField] AudioClip[] acPlayerWalkingSounds;
+
+    public void SoundWalking()
+    {
+        int index = Random.Range(0, acPlayerWalkingSounds.Length);
+
+        asPlayer.PlayOneShot(acPlayerWalkingSounds[index]);
+    }
+}
+```
+Lo que hace este script, básicamente es lo siguiente:
+
+ 1 - Accede al componente AudioSource del player, el cual previamente se lo habremos añadido.
+ 2 - Referencia a un array de clips de sonidos, los cuales los habremos cargado previamente.
+ 3 - Definimos una funcion que va a disparar un clip de sonido correspondiente al sonido de andar.
+ 4 - Esta funcion, accedera de manera aleatoria a los clips de caminar que hayamos cargado previamente, para que el sonido sea algo mas organico.
+
+Hasta aquí bien no??
+
+De momento si echamos un vistazo al inspector de nuestro player, estaría del siguiente modo.
+
+![Eventos00](/img/16_AnimationEvents_00.png)
+
+Lo siguiente que tenemos que hacer es hacer click en nuestro player y acceder al panel animation, y concretamente a su animación `ReaperRun`, que sera a la que le vamos a incluir el sonido de andar.
+
+Suponiendo que tienes abierto el panel Animation por donde te he dicho, vamos a proceder a añadir un `Evento`.
+
+Para ello vamos a posicionarnos en el keyframe de la imagen y añadir un evento con el botón `Añadir Evento`, si no sabes cual es, te deje en la [Imagen del Panel Animation](/img/16_PanelAnimation.png) una indicación de los controles. En fin, que le damos a añadir evento en el keyframe del segundo 17 y en otro en el del segundo 40, tal y como aparece en la imagen (Los eventos son esas rayitas verticales que aparecen encima de los keyframe, justo entre los keyframes y la linea de tiempo).
+
+![Eventos01](/img/16_AnimationEvents_01.png)
+
+Ahora vamos a picar en el primero, el que esta posicionado en el segundo 17 y veremos que en el panel Inspector nos aparece `Animation Events` y un desplegable para elegir una función. Es aquí donde vamos a elegir la funcion que hemos creado en el scritp anterior y que va a disparar un sonido para cuando el player este andando y pase por ese keyframe.
+
+![Eventos02](/img/16_AnimationEvents_02.png)
+
+Pues lo mismo que hemos hecho con el primer evento, vamos a hacer con el segundo, lo seleccionaremos y le aplicaremos la misma función. Y listo, con esto cuando nuestro player pase por esos keyframes lanzará un sonido que nosotros hayamos cargado para el caminar y elegido de manera aleatoria.
+
+Como verás, las posibilidades son casi infinitas. En este punto hemos creado una funcion para el sonido de caminar, pero en el script podemos crear funciones para tantos sonidos como queramos disparar para los diferentes comportamientos. Ahora, te invito a que hagas tus propios experimentos.
