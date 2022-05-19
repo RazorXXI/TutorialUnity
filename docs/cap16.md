@@ -257,13 +257,13 @@ public class PlayerSounds : MonoBehaviour
 ```
 Lo que hace este script, básicamente es lo siguiente:
 
- 1 - Accede al componente AudioSource del player, el cual previamente se lo habremos añadido.
+   1 - Accede al componente AudioSource del player, el cual previamente se lo habremos añadido.
 
- 2 - Referencia a un array de clips de sonidos, los cuales los habremos cargado previamente.
+   2 - Referencia a un array de clips de sonidos, los cuales los habremos cargado previamente.
 
- 3 - Definimos una funcion que va a disparar un clip de sonido correspondiente al sonido de andar.
+   3 - Definimos una funcion que va a disparar un clip de sonido correspondiente al sonido de andar.
 
- 4 - Esta funcion, accedera de manera aleatoria a los clips de caminar que hayamos cargado previamente, para que el sonido sea algo mas organico.
+   4 - Esta funcion, accedera de manera aleatoria a los clips de caminar que hayamos cargado previamente, para que el sonido sea algo mas organico.
 
 Hasta aquí bien no??
 
