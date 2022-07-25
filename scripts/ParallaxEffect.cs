@@ -32,7 +32,7 @@ public class ParalaxEffect : MonoBehaviour
 
     void LateUpdate()
     {
-        Paralla();
+        Parallax();
     }
 
     void Parallax()
