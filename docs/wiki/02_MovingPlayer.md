@@ -85,7 +85,7 @@ void MoveHorizontalPlayer()
 
 Antes de continuar, vamos a explicar un poco que hace esta función.
 
-Primero, vamos a ajustar la velocidad de nuestro player. Esto lo vamos a hacer, accediendo a la propiedad `velocity` de su `Rigidbodo`. Le pasaremos como parámetros a un `Vector2`, `playerSpeedMax`, la cual ser la que indicará de manera fija que velocidad alcanzará como máximo y este lo multiplicaremos por la variable `horDisplace` cuyos valores estaran entre -1 y 1, de este modo, tendremos una velocidad fija para cuando vayamos a la izquiera o la derecha. El siguiente parámetro del `Vector2`, será e valor de `velocity` en el eje `y` actual del player.
+Primero, vamos a ajustar la velocidad de nuestro player. Esto lo vamos a hacer, accediendo a la propiedad `velocity` de su `Rigidbody`. Le pasaremos como parámetros a un `Vector2`, `playerSpeedMax`, la cual ser la que indicará de manera fija que velocidad alcanzará como máximo y este lo multiplicaremos por la variable `horDisplace` cuyos valores estaran entre -1 y 1, de este modo, tendremos una velocidad fija para cuando vayamos a la izquiera o la derecha. El siguiente parámetro del `Vector2`, será e valor de `velocity` en el eje `y` actual del player.
 
 En segundo lugar, accedemos al método `AddForce` del `Rigidbody2D` de nuestro player, al que hemos llamado `rbPlayer`. Despues, le pasamos como parámetros una ristra que basicamente lo que hace es:
 
