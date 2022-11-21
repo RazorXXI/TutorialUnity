@@ -1,1 +1,1 @@
-# Capítulo 80: Realidad Virtual - Cámara, Movimiento e Interacciones
+# Capítulo 1: Cámara, Movimiento e Interacciones
