@@ -37,7 +37,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Capítulo 4: Animaciones. Animation y Animator](/docs/cap16.md)
 
 * **Realidad Virtual**
-     * [Capítulo 1: Cámara, movimiento e interacciones](/docs/cap80.md)
+     * [Capítulo 1: Cámara, movimiento e interacciones](/docs/cap81.md)
 
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
