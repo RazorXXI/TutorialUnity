@@ -8,4 +8,4 @@ Lo primero es desarrollar en un nucleo de Unity 2019.
   
  3 - Debemos descargarnos el package de GoogleVR.
  
-   * Descargar el package desde el siguiente enlace: [](https://github.com/googlevr/gvr-unity-sdk/releases/tag/v1.200.1)
+   * Descargar el package desde el siguiente enlace: [Google VR SDK](https://github.com/googlevr/gvr-unity-sdk/releases/tag/v1.200.1)
