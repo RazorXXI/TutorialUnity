@@ -12,6 +12,8 @@ public class CheckGround : MonoBehaviour
     [SerilizeField] int layerToCompare;
     public static bool isOnGround;
 
+    public int prueba;
+    
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == layerToCompare)
