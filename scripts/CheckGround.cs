@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class CheckGround : MonoBehaviour
 {
-    public int layerToCompare;
+    [SerilizeField] int layerToCompare;
     public static bool isOnGround;
 
     void OnTriggerEnter2D(Collider2D collision)

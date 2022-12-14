@@ -38,6 +38,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
 
 * **Realidad Virtual**
      * [Capítulo 1: Cámara, movimiento e interacciones](/docs/cap80.md)
+     * [Apendice: Configuración de entorno para VR](/docs/apendiceVR.md)
 
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
