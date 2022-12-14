@@ -8,3 +8,4 @@ En esta parte, vamos a hacer muchas cosas, la primera parte consistirá en const
  * [01 - Tiles y Sprites](01_TilesYSprites.md)
  * [02 - Movimiento, salto y comprobación de colisiones](02_MovingPlayer.md)
  * [03 - Animando nuestro personaje](03_AnimatePlayer.md)
+ * [04 - Nuevo Input System](04_NuevoSistemaInput.md)
