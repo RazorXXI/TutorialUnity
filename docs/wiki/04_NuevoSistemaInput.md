@@ -138,3 +138,13 @@ Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado
  | **NOTA** |
  |:---|
  | Es muy importante decir que la instanciacion de nuestros controles debemos hacerlo dentro del métod `Awake` ya que si lo hacemos dentro del método `Start`, no funcionarán. No se te olvide este detalle, que despues lloras porque no te funciona el código |
+
+ Pues bien, vamos a saltar un poco adelante del código. Como verás, he creado dos funciones, una llamada `MoverObjeto()` y otra llamada `LeerControles()`, creo que no puede estar mas claro lo que hacen... Vamos a ir a la última, que es en donde vamos a utilizar lo que estamos viendo aquí. La función es realmente simple, lo que hacemos, es asignar a un `Vector2` que hemos declarado previamente. La asignación se realiza mediante la llamada `accionesCuadrado.Personaje.Mover.ReadValue<Vector2>();` lo que hace esta linea es de nuestro `PlayerActions` llamamos al `Action Map` **Personaje** y de este, llamamos a su acción **Mover**, la instrucción `ReadValue<Vector2>()` lo que nos hace es devolver un `Vector2` de los valores que va leyendo desde los controles que hemos definido, de este modo vamos cargando las diferentes posiciones de nuestro amigo el cuadrado.
+
+ Como verás, es realmente simple el usar el nuevo input system de Unity, si lo comparamos con lo que teniamos que hacer para mover un personaje con el antiguo input, al cual debiamos asignar los `Axis`, y liarla un poco mas.
+
+ Bueno, creo que hasta aquí todo. Ya lo que se te ocurra hacer será cosa tuya, en tu mano esta decidir usar el Input antiguo o este, ya a tu gusto *Willson*.
+
+ Si te interesa el código y lo quieres pillar, te lo dejo aqui [Codigo Mover con Nuevo Input System](../../scripts/MoverCuadrado.cs)
+
+ Y hasta aquí la explicación de hoy sobre el nuevo input system, no se si ampliaré más o no, que la verdad que me ha quedado largo de cojones, pero es que menos no podia. 
