@@ -145,6 +145,6 @@ Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado
 
  Bueno, creo que hasta aquí todo. Ya lo que se te ocurra hacer será cosa tuya, en tu mano esta decidir usar el Input antiguo o este, ya a tu gusto *Willson*.
 
- Si te interesa el código y lo quieres pillar, te lo dejo aqui [Codigo Mover con Nuevo Input System](../../scripts/MoverCuadrado.cs)
+ Si te interesa el código y lo quieres pillar, te lo dejo aqui [Código Mover con Nuevo Input System](../../scripts/MoverCuadrado.cs)
 
  Y hasta aquí la explicación de hoy sobre el nuevo input system, no se si ampliaré más o no, que la verdad que me ha quedado largo de cojones, pero es que menos no podia. 
