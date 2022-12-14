@@ -135,7 +135,7 @@ Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado
 
  Pues si seguimos avanzando vamos a encontrarnos con los métodos `OnEnable()` y `OnDisable()`. Estos dos son necesarios para poder activar nuestras acciones, cuando existan y desactivarlas cuando ya no existan. Si no pones esto, te hará cosas muy raras, asi que ya sabes, no se te olvide ponerlos cuando vayas a usar acciones del nuevo Input System.
 
- | OJO |
- ---
+ | **NOTA** |
+ |:---|
  | Es muy importante decir que la instanciacion de nuestros controles debemos hacerlo dentro del métod Awake |
  | ya que si lo hacemos dentro del método Start, no funcionarán |
