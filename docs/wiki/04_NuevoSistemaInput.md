@@ -137,5 +137,4 @@ Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado
 
  | **NOTA** |
  |:---|
- | Es muy importante decir que la instanciacion de nuestros controles debemos hacerlo dentro del métod Awake |
- | ya que si lo hacemos dentro del método Start, no funcionarán |
+ | Es muy importante decir que la instanciacion de nuestros controles debemos hacerlo dentro del métod Awake ya que si lo hacemos dentro del método Start, no funcionarán |
