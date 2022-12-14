@@ -36,6 +36,66 @@ La ventana se compone de 3 partes bien definidas:
   
   ![Ventana Acciones](imgWiki/04_VentanaAcciones.png)
 
- - Actions:
+ - Actions: Aquí se definiran las acciones que podrá gestionar (mover, saltar, agacharse, disparar, etc...) las cuales se verán definidas mediante los controles que podrán gestionarlas.
+  Para crear nuestras acciones, simplemente daremos al boton `+` que está en la sección `Actions` y aquí definiremos una nueva acción. Para el ejemplo, vamos a definir una acción que se va a llamar `Mover`.
+  Debajo de la acción `Mover` donde inicialmente nos aparece como `<No Binding>` será donde definamos lo botones o controles que realizarán dicha acción.
 
- - Properties:
+ - Properties: Es donde se definirán las propiedades de las acciones que realizarán los controles (los botones o controles que lo gestionarán), lo cual para ello primero definiremos un nuevo `Binding` haciendo click en `Path` donde buscaremos el control y la tecla que deseemos.
+  ![Nuevos Bindings](imgWiki/04_NuevosBinding.png)
+
+Si nos fijamos en la imagen superior, veremos que he definido diferentes controles para mover al personaje tanto un teclado como un gamepad.
+
+Lo siguiente que vamos a tener que hacer, es seleccionar el asset que habiamos creado y al que yo llame `PlayerActions`, tu lo habrás llamado como te haya venido en gana, pero como esto lo escribo yo, pues vamos a seguir con ese nombre. Pues bien, una vez seleccionado nuestro `PlayerActions` en el inspector vamos a marcar la casilla que pone `Generate C# Class` y una vez hecho, le damos en `Apply`.
+
+ ![Editando el Asset PlayerActions](imgWiki/04_AplicandoEnPlayerActions.png)
+
+Una vez hecho esto último, se nos creará un script que se llamará como nuestro asset (`PlayerActions` en mi caso).
+
+ ![Nuevo Script PlayerActions](imgWiki/04_NuevoScriptPlayerActions.png)
+
+Este nuevo script, es el que vamos a tener que utilizar para poder actuar con las acciones que hayamos definido, mediante código c#.
+
+Ahora es donde la cosa se pone guapa... Vamos a crear un cuadrado en una escena 2D el cual vamos a controlar mediante nuestro nuevo y flamante Input System.
+
+Para esto, yo he creado una escena tal que así.
+
+ ![Escena 2D](imgWiki/04_NuevaEscena2D.png)
+
+En esta escena, tan solo tenemos un sprite 2D cuadrado, al cual le he aplicado un Rigidbody2D al que lo he puesto como `Kinematic` para que la gravedad no le afecte.
+
+Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado.cs` que emplearemos para mover a nuestro cuadrado y que tendrá la siguiente pinta:
+
+ ```c#
+ using System.Collections;
+ using System.Collections.Generic;
+ using UnityEngine;
+ using UnityEngine.InputSystem; //NO OLVIDAR INCLUIR LA LIBRERIA PARA PODER USAR EL NUEVO INPUT SYSTEM
+
+ public class MoverCuadrado : MonoBehaviour
+ {
+     [SerializeField] Rigidbody2D rbCuadrado;
+     [SerializeField] float velocidadCuadrado = 8;
+
+    
+     void Awake()
+     {
+         rbCuadrado = GetComponent<Rigidbody2D>();    
+     }
+
+    
+     void Update()
+     {
+        
+     }
+
+     void MoverObjeto()
+     {
+
+     }
+
+     void LeerControles()
+     {
+
+     }
+ }
+ ```
