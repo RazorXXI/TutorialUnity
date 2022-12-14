@@ -76,26 +76,57 @@ Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado
      [SerializeField] Rigidbody2D rbCuadrado;
      [SerializeField] float velocidadCuadrado = 8;
 
+     Vector2 direccionMovimiento = Vector2.zero; //Para ir almacenando los movimientos
+     PlayerActions accionesCuadrado;     //Para poder acceder a las acciones definidas en nuestro Input
     
      void Awake()
      {
-         rbCuadrado = GetComponent<Rigidbody2D>();    
+         rbCuadrado = GetComponent<Rigidbody2D>();
+         accionesCuadrado = new PlayerActions();     //Debemos crear una instancia para poder acceder a los controles
      }
 
-    
+     //Importante no olvidar para que no mueva o actue con algo que no existe NO OLVIDES PONER ESTO
+     private void OnEnable()
+     {
+         accionesCuadrado.Enable(); //Para activar nuestras acciones
+     }
+
+     //Igual de importante que el anterior, por la misma razon NO OLVIDES PONER ESTO
+     private void OnDisable()
+     {
+         accionesCuadrado.Disable(); //Para desactivar nuestras acciones
+     }
+
      void Update()
      {
-        
+         //En update vamos leyendo los controles
+         LeerControles();
+     }
+
+     void FixedUpdate()
+     {
+         //En el FixedUpdate movemos el objeto
+         MoverObjeto();    
      }
 
      void MoverObjeto()
      {
-
+         //Aplicamos movimiento al Rigidbody de nuestro amigo el cuadrado
+         rbCuadrado.velocity = new Vector2(direccionMovimiento.x, direccionMovimiento.y) * velocidadCuadrado;
      }
 
      void LeerControles()
      {
-
+         //Aqui estamos llamando a la accion relacionada con el movimiento la cual hemos definido con sus controles
+         direccionMovimiento = accionesCuadrado.Personaje.Mover.ReadValue<Vector2>(); 
      }
  }
  ```
+
+ Pues bien *Michael* si te copias este script y se lo pones a tu amigo el cuadrado, veras que mediante las teclas `WASD` o un `GamePad` puedes mover tu cuadrado por la pantalla.
+ 
+ Ahora bien, vamos a mirar un poco mas en detalle el script y vamos a desgranarlo.
+
+ Para comenzar, te lo he puesto con un comentario, porque es importante, si quieres usar el nuevo sistema de inputs de Unity, primero tendrás que importarlo, y para ello es la linea ```using UnityEngine.InputSystem;```, ya que si esta no estuviera, nos daría error a la hora de tratar de hacer uso de el.
+
+ Seguidamente, he definido dos variables, una de tipo `Rigidbody2D` para poder mover el cuadrado y una segunda de tipo `float` la cual será la velocidad con la que quiero que se mueva.
