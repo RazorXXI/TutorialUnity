@@ -124,9 +124,18 @@ Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado
  ```
 
  Pues bien *Michael* si te copias este script y se lo pones a tu amigo el cuadrado, veras que mediante las teclas `WASD` o un `GamePad` puedes mover tu cuadrado por la pantalla.
- 
+
  Ahora bien, vamos a mirar un poco mas en detalle el script y vamos a desgranarlo.
 
  Para comenzar, te lo he puesto con un comentario, porque es importante, si quieres usar el nuevo sistema de inputs de Unity, primero tendrás que importarlo, y para ello es la linea ```using UnityEngine.InputSystem;```, ya que si esta no estuviera, nos daría error a la hora de tratar de hacer uso de el.
 
  Seguidamente, he definido dos variables, una de tipo `Rigidbody2D` para poder mover el cuadrado y una segunda de tipo `float` la cual será la velocidad con la que quiero que se mueva.
+
+ Lo siguiente que hacemos, es referenciar al Rigidbody2d del cuadrado e instanciar nuestras acciones para poderlas usar, para ello es la instrucción `accionesCuadrado = new PlayerActions();`. Ya debemos tener claro que para poder usar algo, primero lo tenemos que instanciar...
+
+ Pues si seguimos avanzando vamos a encontrarnos con los métodos `OnEnable()` y `OnDisable()`. Estos dos son necesarios para poder activar nuestras acciones, cuando existan y desactivarlas cuando ya no existan. Si no pones esto, te hará cosas muy raras, asi que ya sabes, no se te olvide ponerlos cuando vayas a usar acciones del nuevo Input System.
+
+ | OJO |
+ ---
+ | Es muy importante decir que la instanciacion de nuestros controles debemos hacerlo dentro del métod Awake |
+ | ya que si lo hacemos dentro del método Start, no funcionarán |
