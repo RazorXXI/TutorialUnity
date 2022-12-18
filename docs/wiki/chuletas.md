@@ -30,4 +30,20 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
    * Configuration -> Scripting Backend: **_IL2CPP_**.
    * Target Architecture -> Desactivamos **_ARMv7_** y marcamos **_ARM64_**.
  
- 10 - Nos vamos a Package Manager y descargamos *XR Interaction Toolkit*.
+ 10 - Nos vamos a Package Manager y descargamos *XR Interaction Toolkit*:
+  
+   - Descargamos también los siguientes **Samples**:
+
+     - Starter Assets.
+     - Tunneling Vignette.
+
+ 11 - Vamos a configurar la escena en Unity para poder emplear VR.
+  
+   1. Creamos un plano para el terreno.
+   2. Creamos un Game Object XR Origin VR.
+
+     - Le agregamos un componente PXR_Manager.
+   3. Seleccionamos el objeto XR Origin de la escena y lo desplegamos:
+
+     - Seleccionamos el LeftHand Controller y en las propiedades del componente XR Controller, seleccionamos el preset XRI Default Left Controller.
+     - Repetimos la operación anterior para el RightHand Controller y seleccionamos el preset XRI Default Right Controller.
