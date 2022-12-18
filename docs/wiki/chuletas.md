@@ -10,7 +10,7 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
 
  4 - Instalamos los modulos de Unity para Android:
 
-     * Android Build Support
+     - Android Build Support
 
          - Android SDK & NDK Tools
 
@@ -20,7 +20,7 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
 
  6 - Nos vamos al Package Manager para instalar el SDK de PICO 4 que previamente hemos descargado.
 
-     * Package Manager -> Add package from disk
+     - Package Manager -> Add package from disk
  
      Buscamos la carpeta donde hemos descomprimido el SDK de PICO 4 y seleccionamos el archivo .JSON
  
@@ -30,10 +30,10 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
  
  9 - Despues nos vamos al apartado *Player* aquí vamos a *Other Settings* y cambiamos los siguiente:
  
-     * Identification -> Minimum API Level: **_API Level 27 (Android 8.1 'Oreo')_**.
+     - Identification -> Minimum API Level: **_API Level 27 (Android 8.1 'Oreo')_**.
  
-     * Configuration -> Scripting Backend: **_IL2CPP_**.
+     - Configuration -> Scripting Backend: **_IL2CPP_**.
  
-     * Targe Architecture -> Desactivamos ARMv7 y marcamos ARM64.
+     - Targe Architecture -> Desactivamos ARMv7 y marcamos ARM64.
  
  10 - Nos vamos a Package Manager y descargamos *XR Interaction Toolkit*.
