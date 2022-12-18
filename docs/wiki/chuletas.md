@@ -48,6 +48,7 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
       - Seleccionamos el LeftHand Controller y en las propiedades del componente XR Controller, seleccionamos el preset XRI Default Left Controller.
       - Repetimos la operación anterior para el RightHand Controller y seleccionamos el preset XRI Default Right Controller.
       - Tanto para LeftHand Controller como para RightHand Controller, bajamos en las propiedades de sus XR Controller hasta donde pone Model Prefab le cargamos a cada uno su LeftControllerModel o RightControllerModel desde `Packages -> Pico Integration SDK -> Assets -> Resources -> Prefabs`.
+ 
  12 - Descargamos el [SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools) de Android.
 
  13 - Descomprimimos el archivo descargado con el **SDK Platform Tools** de Android y abrimos el `CMD` de Windows. Nos vamos a la ruta donde este el **Platform Tools**, conectamos nuestro visor PICO 4 al ordenador y desde la linea de comando ejecutamos el comando `adb devices` (*Previamente debemos haber activado el modo Developer del visor PICO4*), si todo ha ido bien, debemos tener una respuesta del comando donde nos salga:
