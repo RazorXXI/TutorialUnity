@@ -42,3 +42,4 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
 
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
+ * [Appendix II: Resumenes y Chuletas]()
