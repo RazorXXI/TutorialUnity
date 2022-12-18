@@ -20,7 +20,7 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
 
    * Package Manager -> Add package from disk
  
-    Buscamos la carpeta donde hemos descomprimido el SDK de PICO 4 y seleccionamos el archivo .JSON
+   Buscamos la carpeta donde hemos descomprimido el SDK de PICO 4 y seleccionamos el archivo .JSON
  
  7 - Instalamos desde el Package Manager el XR Manager (Para versiones de Unity inferiores a la 2021).
  
