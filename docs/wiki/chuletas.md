@@ -58,4 +58,6 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
  <CODIGO_DEL_VISOR>     device
  ```
 
- 14 -
+ 14 - Abrimos File -> Build Settings y en **Run Device** desplegamos y seleccionamos el visor PICO 4.
+
+ 15 - Para comprobar si todo funciona, le daremos a Build and Run, seleccionaremos una carpeta donde generar el APK y observaremos en el visor si vemos el entorno de Unity.
