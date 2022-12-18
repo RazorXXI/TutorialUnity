@@ -47,3 +47,4 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
 
       - Seleccionamos el LeftHand Controller y en las propiedades del componente XR Controller, seleccionamos el preset XRI Default Left Controller.
       - Repetimos la operación anterior para el RightHand Controller y seleccionamos el preset XRI Default Right Controller.
+      - Tanto para LeftHand Controller como para RightHand Controller, bajamos en las propiedades de sus XR Controller hasta donde pone Model Prefab le cargamos a cada uno su LeftControllerModel o RightControllerModel desde `Packages -> Pico Integration SDK -> Assets -> Resources -> Prefabs`.
