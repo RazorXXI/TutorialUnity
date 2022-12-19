@@ -61,3 +61,15 @@ Pasos para configurar PICO 4 para desarrollar en Unity:
  14 - Abrimos File -> Build Settings y en **Run Device** desplegamos y seleccionamos el visor PICO 4.
 
  15 - Para comprobar si todo funciona, le daremos a Build and Run, seleccionaremos una carpeta donde generar el APK y observaremos en el visor si vemos el entorno de Unity.
+
+ # 2 - Movimiento con XR Interaction Toolkit
+
+ Primero y antes de nada, vamos a borrar el XR Origin si tenemos un puesto, a continuación nos vamos a Project, y allí nos vamos a `Assets -> Samples -> XR Interaction Toolkit -> (La version que tengamos) -> Starter Assets` y seleccionamos **XRI Default Continuous Move** y en el *Inspector* le damos en **Add to ActionBasedContinuousMoveProvider defaul** hacemos lo mismo con **XRI Default Snap Turn**, con **XRI Default Continuous Turn**, con **XRI Default Left Controller** y con **XRI Default Right Controller**. Controller*.
+
+ Despues nos vamos a *Project Settings* y alli nos vamos a *Preset Manager* y comprobamos que los Presets de los XRI Controllers han sido cargados. En la parte de `ActionBasedController` indicamos en Filter `Right` para el *Right Controller* y `Left` para el *Left.
+
+ Seguidamente creamos un objeto XR Origin VR, y lo abrimos para acceder a sus objetos hijos. Procediendo a cargar los *Model Prefabs* tanto al `Left` como al `Right` controller.
+
+ A partir de aquí crearemos nuestro `Locomotion System`, para ello creamos un GameObject `XR -> Locmotion System`, con esto podremos movernos por la escena que hayamos creado.
+
+ Seleccionamos en nuestra jerarquia el objeto Locomotion System y en su componente `Locomotion System`, le añadimos nuestro `XR Origin` en donde pone `XR Origin`. A continuación, le agregaremos un componente `Continuous Move (Action-Based)`, el cual configuraremos algunos de sus parametros, primero referenciaremos el `Locomotion System` arranstrando este en el apartado `System` del componente `Continous Move`. Despues controlaremos el movimiento con el controlador derecho, para ello, en el componente `Continuous Move` desmarcamos la casilla `Use Reference` del apartado `Right Hand Move Action`. En el componente `Snap Turn Provider` desmarcamos la casilla `Use Reference` del `Left Hand Snap Turn Action` para asi controlar el giro con el controlador izquierdo.
