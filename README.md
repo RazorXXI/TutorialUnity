@@ -29,6 +29,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Capítulo 10: Otros aspectos de la programación en C#](/docs/cap10.md)
      * [Capítulo 11: Cosas interesantes para hacer con C#](/docs/cap11.md)
      * [Capítulo 12: Atributos para personalizar el Inspector de Unity](/docs/cap12.md)
+     * [Capítulo 13: Aspectos avanzados de programación C#](/docs/cap12_0.md)
 
  * **Físicas, Inputs y Otros Menesteres**
      * [Capítulo 1: Físicas en Unity 3D. Rigidbody y Colisiones Varias](/docs/cap13.md)
@@ -42,4 +43,4 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
 
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
- * [Appendix II: Resumenes y Chuletas]()
+ * [Appendix II: Resumenes y Chuletas](/docs/wiki/appendixII/00_ResumenNuevoInput.md)
