@@ -31,6 +31,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Capítulo 12: Atributos para personalizar el Inspector de Unity](/docs/cap12.md)
      * [Capítulo 13: Aspectos avanzados de programación C#](/docs/cap12_0.md)
      * [Capítulo 14: Funciones matemáticas relevantes](/docs/cap12_1.md)
+     * [Capítulo 15: Delegados](/docs/cap12_2.md)
 
  * **Físicas, Inputs y Otros Menesteres**
      * [Capítulo 1: Físicas en Unity 3D. Rigidbody y Colisiones Varias](/docs/cap13.md)
