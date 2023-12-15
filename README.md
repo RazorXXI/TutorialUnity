@@ -45,5 +45,5 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
 
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
- * [Appendix II: Resumenes y Chuletas](/docs/wiki/appendixII/00_ResumenNuevoInput.md)
- * [Appendix III: Configuración de PICO 4 en UNITY](/docs/wiki/chuletas.md)
+ * [Appendix II: Resumenes y Chuletas (`INCOMPLETO`)](/docs/wiki/appendixII/00_ResumenNuevoInput.md)
+ * [Appendix III: Configuración de PICO 4 en UNITY (`INCOMPLETO`)](/docs/wiki/chuletas.md)
