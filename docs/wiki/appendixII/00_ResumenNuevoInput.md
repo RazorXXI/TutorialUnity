@@ -9,3 +9,10 @@ Para configurar el nuevo sistema de inputs de Unity, tendremos que seguir una se
 
  > [!NOTE]
  > Una nota rapida para informar 
+
+ ```mermaid
+
+    A-->B;
+    A-->C;
+    B-->D;
+ ```
