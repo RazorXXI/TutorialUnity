@@ -7,5 +7,5 @@ Para configurar el nuevo sistema de inputs de Unity, tendremos que seguir una se
 
  3. 
 
- > [!NOTA]
+ > [!NOTE]
  > Una nota rapida para informar 
