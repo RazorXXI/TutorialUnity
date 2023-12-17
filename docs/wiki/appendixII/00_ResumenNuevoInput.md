@@ -11,7 +11,7 @@ Para configurar el nuevo sistema de inputs de Unity, tendremos que seguir una se
  > Una nota rapida para informar 
 
  ```mermaid
-
+ graph TD;
     A-->B;
     A-->C;
     B-->D;
