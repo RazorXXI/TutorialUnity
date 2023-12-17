@@ -67,4 +67,3 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Efecto Parallax II](/scripts/ParallaxScript.cs)
      * [Busqueda de un target](/scripts/Target.cs)
      * [Un script con varias cosas ](/scripts/TipsAndVarious.cs)
-     * [Una pequeña prueba de insercion](/scripts/Target.cs)
