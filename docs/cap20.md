@@ -47,5 +47,5 @@ Si definimos varios scriptable objects por ejemplo, tipo orco, mago, guerrero u 
 
 Queda mas o menos claro la gran utilidad que nos da el uso de `scriptable objects`?. La potencia o mejor dicho la flexibilidad es poder desacoplar código y aplicar propiedades o comportamientos a diferentes objetos que vayamos creando en nuestro juego.
 
-> ### :light_bulb: Sugerencia
+> :light_bulb: ### Sugerencia
 > Aquí el texto... Esta sería una forma.
