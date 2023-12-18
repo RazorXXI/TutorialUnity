@@ -39,10 +39,21 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Capítulo 3: Materiales, Texturas y Shaders](/docs/cap15.md)
      * [Capítulo 4: Animaciones. Animation y Animator](/docs/cap16.md)
 
-* **Realidad Virtual**
+ * **Realidad Virtual**
      * [Capítulo 1: Cámara, movimiento e interacciones](/docs/cap80.md)
      * [Apendice: Configuración de entorno para VR](/docs/apendiceVR.md)
 
+ * **Conceptos de Programación Avanzada**
+     *[Capítulo 1:](/) 
+     *[Capítulo 2:](/)
+     *[Capítulo 3:](/)
+     *[Capítulo 4:](/)
+     *[Capítulo 5:](/)
+     *[Capítulo 6:](/)
+     *[Capítulo 7:](/)
+     *[Capítulo 8:](/)
+     *[Capítulo 9:](/)
+     *[Capítulo 10](/)
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
  * [Appendix II: Resumenes y Chuletas (`INCOMPLETO`)](/docs/wiki/appendixII/00_ResumenNuevoInput.md)
@@ -67,3 +78,5 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Efecto Parallax II](/scripts/ParallaxScript.cs)
      * [Busqueda de un target](/scripts/Target.cs)
      * [Un script con varias cosas ](/scripts/TipsAndVarious.cs)
+
+[def]: /
