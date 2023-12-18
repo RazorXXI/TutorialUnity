@@ -9,7 +9,7 @@ Para configurar el nuevo sistema de inputs de Unity, tendremos que seguir una se
 
  <!-- > [!NOTE] -->
  <!-- > Una nota rapida para informar--> 
- > [!Sugestion]
+ > _Sugerencia_
  > Esto es una sugerencia.
  ```mermaid
  graph TD;
