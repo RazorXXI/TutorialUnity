@@ -61,3 +61,4 @@ Se que ahora todo lo que he escrito en la clasificación te suena a chino, soy c
 
 Seguramente si te has puesto a indagar un poco, el que mas te sonará sera el `Singleton`, este junto al `Object Pool` son los dos mas conocidos en el desarrollo de videojuegos, pero eso, ya lo iremos viendo mas adelante. Sin prisa mi joven Skywalker.
 
+En el siguiente capítulo te enseñaré como implementar el `Object Pool` y el `Singleton`. Y si se me ocurre algún otro que pueda ser interesante, pues lo incluiré, pero eso ya me lo iré pensando sobre la marcha, que prisa no hay y ademas `la prisa mata, amigo`.
