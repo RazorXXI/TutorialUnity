@@ -29,9 +29,6 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Capítulo 10: Otros aspectos de la programación en C#](/docs/cap10.md)
      * [Capítulo 11: Cosas interesantes para hacer con C#](/docs/cap11.md)
      * [Capítulo 12: Atributos para personalizar el Inspector de Unity](/docs/cap12.md)
-     * [Capítulo 13: Aspectos avanzados de programación C#](/docs/cap12_0.md)
-     * [Capítulo 14: Funciones matemáticas relevantes](/docs/cap12_1.md)
-     * [Capítulo 15: Delegados](/docs/cap12_2.md)
 
  * **Físicas, Inputs y Otros Menesteres**
      * [Capítulo 1: Físicas en Unity 3D. Rigidbody y Colisiones Varias](/docs/cap13.md)
@@ -44,16 +41,15 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Apendice: Configuración de entorno para VR](/docs/apendiceVR.md)
 
  * **Conceptos de Programación Avanzada**
-     * [Capítulo 1:](/) 
-     * [Capítulo 2:](/)
-     * [Capítulo 3:](/)
-     * [Capítulo 4:](/)
-     * [Capítulo 5:](/)
-     * [Capítulo 6:](/)
-     * [Capítulo 7:](/)
-     * [Capítulo 8:](/)
-     * [Capítulo 9:](/)
-     * [Capítulo 10](/)
+     * [Capítulo 1: Clases Estáticas](/docs/cap17.md) 
+     * [Capítulo 2: Constantes y Enumeraciones](/docs/cap18.md)
+     * [Capítulo 3: Máquina de Estados](/docs/cap19.md)
+     * [Capítulo 4: Funciones Matemáticas Relevantes](/docs/cap12_1.md)
+     * [Capítulo 5: Delegados](/docs/cap12_2.md)
+     * [Capítulo 6: Scriptable Objects](/)
+     * [Capítulo 7: Patrones de Diseño I](/)
+     * [Capítulo 8: Patrones de Diseño II](/)
+     * [Capítulo 9: Principios SOLID](/)
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
  * [Appendix II: Resumenes y Chuletas (`INCOMPLETO`)](/docs/wiki/appendixII/00_ResumenNuevoInput.md)
