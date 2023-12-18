@@ -6,14 +6,3 @@ Para configurar el nuevo sistema de inputs de Unity, tendremos que seguir una se
  2. Ir a Project Settings y darle a `Create Settings Assets`.
 
  3. 
-
- <!-- > [!NOTE] -->
- <!-- > Una nota rapida para informar--> 
- > [!TIP](Sugerencia)
- > Esto es una sugerencia.
- ```mermaid
- graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
- ```
