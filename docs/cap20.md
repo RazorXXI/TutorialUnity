@@ -46,3 +46,6 @@ public class OrcWarriorCharacter: Monobehaviour
 Si definimos varios scriptable objects por ejemplo, tipo orco, mago, guerrero u otro tipo, vamos a poder ir dando al asset `ScriptableObjectCharacter` diferentes valores, los cuales van a ser aplicados al objeto que lo vaya a usar.
 
 Queda mas o menos claro la gran utilidad que nos da el uso de `scriptable objects`?. La potencia o mejor dicho la flexibilidad es poder desacoplar código y aplicar propiedades o comportamientos a diferentes objetos que vayamos creando en nuestro juego.
+
+> # Sugerencia
+> Aquí el texto... Esta sería una forma.
