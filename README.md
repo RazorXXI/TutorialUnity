@@ -47,9 +47,10 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Capítulo 4: Funciones Matemáticas Relevantes](/docs/cap12_1.md)
      * [Capítulo 5: Delegados](/docs/cap12_2.md)
      * [Capítulo 6: Scriptable Objects](/docs/cap20.md)
-     * [Capítulo 7: Patrones de Diseño I](/docs/cap21.md)
-     * [Capítulo 8: Patrones de Diseño II](/docs/cap22.md)
-     * [Capítulo 9: Principios SOLID](/)
+     * [Capítulo 7: Patrones de Diseño I - Definición](/docs/cap21.md)
+     * [Capítulo 8: Patrones de Diseño II - Object Pooling](/docs/cap22.md)
+     * [Capítulo 9: Patrones de Diseño III - Singleton](/)
+     * [Capítulo 10: Principios SOLID](/)
      
  * [Appendix I: Construyendo un juego 2D con Unity](/docs/wiki/README.md)
  * [Appendix II: Resumenes y Chuletas (`INCOMPLETO`)](/docs/wiki/appendixII/00_ResumenNuevoInput.md)
