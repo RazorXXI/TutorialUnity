@@ -1,4 +1,5 @@
-# Capítulo 1 - Físicas en Unity 3D. Rigidbody y Colisiones Varias
+# Capítulo 3: Físicas, Inputs y Otros Menesteres
+## 3.1 - Físicas en Unity 3D. Rigidbody y Colisiones Varias
 
 Que tal mi querido Einstein!! Hoy toca hablar de física... pero no cualquier física... no te voy a contar mierdas sobre la teoría de la relatividad, mecánica cuántica o la teoría de cuerdas. Te voy a contar sobre Física en Unity. Así que acomodate, pillate algo fresquito para meter al estomago, que arrancamos.
 
@@ -11,8 +12,8 @@ Pues bien, que me voy por las ramas. Como hemos visto antes, tenemos varios comp
  * El componente `Rigidbody`.
  * El componente `Collider`.
 
-## El Componente Rigidbody
-
+### 3.1.1 - El Componente Rigidbody
+---
 El componente `Rigidbody` es el que nos va a permitir simular comportamientos físicos en nuestro `GameObject`, permitiendo así a este último, el ser afectado por la gravedad o responder a las colisiones.
 
 El componente `Rigidbody` tiene una serie de parámetros que serán los que modifiquemos para hacer que el objeto tenga una serie de caracteristicas físicas. A continuación vamos a enumerarlos y comentarlos brevemente, para posteriormente ampliar un poco mas sobre ellos.
@@ -69,8 +70,8 @@ No voy a entrar en detalle de como acceder a los atributos del `Rigidbody` pues 
 
 Antes de seguir, te voy a dejar un [ejemplo](../scripts/ControlRigidBody.cs) de cosas que toquetear al `Rigidbody`, para que vayas viendo como se hacen cierto tipo de cosas.
 
-## El Componente Collider
-
+### 3.1.2 - El Componente Collider
+---
 Este componente es el que va a definir el volumen o envoltura del objeto con el que otros objetos podrán colisionar, apoyarse o realizar otras acciones.
 
 Los `Colliders` mas sencillos son:

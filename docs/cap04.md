@@ -1,4 +1,5 @@
-# Capítulo 4 - Arrays
+# Capítulo 2: Scripting en Unity
+## 2.4 - Arrays
 
   Los `Arrays` son un tipo de estructura que permite almacenar un conjunto de datos.
 

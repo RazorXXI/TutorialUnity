@@ -1,11 +1,12 @@
-# Capítulo 8 - La Clase Padre Monobehaviour
+# Capítulo 2: Scripting en Unity
+## 2.8 - La Clase Padre Monobehaviour
 
 Lucke, yo, soy tu Padre!!
 
 Bien, pues es cierto, es el padre. `Monobehaviour` es la clase de la que hereda cualquier `script` en Unity. Obviamente si lo queremos usar de componente, debe heredar de `Monobehaviour`.
 
-  ## Ciclo de vida de Monobehaviour
-  
+### 2.8.1 - Ciclo de vida de Monobehaviour
+---  
   El ciclo de vida de `Monobehaviour` es como se muestra a continuación:
   
   ![Ciclo de Vida de Monobehaviour](https://i.stack.imgur.com/gmvWn.png)
@@ -47,7 +48,7 @@ Bien, pues es cierto, es el padre. `Monobehaviour` es la clase de la que hereda 
   - `OnApplicationQuit()`: Es llamado justo antes de borrar todos los *GameObjects* y cerrar el juego o la aplicación.
   - `OnMouseDown()`: Se ejecuta, cada vez que se pulsa el botón izquierdo del ratón.
   
-  Bien, ahora que ya mas o menos lo tienes claro, te voy a dar una serie de Briconsejos para que seas un Mostro de la Programación de Juegos en Unity3D.
+Bien, ahora que ya mas o menos lo tienes claro, te voy a dar una serie de Briconsejos para que seas un Mostro de la Programación de Juegos en Unity3D.
   
   Comenzamos.
   

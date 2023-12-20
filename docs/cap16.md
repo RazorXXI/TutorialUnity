@@ -1,4 +1,5 @@
-# Animaciones. Animation y Animator
+# Capítulo 3: Físicas, Inputs y Otros Menesteres
+## 3.4 - Animaciones. Animation y Animator
 
 Y es en este punto que vamos a aprender a que los muñecos se mueva.
 
@@ -17,8 +18,8 @@ Antes de proseguir, hemos de contar lo siguiente. Para crear animaciones, Unity 
 
 Serán estas dos partes las que nos van a permitir poder crear nuestras animaciones, así como el comportamiento de estas. Se que ahora mismo suena a chino, pero pronto cobrará mas sentido.
 
-## Panel Animation
-
+### 3.4.1 - Panel Animation
+---
 En `Animation` será donde se vayan generando nuestro clips de animación a partir de un modelo 3D o bien de otro objeto.
 
 Aquí, podremos modificar propiedades como el `transform` o las propiedades de otros componentes. A continuación vamos a ver el panel `Animation`.
@@ -29,8 +30,8 @@ Para poder acceder al panel animation, simplemente haremos click en `Window -> A
 
 Llegados a este punto seguro que estarás diciendo... (si, todo esto esta muy bien, pero como puñetas se crea una animación??!!). Tranquilo, no desesperes, voy a ello, pero antes te tenia que presentar nuestro querido panel *Animation* ya que en el vas a pasar muchas horas.
 
-### Creando nuestra primera animación
-
+#### 3.4.1.1 - Creando nuestra primera animación
+---
 Para este ejemplo, voy a explicar como crear una animación en 2D ya que será mas sencillo y tocaremos un par de puntos interesantes en el proceso.
 
 De punto de partida, diré que antes tenemos que tener una serie de sprites para animar, ya que serán la base de nuestras animaciones 2D. Si los descargas del Asset Store de Unity, por lo general traeran ya sus archivos de animación asi como códigos asociados. Es por ello es que yo te voy a contar como hacer el proceso totalmente a mano, que es como si tu te hubieras creado tus personajes y ahora te toca crear la animación.
@@ -122,8 +123,8 @@ Pues bien, ya sabemos como crear nuestra primera animación, asi que vamos a cre
 
 Pues bien, supongo que habras sido buen chico y te habrás creado la última animación, tal y como te he dicho no?? verdad?? A que has sido un chico aplicado y lo has hecho...?? En caso contrario, ya estas tardando en hacerla, puesto que vamos al siguiente punto que es `El Panel Animator`, y a partir de aquí agarrate que vienen curvas, porque vamos con el código.
 
-## Panel Animator
-
+### 3.4.2 - Panel Animator
+---
 Pues bien, si en el panel `animation` creabamos nuestras animaciones según ibamos necesitando para nuestro personaje, en el panel `animator` vamos a definir cuando se van a activar y por ello, vamos a definir el comportamiento de las animaciones en nuestro pequeño amigo pixelado.
 
 Para abrir el `panel animator` ve a `Window -> Animations -> Animator` y se nos abrirá la ventana de `Animator`. Yo un consejo que te doy, es acoplarlo en un sitio donde lo puedas tener accesible, del mismo modo que te digo lo mismo para el panel `Animation`. Te dejo una imagen de como lo tengo yo, que para mi es bastante comodo tenerlo así. Tu puedes ponerlo como mejor te venga en gana.
@@ -227,8 +228,8 @@ Si has seguido el proceso, y lo has ido haciendo conmigo, puedes darle al `Play`
 
 *IMPORTANTE: EL SCRIPT QUE HEMOS CREADO, LO TIENES QUE AÑADIR AL MUÑECO, SI NO, NO FUNCIONA. CREO QUE LLEGADOS A ESTAS ALTURAS, NO TENGO QUE DECIRLO. PERO POR SI ACASO.*
 
-## Eventos en animaciones
-
+### 3.4.3 - Eventos en animaciones
+---
 El poder disparar eventos en animaciones, es algo que vamos a usar mogollón de veces, bien sea para hacer sonar cuando nuestro muñeco dispare, o cuando salte, o si quiere decir eso de AYUUUUKEN!!
 
 Pues bien, aunque aun no hemos llegado a sonidos, vamos a verlo por encima porque vamos a disparar sonidos a la hora de que nuestro amigo se mueva.

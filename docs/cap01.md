@@ -1,4 +1,5 @@
-# Capítulo 1 - Una Breve Introducción
+# Capítulo 2: Scripting en Unity
+## 2.1 - Una Breve Introducción
 
 El lenguaje de programación empleado en Unity es C#. C# es un lenguaje de programación orientado a Objetos.
 
@@ -17,8 +18,8 @@ La clase fundamental y principal de la cual heredan todos en Unity, es la clase 
 
 A modo de detalle, podemos indicar, que la clase `MonoBehaviour` está indicada para realizar juegos pequeños y medianos, dado que para juego grandes triple A, no se utiliza tanto.
 
-# El Componente Script
-
+### 2.1.2 - El Componente Script
+---
 Los `scripts` son componentes que nos permiten definir un comportamiento específico para nuestra aplicación o juego.
 
 Como hemos indicado al principio, los `scripts`en Unity, están escritos en el lenguaje C#. Todos los `scripts`son tratados como `assets` que pueden ser añadidos a nuestro juego o aplicación.

@@ -1,11 +1,12 @@
-# Capítulo 9 - Gestión de GameObjects mediante Scripts
+# Capítulo 2: Scripting en Unity
+## 2.9 - Gestión de GameObjects mediante Scripts
 
 Aquí ya empieza la chicha buena. Vete por un cafelito, cola-cao o lo que te guste, que aquí hay para rato.
 
 Ya volviste con algo para meter al estomago? Pues comencemos, que esta parte es densa de narices.
 
-## Instanciando GameObjects
-
+### 2.9.1 - Instanciando GameObjects
+---
 Como ya hemos visto, un `script` nos permite hacer cosas con nuestros `GameObjects`, pero ademas, nos permite *instanciar* (crear) y destruir `GameObjects` en tiempo de ejecución.
 
 El método que nos permite crear `GameObjects` es **`instantiate`**. Para usarlo, es necesario una referencia al `GameObject` que se va a crear (*instanciar*).
@@ -279,7 +280,7 @@ Bueno, te haré un breve resumen.
 
 Pues ya esta, aquí te he explicado básicamente como funciona y lo que hemos hecho. Todo claro mi joven aprendiz??
 
-## Destruyendo Cosas de Forma Controlada
+### 2.9.2 - Destruyendo Cosas de Forma Controlada
 
 Uff... mucho tute con esto de crear, mover... jope, que de cosas podemos hacer y todo lo que hemos visto en un ratito. Tranquilo, que aun queda mas, así que yo que tu me iba por un chupachups de Koyak, que esto aun va para largo.
 

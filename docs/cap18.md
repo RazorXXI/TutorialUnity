@@ -1,9 +1,11 @@
-# Capítulo 2 - Constantes y Enumeraciones
+# Capítulo 5: Conceptos de Programación Avanzada
+## 5.2 - Constantes y Enumeraciones
 Bueno, siguiendo con lo que estabamos, vamos a ver ahora el concepto de constante y enumeración, el cual nos va a resultar muy util para hacer nuestros futuros pequeños juegos, o lo que nosotros queramos en C#.
 
 Vamos al lio.
 
-## Constantes
+### 5.2.1 - Constantes
+---
  Las constantes son datos los cuales no van a variar su valor durante la ejecución de nuestro código, al contrario que sucede con las variables.
 
  La forma de declarar una variables es la siguiente:
@@ -27,7 +29,8 @@ Vamos al lio.
   * __Optimización:__ El compilador reservará una cierta cantidad de memoria durante toda la ejecución de nuestro programa, permitiendo centrar recursos en otros procesos.
   * __Seguridad:__ Al no poderse modificar su valor en tiempo de ejecución, evitaremos cambiar dicho valor por error durante la ejecución o bien por equivocación mientras escribimos el código, ya que el compilador nos informará de un error informando que estamos tratando de cambiar el valor de una constante.
 
-## Enumeraciones
+### 5.2.2 - Enumeraciones
+--- 
  Las enumeraciones son un tipo de variable la cual poseera un conjunto de valores constantes.
 
  Sé que ahora no queda muy claro, pero en breve lo pillaras rápido.

@@ -1,4 +1,5 @@
-# Capítulo 3 - Unity Asset Store
+# Capítulo 1: Unity Instalación y Presentación
+## 1.3 - Unity Asset Store
 
 Bien, este capítulo va a ser bastante corto. Aquí te voy a contar de como conseguir "*Assets*"[^1] para tus proyectos.
 
@@ -48,8 +49,8 @@ Cuando le demos a importar, nos abrirá una ventana donde nos permitirá elegir 
 
 Y hasta aquí poco mas, no hay demasiado que explicar ya en relación a conseguir tus assets en la Store de Unity, lo que si te voy a dejar, son algunos enlaces a otras páginas donde puedes conseguir assets también para tus proyectos y preferiblemente gratis.
 
-## Algunas páginas para conseguir assets
-
+### 1.3.1 - Algunas páginas para conseguir assets
+---
  * [Unity Asset Store](https://assetstore.unity.com/): Página de Unity donde conseguir diversos assets (No todos gratis).
  * [Itch.io Game Assets](https://itch.io/game-assets): Página de Itch.io donde puedes encontrar varios assets (No todos gratis).
  * [Turbosquid](https://www.turbosquid.com/): Aquí podrás descargarte modelos 3D para tus proyectos (No todos son gratis).

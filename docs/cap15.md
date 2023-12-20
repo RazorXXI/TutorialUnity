@@ -1,9 +1,10 @@
-# Capítulo 3 - Materiales, Texturas y Shaders
+# Capítulo 3: Físicas, Inputs y Otros Menesteres
+## 3.3 - Materiales, Texturas y Shaders
 
 Bueno mi joven padawan, hoy toca hablar sobre los materiales. Te voy a dar primero la explicación de lo que son los materiales en unity y después vamos a profundizar un poco mas. En principio este capítulo no va a ser demasiado extenso o al menos es lo que voy a intenar, pero claro lo mas importante es dejar todo clarito y muy mascadito para que no haya dudas, que sino despues me dices que no te has enterado.
 
-## Materiales y Texturas
-
+### 3.3.1 - Materiales y Texturas
+---
 Los **materiales** son archivos que van a definir como se va a comportar visualmente una superfice cuando la luz incida en ella y a la hora de ser renderizada.
 
 Las opciones de los materiales van a depender del `shader` que este usand.
@@ -57,8 +58,8 @@ Las `texturas` no son otra cosa que imágenes que se aplicaran a una malla 3D. T
 
 Si estuvieramos hablando del modo 2D, estas texturas las habriamos llamado `Sprites` que aunque siguen siendo imagenes, estas son utilizadas de manera distinta al modo 3D. Con `sprites`, se puede animar un personaje en 2D o también crear escenarios completos.
 
-## Shaders
-
+### 3.3.2 - Shaders
+---
 Hasta el momento, hemos solo nombrado a los `shaders` pero aun no hemos definido que son y que hacen. Es aquí donde te va a quedar bastante claro de que se trata el tema.
 
 Un `Shader` es un código que contiene una serie de cálculos matemáticos que van a servir para calcular el color de cada pixel a la hora de ser renderizado. Esto se basa en el *input* de la iluminación y de la configuración del material. Gracias al `Shader` obtendremos el resultado final que queremos mostrar por pantalla.
@@ -75,24 +76,23 @@ Por defecto Unity, trae una serie de `Shaders` incluidos cuando se instala. Esto
  - Unlit: Para renderizados donde se ignora toda luz y sombreado.
  - Legacy: Shaders antiguos de Unity.
 
-## Información sobre la luz
-
+### 3.3.3 - Información sobre la luz
+---
 Ya para acabar este capítulo vamos a tratar dos puntos que creo son importantes estos son:
 
  - Conservación de Energia (Energy Conservation).
  - Alto Rango Dinámico (HDR).
 
-### Conservación de Energia
-
+#### 3.3.3.1 - Conservación de Energia
+---
 Esto es un concepto de física el cual dice que, los objetos no pueden reflejar mas luz de la que reciben.
 
 Con la base de esta explicación, Unity nos dice que, cuanto menos "*specular*" sea un material, menos difuso debe ser, y que cuanto mas suave es una superficie, mas fuerte y pequeño será el resalte de la luz.
 
-### Alto Rango Dinámico
-
+#### 3.3.3.2 - Alto Rango Dinámico
+---
 El `Alto Rango Dinámico`, es una técnica que trata de simular el comportamiento del ojo humano en los motores gráficos. Y esto como es? Pues te voy a dar una explicación del estilo del **Hombre y la Vida**.
 
 Cuando el ojo humano está mirando un objeto en la vida real, el ojo trata de ajustarse a las condiciones de la luz en la zona donde se encuentra el observador y hacia la zona a la que está mirando. Por ejemplo, si estas en la calle en un dia soleado tu pupila se contraera para ajustarse a la iluminación de donde estas, pero si al mismo tiempo miras hacia una zona que se encuentra en la sombra, el ojo reajustará la pupila para poder ver mas detalle de la zona que está en la sombra, la cual está menos iluminada que en la zona que se encuentra el observador y que está plenamente iluminada por la luz solar.
-
 
 Y hasta aquí el capítulo de hoy, espero que haya sido productivo y didactico. De todas formas, no seas vago y tómate la molestia de buscar por ti mismo sobre estos temas si te entra curiosidad, cosa que deberias. Asi que por hoy, colorín colorado, este cuento se ha acabado.

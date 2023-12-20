@@ -1,4 +1,5 @@
-# Capítulo 2 - Entorno de Unity
+# Capítulo 1: Unity Instalación y Presentación
+## 1.2 - Entorno de Unity
 
 Bien, ya supongo que habras instalado el Unity y la versión 2021 LTS como te dije, y si no es así, pues tira para el capítulo anterior y aquí te espero a que lo instales.
 

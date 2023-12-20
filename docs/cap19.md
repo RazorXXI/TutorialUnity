@@ -1,7 +1,9 @@
-# Capítulo 3 - Máquina de Estados
+# Capítulo 5: Conceptos de Programación Avanzada
+## 5.3 - Máquina de Estados
 No te asustes que tampoco es tan dificil y veras como con un poco que te cuente, lo pillas rápido, así que vamos a ello.
 
-## Máquina de Estados (Definición y Usos)
+### 5.3.1 - Máquina de Estados (Definición y Usos)
+---
 Una máquina de estados, no es el gobierno ese que los mas conspiranoicos dice que controlan a los paises en la sobra, no... quizas eso sería mas divertido, pero no es es el caso. En fin, que me voy por las ramas.
 
  Una __máquina de estados__ es una función que se emplea para **controlar el código en tiempo de ejecución**.
@@ -16,11 +18,10 @@ Una máquina de estados, no es el gobierno ese que los mas conspiranoicos dice q
 
  Vamos a ver como podemos implementar una máquina de estados sencillita, y pares vamos a poner un ejemplito to´ guapo de esos que te pongo.
 
+
+ ### 5.3.2 - Estructura de Una Máquina de Estados
 ---
- ### Estructura de Una Máquina de Estados
-
  La máquina de estados que vamos a crear, básicamente tendrá la siguiente forma:
-
 
  ![Maquina de estados](../img/12_02_State_machine.png)
 

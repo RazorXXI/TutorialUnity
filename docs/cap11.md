@@ -1,10 +1,11 @@
-# Capítulo 11 - Cosas interesantes para hacer con C#
+# Capítulo 2: Scripting en Unity
+## 2.11 - Cosas interesantes para hacer con C#
 
 La infinidad de cosas que podemos hacer con C# para darle vida a nuestros juegos, es infinita, el único límite que tenemos es la propia imaginación del desarrollador.
 
 Por ello, en este capítulo, vamos a ver algunas cositas que podemos hacer, algunas serán bastante obvias, pero que seguramente se te puede venir al cerebelo esa pregunta tan puñetera, como es... `Y esto como lo hago???!!`. Pues bien, no sufras, que para eso estamos aquí.
 
-## Como cambiar de escena
+### 2.11.1 - Como cambiar de escena
 
 El cambio de escena en un juego, es algo muy rutinario, dado que cada escena representa o puede representar un nivel de nuestro juego, obviamente esto puede ser así, si tu juego va a tener varios niveles, en caso contrario, el cambio de escena, puede ser debido a que vayas a entrar en un sitio, presentar algo, el menú de juego es otra escena, los créditos, una fase bonus, todo eso son escenas.
 
@@ -99,6 +100,3 @@ Que porque no instanciarlo antes?? Simple. Porque a lo mejor, en esa escena quer
 Lo pillas??
 
 Bueno, creo que ya con esto puede quedar mas clarito para que, cuando, como y donde emplear `OnLevelWasLoad`.
-
-
-

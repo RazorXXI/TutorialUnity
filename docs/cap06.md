@@ -1,11 +1,12 @@
-# Capítulo 6 - Estructuras de Control
+# Capítulo 2: Scripting en Unity
+## 2.6 - Estructuras de Control
 
 Las estructuras de control, nos van a permitir controlar y dirigir el flujo de ejecución de nuestros scripts. De ese modo podemos imponer condiciones, manejar el flujo de nuestro script mediante la comparación de valores, etc.
 
 Así que este capítulo te va a ser realmente importante, ya que gracias a las estructuras de control que vamos a ver aquí, es como vamos a poder construir nuestros `scripts` en un futuro. Así que ponte cómodo, relajate, que este capitulo, va a ser un pelín largo, aunque trataré de condensarlo todo lo que pueda hasta la mínima expresión.
 
-  ## Estructura if/else
-  
+### 2.6.1 - Estructura if/else
+---
   Esta estructura nos permite ejecutar un fragmente de código siempre que se cumpla una condición dada.
   
   La sintaxis es:
@@ -34,8 +35,8 @@ Así que este capítulo te va a ser realmente importante, ya que gracias a las e
   }
   ```
 
-  ## Estructura if/else if/else
-  
+### 2.6.2 - Estructura if/else if/else
+---  
   Esta estructura es igual que la anterior, pero podemos especificar mas de una condición para controlar.
   
   La sintaxis es:
@@ -72,8 +73,8 @@ Así que este capítulo te va a ser realmente importante, ya que gracias a las e
   }
   ```
 
-  ## Bucle While
-  
+### 2.6.3 - Bucle While
+---  
   El bucle While del paraguail...
   
   Este bucle nos permite ejecutar un fragmente de código mientras se cumpla su condición y se repetirá mientras la condición sea cierta.
@@ -103,8 +104,8 @@ Así que este capítulo te va a ser realmente importante, ya que gracias a las e
   |:---|
   | **Es muy importante controlar que la condición se cumpla en algún momento, dado que si no se cumple entraremos en una mierda muy gorda que en informática se conoce como BUCLE INFINITO o THE FUCKING LOOP OF DEATH, el cual permanecerá dentro del bucle toda la eternidad, dejándonos el  ordenador bloqueado, con el consiguiente fallo de nuestro juego o aplicación. Así que mi "Joven Palawan", no se te olvide de hacer que se cumpla la condición.** |
 
-  ## Estructura Switch
-  
+### 2.6.4 - Estructura Switch
+---  
   Este tipo de estructura, nos permite ejecutar una acción desde una lista de posibles opciones.
   
   Su sintaxis es:
@@ -163,8 +164,8 @@ Así que este capítulo te va a ser realmente importante, ya que gracias a las e
   }
   ```
 
-  ## Bucle For
-  
+### 2.6.5 - Bucle For
+---  
   Este bucle es ampliamente empleado para recorrer estructuras de datos, como por ejemplo los `arrays`.
   
   Un detalle importante, es que en este bucle no tenemos el problema que teníamos en el `while` de que no se cumpliera la condición y nos quedáramos atrapados en un Bucle Infinito, ya que para poder emplear el bucle `for`, debemos definir previamente la longitud del bucle.
@@ -189,8 +190,8 @@ Así que este capítulo te va a ser realmente importante, ya que gracias a las e
   
   Como podemos comprobar, la gran utilidad de este bucle es la de iterar con los elementos de un `array`, aunque se puede emplear para otros fines, el principal que veréis es este.
 
-  ## Bucle Foreach
-
+### 2.6.6 - Bucle Foreach
+---
   Este bucle es parecido al `for`, pero esta orientado para iterar con colecciones de datos.
 
   Un dato curioso que lo diferencia con respecto al `for` es que con este bucle, no vamos a iterar con un indice, con lo cual no podremos realizar operaciones como asignaciones en las posiciones indicadas por el indice.

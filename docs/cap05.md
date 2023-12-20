@@ -1,11 +1,12 @@
-# Capítulo 5 - Funciones
+# Capítulo 2: Scripting en Unity
+## 2.5 - Funciones
 
 Como hemos ido viendo, los `scripts` son componentes que nosotros creamos, para darle comportamientos y funcionalidades a los **GameObjects** de nuestro juego o aplicación.
 
 En este capítulo vamos a aprender a crear nuestras propias funciones ó también llamados mas correctamente **métodos**.
 
-## Declaración y uso de funciones
-
+### 2.5.1 - Declaración y uso de funciones
+---
 En C# podemos crear nuestras propias funciones, es eso mismo lo que va a ampliar la funcionalidad de lo que queramos hacer en nuestros juegos gracias a nuestros *scripts*.
 
 La forma de declarar una función en C# es del siguiente modo:

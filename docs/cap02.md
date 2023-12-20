@@ -1,7 +1,8 @@
-# Capítulo 2 - Variables y Tipos de Datos
+# Capítulo 2: Scripting en Unity
+## 2.2 - Variables y Tipos de Datos
 
-  ## Definición de Variable
-
+### 2.2.1 - Definición de Variable
+---
   Una variable es un espacio en memoria, que se reserva para almacenar un dato.
 
 Una vez tenemos claro que es una variable, vamos a explicar como se declaran y sus tipos de datos.
@@ -39,7 +40,8 @@ Ejemplo:
 int edadPlayer = 18;
 ```
 
-  ### Tips importantes sobre las Variables
+#### 2.2.1.1 - Tips importantes sobre las Variables
+---
 
   Como hemos visto, según indiquemos, una variable puedes ser pública o privada, pudiendo ser vista por el inspector de **Unity** o no. Pero a lo mejor, queremos que una variable no sea accesible por otras clases, pero si desde el editor de **Unity**, para ello, indicaremos la propiedad `[SerializeField]` en la declaración de la variable. De este modo, permitimos que una variable sea privada, pero si accesible desde el editor de Unity. 
 
@@ -52,7 +54,8 @@ private int playerLife; //Esta variable es privada, pero accesible desde el edit
 
 Como normal general para una buena práctica, lo correcto es poner las variables de clase como privadas, y usar `[SerializeField]` para poderlas mostrar y utilizar desde el editor.
 
-## Operadores en C#
+### 2.2.2 - Operadores en C#
+---
 Tenemos varios tipos de operadores que nos permiten realizar operaciones, los mas comunes son:
 
 **Operadores Numéricos**

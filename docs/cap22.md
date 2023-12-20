@@ -1,7 +1,9 @@
-# Capítulo 8 - Patrones de Diseño
+# Capítulo 5: Conceptos de Programación Avanzada
+## 5.8 - Patrones de Diseño II (Object Pooling)
 Bueno, pues siguiendo con los patrones de diseño, hoy vamos a ver uno de los mas utilizados en el desarrollo de juegos, y para eso estamos hablando de la piscina de objetos u `Object Pool`. Tachaaaan!!! Como te has quedado?
 
-## Piscina de Objetos (Object Pool)
+### 5.8.1 - Piscina de Objetos (Object Pool)
+---
 Hasta el momento, siempre que hemos querido usar mas de un mismo objeto en un juego, por ejemplo los disparos, hemos recurrido a los métodos `Instantiate();` y `Destroy()`.
 
 Esto está bien si no tenemos muchas cosas en la jerarquia de nuestro juego, pero cuando tenemos muchos objetos, el uso de los métodos `Instantiate();` y `Destroy();` nos va a afectar directamente al rendimiento de nuestro juego. En resumen, crear y destruir objetos, no es muy optimo, lo mejor es **activar** y **desactivar** objetos.

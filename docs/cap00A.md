@@ -1,4 +1,5 @@
-# Capítulo 1 - Instalación de Unity
+# Capítulo 1: Unity Instalación y Presentación
+## 1.1 - Instalación de Unity
 
 Bienvenido mi joven Skywalker. Si has llegado hasta aquí es que quieres aprender a hacer cosas en Unity (como yo... que también estoy en ello), pues estas en el mejor sitio. Esto es porque yo también estoy en la misma tesitura que tu, con la salvedad que si estas leyendo esto, es que voy afianzando conocimientos paso a paso.
 

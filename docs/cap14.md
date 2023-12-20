@@ -1,4 +1,5 @@
-# Mas Física. Joint que te Joint y Character Controller
+# Capítulo 3: Físicas, Inputs y Otros Menesteres
+## 3.2 - Mas Física. Joint que te Joint y Character Controller
 
 Bueno mi joven padawan, vamos a seguir ahora viendo mas sobre las físicas, dado que esto es lo que va a permitir dotar a nuestro juego de realismo y funcionalidad (por supuesto, siempre apoyados sobre nuestros Scripts, que son los que van a producir la autentica magia).
 
@@ -11,8 +12,8 @@ Sin estos dos elementos, es imposible el poder detectar ninguna colisión usando
 
 Bueno, vamos a dejar un rato las colisiones y vamos a empezar con una cosa nueva... Tatachiaaan!!! `Joints`.
 
-## Joints
-
+### 3.2.1 - Joints
+---
 Bueno, vamos a ver, si vamos literalmente a la traducción de su significado al español, esto significa `Uniones`... Y para que sirven, que son exactamente, se comen...?? Voy a ir por partes, respondiendo a la última pregunta... No son comestibles, pero si son muy útiles. Sobre que son, pues bien, tal y como hemos dicho son uniones, basicamente lo que hacen es unir un objeto de tipo `Rigidbody` con otro o directamente a un punto que sea fijo, para esto se usan los componentes `Joint` los cuales sirven para dar una cierta libertad de movimiento al `Rigidbody` en cuestión.
 
 Supongo que tu cerebrito habrá empezado a cabilar y a ver que se puede unir, que no, como cuando, que fue primero la gallina o el huevo?? Tranquilo, ahora te lo explico para que no tengas angustia existencial.
@@ -36,8 +37,8 @@ Los tipos de `Joints` que tenemos son:
 
  ![Joints Importantes](../img/14_Joints.png)
 
-## Character Controller
-
+### 3.2.2 - Character Controller
+---
 Y seguimos metiendo conceptos en tu cerebro, asi a cascoporro. Ahora es el turno del componente `Character Controller`.
 
 Este componente básicamente es usado para los controles de jugador en tercera o primera persona y que no usa la física del `Rigidbody`. Nos va a permitir, configurar como se va a mover y comportar dicho movimiento del personaje, gracias a una serie de parámetros, los cuales van a limitar y modelar dicho comportamiento.
@@ -93,8 +94,7 @@ public class ChControllerScript : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
     }
-
-    
+ 
     void Update()
     {
         movimiento = new Vector3(Input.GetAxis("Horizontal") * speed, 0, Input.GetAxis("Vertical") * speed);

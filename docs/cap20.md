@@ -1,4 +1,5 @@
-# Capítulo 6 - Scriptable Object
+# Capítulo 5: Conceptos de Programación Avanzada
+## 5.6 - Scriptable Object
 Aquí empezamos con la chicha guapa.
 
 Un `scriptable object` es un tipo de objeto que podemos usar para darle propiedades a otros objetos, pudiendo crear un tipo de `asset especial`, que se puede asignar a otros assets.

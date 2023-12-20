@@ -1,16 +1,19 @@
-# Capítulo 7 - Patrones de Diseño I
+# Capítulo 5: Conceptos de Programación Avanzada
+## 5.7 - Patrones de Diseño I (Definición)
 Bueno mis queridos amiguitos, en este capítulo vamos a ver una cosa muy util a la hora de realizar nuestros juegos, es lo que se conoce como `Patrones de Diseño`.
 
 Para que se entienda mas o menos claro que son los patrones de diseño, voy a intentar dar una explicación mas o menos resumida de que son y cual es su propósito.
 
-## Definición de Patrón de Diseño
+### 5.7.1 - Definición de Patrón de Diseño
+---
 Un patrón de diseño, es una solución habitual a un problema que ocurre con frecuencia en el diseño de un software.
 
 Son una serie de soluciones de código que se pueden personalizar para solucionar un problema recurrente.
 
 La idea de un patrón de diseño, no es un bloque de código específico, sino un concepto general para poder implementar una solución que encaje con las necesidades de nuestro juego, software, etc...
 
-## Clasificación de los Patrones de Diseño
+### 5.7.2 - Clasificación de los Patrones de Diseño
+---
 Hay varias maneras de clasificar a los patrones de diseño, pero para nuestro caso, que es el que nos importa, los vamos a catalogar según su propósito:
 
  * **Patrones Creacionales**: Son aquellos que proporcionan mecanismos de creación de objetos, incrementando la flexibilidad y reutilización del código existente.
@@ -21,7 +24,8 @@ Hay varias maneras de clasificar a los patrones de diseño, pero para nuestro ca
 
 Se que ahora todo lo que he escrito en la clasificación te suena a chino, soy consciente de ello. Pero una vez termine con esto, vas a ser un `'fucking god'` en estos menesteres, ya verás.
 
-## Ampliación de la clasificación de Patrones
+### 5.7.3 - Ampliación de la clasificación de Patrones
+ ---
  En este punto, vamos a enumerar algunos de los distintos tipos de patrones de diseño. Obviamente no los vamos a ver todos, aunque si los mas importantes que nos van a facilitar la vida para realizar juegos o aplicaciones con Unity.
 
  Según los tipos de patrones, podemos identificar los siguientes.

@@ -1,12 +1,15 @@
-# Capítulo 1 - Clases Estáticas
+# Capítulo 5: Conceptos de Programación Avanzada
+## 5.1 - Clases Estáticas
 En este punto vamos a ver ciertos aspectos avanzados de la programación en C#, e iremos profundizando poco a poco para ver como podemos ampliar y mejorar nuestros códigos.
 
 Tranquilos, que esto es facil.
 
-## Definición de Clase Estática
+### 5.1.1 - Definición de Clase Estática
+---
 Una clase estática es aquella en la que sus variables y métodos, que indiquemos como estáticos, compartirán los datos que almacenen en todas las instancias de esa clase. 
 
-## Una visión mas sencilla de Clase Estática
+### 5.1.2 - Una visión mas sencilla de Clase Estática
+ ---
  Sé que la chapa que te he soltado antes te ha dejado igual, así que voy a explicarlo mejor, fuera de su definición _"oficial"_.
 
  Pensemos en lo siguiente. Cuando instanciamos un objeto de una clase, este tendrá sus valores de variables y métodos según lo modifiquemos en su instancia, y si instanciamos otro objeto, este último, tendrá otros valores... Hasta aquí todo correcto. Pero, si una variable de la clase es marcada como __static__, todas las instancias que creemos de esa clase, cuando modifiquemos la variable _estatica_, esta tendrá el mismo valor en el resto de instancias, durante toda la ejecución del programa.

@@ -1,7 +1,8 @@
-# Capítulo 10 - Otros aspectos de la programación en C#
+# Capítulo 2: Scripting en Unity
+## 2.10 - Otros aspectos de la programación en C#
 
-  ## Corrutinas
-  
+### 2.10.1 - Corrutinas
+---
   Las corrutinas son métodos de Unity, a los cuales se les puede poner un retardo de tiempo, con el fin de pausar su funcionalidad en una parte de la ejecución, durante una serie de segundos y *frames*.
   
   Las corrutinas se diferencian del resto de métodos que creemos en Unity, porque su valor devuelto es un `IEnumerator`.
@@ -26,12 +27,13 @@
   ```
   
 
-   ### Ciclo de vida de una corrutina
-   Vamos a ver una imagen del ciclo de vida de una **corrutina**:
+### 2.10.2 - Ciclo de vida de una corrutina
+---
+Vamos a ver una imagen del ciclo de vida de una **corrutina**:
     
    ![Ciclo de Vida de Una Corrutina](https://i.ytimg.com/vi/n_sr1CtYi6I/maxresdefault.jpg)
   
-  De momento no es preciso que entiendas el esquema este, pero tenlo en tu cabeza, que te va a ser útil y poco a poco, mas adelante lo iras pillando.
+De momento no es preciso que entiendas el esquema este, pero tenlo en tu cabeza, que te va a ser útil y poco a poco, mas adelante lo iras pillando.
   
   Bueno, ya sabemos como se crea una corrutina, pero claro, ahora la pregunta es... ¿Como se llama a una corrutina?. Pues bien mi brillante amigo, simplemente añadiendo una llamada con el método `StartCoroutine(corrutina());`, donde `corrutina()` será el nombre que le hayamos dado nosotros a la **corrutina** que hayamos creado.
   
@@ -86,8 +88,8 @@
   }
   ```
 
-  ## Invoke. Que es y como se usa
-
+### 2.10.3 - Invoke. Que es y como se usa
+---
   `Invoke` es un método heredado de `MonoBehaviour`, el cual básicamente lo que hace es, encontrar una función que coincide con el nombre dado y ejecutarla transcurridos un número de segundos proporcionados.
 
   Su sintaxis es:
@@ -160,6 +162,3 @@ Donde:
 Aquí ya la cosa se pone interesante, por ejemplo imagina, que cada cierto tiempo quieras que en un punto de tu juego, salgan enemigos cada 10 segundos  cada vez. Pues esto lo haría `InvokeRepeating`. Pero... y si en un momento determinado queremos parar esto... No supondría un problema, ya que para ello, tenemos la función `CancelInvoek` que hace justo esto que hemos comentado.
 
 `CancelInvoke`, tal y como acabamos de decir, detiene los `Invoke` que estén en ejecución, pero ojo al dato __DETIENE TODOS LOS INVOKES QUE ESTEN EN EJECUCION__, así que si por ejemplo la vas a usar para detener un `Invoke` en concreto, ten presente de volver a activar todos los demás que realmente necesites que estén en ejecución, ya que al llamar a `CancelInvoke`, estos habrán sido detenidos igualmente.
-
-
-  

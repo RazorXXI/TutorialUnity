@@ -1,9 +1,10 @@
-# Capítulo 7 - Control de Componentes
+# Capítulo 2: Scripting en Unity
+## 2.7 - Control de Componentes
 
 En este capítulo vamos a ver muchas cosas, desde como se comunican entre si los `GameObjects`, como interactuan y mazo de cosillas chulas. Ponte cómodo, vete a tomar un refrigerio antes y vuelve, que aquí tenemos para un ratito. Asi que sin mas dilación, vamos ya a meternos en faena.
 
-  ## Como se comunican los Objetos a través del código
-  
+### 2.7.1 - Como se comunican los Objetos a través del código
+---  
   Bien, para tener claro como se comunican los objetos desde el código, primero debemos tener claro el concepto de referencia de un `GameObject`. Esto no es otra cosa, que la declaración de una variable de tipo `GameObject` por ejemplo, la cual indicaremos en nuestro script como `[SerializeField]`, para poder se accesible desde el editor de Unity, y de ese modo, poder arrastrar el objeto que queramos referenciar.
   
   Pues bien, teniendo claro esto, y si no te queda claro ahora, tu tranqui, que a medida que avances en este capítulo, vas a ir entendiendo esto en tu mollera.
