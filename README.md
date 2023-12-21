@@ -49,7 +49,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [5.6: Scriptable Objects](/docs/cap20.md)
      * [5.7: Patrones de Diseño I - Definición](/docs/cap21.md)
      * [5.8: Patrones de Diseño II - Object Pooling](/docs/cap22.md)
-     * [5.9: Patrones de Diseño III - Singleton (`INCOMPLETO`)](/)
+     * [5.9: Patrones de Diseño III - Singleton](/docs/cap23.md)
      * [5.10: Principios SOLID](/)
      
  * [Appendix I: Construyendo un juego 2D con Unity (`INCOMPLETO`)](/docs/wiki/README.md)
