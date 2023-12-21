@@ -35,9 +35,22 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [3.2: Mas Física. Joint que te Joint y Character Controller](/docs/cap14.md)
      * [3.3: Materiales, Texturas y Shaders](/docs/cap15.md)
      * [3.4: Animaciones. Animation y Animator](/docs/cap16.md)
+     * [3.5: Sistema de Particulas (`INCOMPLETO`)](/)
+     * [3.6: Inputs (`INCOMPLETO`)](/)
+     * [3.7: Sistema de Navegación (`INCOMPLETO`)](/)
+     * [3.8: Audio (`INCOMPLETO`)](/)
+     * [3.9: UI y Canvas (`INCOMPLETO`)](/)
+     * [3.10: Playerprefs (`INCOMPLETO`)](/)
+     * [3.11: Nuevo Sistema de Inputs de Unity (`INCOMPLETO`)](/)
 
- * **Capítulo 4: Realidad Virtual (`INCOMPLETO`)**
+ * **Capítulo 4: Realidad Virtual y Realidad Aumentada (`INCOMPLETO`)**
      * [4.1: Cámara, movimiento e interacciones](/docs/cap80.md)
+     * [4.2: Preparación de un Proyecto para VR (`INCOMPLETO`)](/)
+     * [4.3: Optimización y creación de nuestro primer proyecto VR (`INCOMPLETO`)](/)
+     * [4.4: Introducción a AR (`INCOMPLETO`)](/)
+     * [4.5: Preparacion de un proyecto AR en Unity con Voforia (`INCOMPLETO`)](/)
+     * [4.6: Nuestro primer proyecto de AR en Unity (`INCOMPLETO`)](/)
+     * [4.7: Raycasting (`INCOMPLETO`)](/)
      * [Apendice: Configuración de entorno para VR](/docs/apendiceVR.md)
 
  * **Capítulo 5: Conceptos de Programación Avanzada**
@@ -50,11 +63,22 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [5.7: Patrones de Diseño I - Definición](/docs/cap21.md)
      * [5.8: Patrones de Diseño II - Object Pooling](/docs/cap22.md)
      * [5.9: Patrones de Diseño III - Singleton](/docs/cap23.md)
-     * [5.10: Principios SOLID](/)
+     * [5.10: Principios SOLID (`INCOMPLETO`)](/)
      
+ * **Capítulo 6: Otras cosas importantes en Unity (`INCOMPLETO`)**
+     * [6.1: El Audiomixer (`INCOMPLETO`)](/)
+     * [6.2: Cinemachine (`INCOMPLETO`)](/)
+     * [6.3: Sistema de Inputs avanzado para movil (`INCOMPLETO`)](/)
+     * [6.4: Unity Services (`INCOMPLETO`)](/)
+     * [6.5: Unity Analytics (`INCOMPLETO`)](/)
+     * [6.6: Arquitectura en juegos de Unity (`INCOMPLETO`)](/)
+     * [6.7: Optimización Avanzada (`INCOMPLETO`)](/)
+     * [6.8: Montaje de un proyecto con Unity (`INCOMPLETO`)](/)
+     * [6.9: Renderización (`INCOMPLETO`)](/)
+     * [6.10: Multijugador con Photon Engine (`INCOMPLETO`)](/)
+
  * [Appendix I: Construyendo un juego 2D con Unity (`INCOMPLETO`)](/docs/wiki/README.md)
- * [Appendix II: Resumenes y Chuletas (`INCOMPLETO`)](/docs/wiki/appendixII/00_ResumenNuevoInput.md)
- * [Appendix III: Configuración de PICO 4 en UNITY (`INCOMPLETO`)](/docs/wiki/chuletas.md)
+ * [Appendix II: Configuración de PICO 4 en UNITY (`INCOMPLETO`)](/docs/wiki/chuletas.md)
 
  * **Scripts de Ejemplo**
      * [Buscar un player u otro objetivo](/scripts/BuscarPlayer.cs)
