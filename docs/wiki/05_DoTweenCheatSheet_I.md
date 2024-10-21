@@ -6,6 +6,6 @@ Una herramienta de Unity para crear animaciones suaves y personalizadas de forma
 
 ## ¿Como se instala DoTween?
 
-    -   Descarga el paquete desde el Asset Store de Unity.
+ -   Descarga el paquete desde el Asset Store de Unity.
 
-    -   Importa el paquete a tu proyecto.
+ -   Importa el paquete a tu proyecto.
