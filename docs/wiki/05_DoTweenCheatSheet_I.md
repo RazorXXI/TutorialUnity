@@ -67,3 +67,58 @@ public class DoTweenExample : MonoBehaviour
     }
 }
  ```
+
+## Secuencias
+ Con DOTween tambien podemos encadenar varias animaciones, es lo que DOTween define como secuencia.
+
+ Para declarar y usar una secuencia en DOTween lo haremos del siguiente modo.
+
+ ```c#
+ //Declaracion de la secuencia
+ Sequence mySequence = DOTween.Sequence();
+
+ //Agregar animacion
+ mySequence.Append(transform.DOMoveX(2, 1));
+ //Agregar animacion
+ mySequence.Append(transform.DORotate(Vector3.up * 360, 2));
+
+ //Reproducir secuencia
+ mySequence.Play();
+ ```
+
+## Control de Tweens
+Los controles de animaciones y secuencias son los siguientes:
+
+ - **Play** : Inicia la animación
+ - **Pause** : Pausa la animación
+ - **Resume** : Reanuda la animación
+ - **Rewind** : Vuelve la animación al principio
+ - **Kill** : Cancela la animación
+ - **Complete** : Fuerza la finalización de la animación
+
+
+## Otros métodos interesantes de DOTween
+ - **DOShake** : Simula un temblor
+ - **DOPath** : Anima a lo largo de un camino
+ - **DOProperty** : Anima cualquier propiedad personalizada
+
+## Ejemplos útiles
+
+ A continuación se muestran algunos ejemplos utiles de DOTween.
+
+**Menú Desplegable**
+ ```c#
+public void ToggleMenu() {
+    menuPanel.DOMoveY(menuPanel.rectTransform.anchoredPosition.y + 100, 0.5f).SetEase(Ease.OutBack);
+}
+ ```
+
+ **Controlar vida util de particulas (Sistema de Particulas)**
+ ```c#
+ps.main.startLifetimeModule.constant.DOValue(2f, 1f); // Aumenta a 2 segundos en 1 segundo
+ ```
+
+ **Efecto de desvanecimiento de particulas**
+ ```c#
+colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el último color en 1 segundo
+ ```
