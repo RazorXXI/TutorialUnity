@@ -46,3 +46,24 @@ using DG.Tweening;  //Importacion necesaria para usar DoTween
  | OnStart | Ejecuta el código al iniciar |
  | OnUpdate | Ejecuta el código durante la animación |
  | | |
+
+ A continuación un ejemplo de uso de función y personalización.
+
+ ```c#
+using UnityEngine;
+using DG.Tweening;
+
+public class DoTweenExample : MonoBehaviour
+{
+    //Variables y codigo
+
+    private void funcionDoTween()
+    {
+        //Codigo...
+        // Escalar hacia arriba y hacia abajo
+        transform.DOPunchScale(Vector3.one, 1f, 10) 
+            .SetEase(Ease.InOutSine)        // Movimiento suave
+            .SetLoops(-1, LoopType.Yoyo);   // Repetir infinitamente, yendo y viniendo
+    }
+}
+ ```
