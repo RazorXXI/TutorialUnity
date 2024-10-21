@@ -115,10 +115,67 @@ public void ToggleMenu() {
 
  **Controlar vida util de particulas (Sistema de Particulas)**
  ```c#
-ps.main.startLifetimeModule.constant.DOValue(2f, 1f); // Aumenta a 2 segundos en 1 segundo
+ ParticleSystem ps = GetComponent<ParticleSystem>();
+//Otras declararciones
+
+ ps.main.startLifetimeModule.constant.DOValue(2f, 1f); // Aumenta a 2 segundos en 1 segundo
  ```
 
  **Efecto de desvanecimiento de particulas**
  ```c#
-colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el último color en 1 segundo
+ParticleSystem ps = GetComponent<ParticleSystem>();
+//Otras declaraciones
+
+ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el último color en 1 segundo
+ ```
+
+ **Animar la velocidad de emisión de las particulas**
+ ```c#
+ ParticleSystem ps = GetComponent<ParticleSystem>();
+ //Otras declaraciones
+
+ ps.emision.rateOverTime.constant.DOValue(100, 2f); // Aumenta a 100 partículas por segundo en 2 segundos
+ ```
+
+  **Cambiar el tamaño del emisor de particulas**
+  ```c#
+ ParticleSystem ps = GetComponent<ParticleSystem>();
+ //Otras declaraciones
+
+ ps.shape.radius.DOValue(5f, 1f); // Aumenta el radio a 5 unidades en 1 segundo
+  ```
+
+  **Crear efecto de explosión aumentando la velocidad y tamaño de las particulas**
+
+  ```c#
+ ParticleSystem ps = GetComponent<ParticleSystem>();
+ //Otras declaraciones
+
+ ps.main.startSpeed.DOValue(20f, 0.5f);
+ ps.shape.radius.DOValue(10f, 0.5f);
+  ```
+
+ **Activar y desactivar el sistema de particulas**
+ ```c#
+ ParticleSystem ps = GetComponent<ParticleSystem>();
+ //Otras declaraciones
+
+ DOTween.Sequence()
+    .Append(transform.DOPunchScale(Vector3.one, 1f, 1))
+    .AppendCallback(() => ps.Play());
+ ```
+
+ **Efecto de explosion al destruir un objeto**
+ ```c#
+ public void Explode() {
+    ParticleSystem ps = GetComponent<ParticleSystem>();
+    ps.Play();
+
+    // Aumentar la velocidad y el tamaño de las partículas
+    ps.main.startSpeed.DOValue(20f, 0.2f);
+    ps.shape.radius.DOValue(10f, 0.2f);
+
+    // Destruir el objeto después de la explosión
+    Destroy(gameObject, 1f);
+}
  ```
