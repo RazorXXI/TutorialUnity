@@ -79,6 +79,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
 
  * [Appendix I: Construyendo un juego 2D con Unity (`INCOMPLETO`)](/docs/wiki/README.md)
  * [Appendix II: Configuración de PICO 4 en UNITY (`INCOMPLETO`)](/docs/wiki/chuletas.md)
+ * [Appendix III: Cheat Sheet de DoTween](/docs/wiki/05_DoTweenCheatSheet_I.md)
 
  * **Scripts de Ejemplo**
      * [Buscar un player u otro objetivo](/scripts/BuscarPlayer.cs)
