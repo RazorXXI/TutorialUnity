@@ -183,5 +183,73 @@ ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el 
 
  ### Ejemplos con la cámara
  A continuación algunos ejemplos de DOTween con la camara principal.
-
  
+ **Movimiento suave de cámara**
+ ```c#
+ Camera.main.transform.DOMove(new Vector3(10, 5, -10), 2f); // Mueve la cámara a una nueva posición en 2 segundos
+ ```
+ 
+ **Zoom de cámara**
+ ```c#
+ Camera.main.orthographicSize.DOValue(5, 1f); // Cambia el tamaño ortogonal de la cámara en 1 segundo
+ ```
+
+ **Rotar la cámara**
+ ```c#
+ Camera.main.transform.DORotate(new Vector3(30, 0, 0), 2f); // Rota la cámara 30 grados en el eje X en 2 segundos
+ ```
+
+ **Seguir un objeto en movimiento**
+ ```c#
+ Camera.main.transform.DOFollow(targetTransform, 2f); // Sigue al objeto targetTransform con una velocidad de 2 unidades por segundo
+ ```
+
+ **Combinar seguimiento con zoom**
+ ```c#
+ Camera.main.transform.DOFollow(targetTransform, 2f).SetLookAhead(0.5f); // Añade un poco de anticipación al seguimiento
+ Camera.main.orthographicSize.DOValue(3, 2f); // Hace zoom mientras sigue al objeto
+ ```
+
+ **Efecto Sacudida**
+ ```c#
+ Camera.main.DOShakePosition(1f, 0.2f, 10, 90, false); // Sacude la cámara durante 1 segundo
+ ```
+
+ **Efecto de camara lenta**
+ ```c#
+ Time.timeScale = 0.5f; // Reduce la velocidad del tiempo
+ ```
+
+ **Volver a la normalidad despues de efecto**
+ ```c#
+ DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1, 2f); // Aumenta la velocidad del tiempo en 2 segundos
+ ```
+
+ **Combinar multiples efectos de camara**
+ ```c#
+ Sequence mySequence = DOTween.Sequence();
+ 
+ mySequence.Append(Camera.main.transform.DOMove(new Vector3(10, 5, -10), 2f));
+ mySequence.Append(Camera.main.transform.DORotate(new Vector3(30, 0, 0), 1f));
+ mySequence.Play();
+ ```
+
+ **Camara que sigue a un personaje con efecto zoom**
+ ```c#
+ public class CameraFollow : MonoBehaviour
+ {
+    public Transform target; // Objeto a seguir
+    public float smoothTime = 0.3f;
+    private Vector3 velocity = Vector3.zero;
+
+    void FixedUpdate()
+    {
+        Vector3 targetPosition = target.position + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+
+        // Zoom hacia el objetivo cuando se acerca
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+        Camera.main.orthographicSize = Mathf.Lerp(10, 5, distanceToTarget / 10);
+    }
+ }
+ ```
