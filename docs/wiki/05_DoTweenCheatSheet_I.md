@@ -106,67 +106,68 @@ Los controles de animaciones y secuencias son los siguientes:
 
  A continuación se muestran algunos ejemplos utiles de DOTween.
 
-**Menú Desplegable**
- ```c#
+ ### Ejemplos con Sistema de Particulas
+  **Menú Desplegable**
+  ```c#
 public void ToggleMenu() {
     menuPanel.DOMoveY(menuPanel.rectTransform.anchoredPosition.y + 100, 0.5f).SetEase(Ease.OutBack);
 }
- ```
+  ```
 
- **Controlar vida util de particulas (Sistema de Particulas)**
- ```c#
+  **Controlar vida util de particulas (Sistema de Particulas)**
+  ```c#
  ParticleSystem ps = GetComponent<ParticleSystem>();
 //Otras declararciones
 
  ps.main.startLifetimeModule.constant.DOValue(2f, 1f); // Aumenta a 2 segundos en 1 segundo
- ```
+  ```
 
- **Efecto de desvanecimiento de particulas**
- ```c#
+  **Efecto de desvanecimiento de particulas**
+  ```c#
 ParticleSystem ps = GetComponent<ParticleSystem>();
 //Otras declaraciones
 
 ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el último color en 1 segundo
- ```
+  ```
 
- **Animar la velocidad de emisión de las particulas**
- ```c#
+  **Animar la velocidad de emisión de las particulas**
+  ```c#
  ParticleSystem ps = GetComponent<ParticleSystem>();
  //Otras declaraciones
 
  ps.emision.rateOverTime.constant.DOValue(100, 2f); // Aumenta a 100 partículas por segundo en 2 segundos
- ```
+  ```
 
-  **Cambiar el tamaño del emisor de particulas**
-  ```c#
+   **Cambiar el tamaño del emisor de particulas**
+   ```c#
  ParticleSystem ps = GetComponent<ParticleSystem>();
  //Otras declaraciones
 
  ps.shape.radius.DOValue(5f, 1f); // Aumenta el radio a 5 unidades en 1 segundo
-  ```
+   ```
 
-  **Crear efecto de explosión aumentando la velocidad y tamaño de las particulas**
+   **Crear efecto de explosión aumentando la velocidad y tamaño de las particulas**
 
-  ```c#
+   ```c#
  ParticleSystem ps = GetComponent<ParticleSystem>();
  //Otras declaraciones
 
  ps.main.startSpeed.DOValue(20f, 0.5f);
  ps.shape.radius.DOValue(10f, 0.5f);
-  ```
+   ```
 
- **Activar y desactivar el sistema de particulas**
- ```c#
+   **Activar y desactivar el sistema de particulas**
+   ```c#
  ParticleSystem ps = GetComponent<ParticleSystem>();
  //Otras declaraciones
 
  DOTween.Sequence()
     .Append(transform.DOPunchScale(Vector3.one, 1f, 1))
     .AppendCallback(() => ps.Play());
- ```
+   ```
 
- **Efecto de explosion al destruir un objeto**
- ```c#
+   **Efecto de explosion al destruir un objeto**
+   ```c#
  public void Explode() {
     ParticleSystem ps = GetComponent<ParticleSystem>();
     ps.Play();
@@ -178,4 +179,9 @@ ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el 
     // Destruir el objeto después de la explosión
     Destroy(gameObject, 1f);
 }
- ```
+   ```
+
+ ### Ejemplos con la cámara
+ A continuación algunos ejemplos de DOTween con la camara principal.
+
+ 
