@@ -109,7 +109,8 @@ Los controles de animaciones y secuencias son los siguientes:
  ### Ejemplos con Sistema de Particulas
   **Menú Desplegable**
   ```c#
-public void ToggleMenu() {
+public void ToggleMenu() 
+{
     menuPanel.DOMoveY(menuPanel.rectTransform.anchoredPosition.y + 100, 0.5f).SetEase(Ease.OutBack);
 }
   ```
@@ -119,7 +120,8 @@ public void ToggleMenu() {
  ParticleSystem ps = GetComponent<ParticleSystem>();
 //Otras declararciones
 
- ps.main.startLifetimeModule.constant.DOValue(2f, 1f); // Aumenta a 2 segundos en 1 segundo
+// Aumenta a 2 segundos en 1 segundo
+ ps.main.startLifetimeModule.constant.DOValue(2f, 1f); 
   ```
 
   **Efecto de desvanecimiento de particulas**
@@ -168,7 +170,8 @@ ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el 
 
    **Efecto de explosion al destruir un objeto**
    ```c#
- public void Explode() {
+ public void Explode() 
+ {
     ParticleSystem ps = GetComponent<ParticleSystem>();
     ps.Play();
 
@@ -178,7 +181,7 @@ ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el 
 
     // Destruir el objeto después de la explosión
     Destroy(gameObject, 1f);
-}
+ }
    ```
 
  ### Ejemplos con la cámara
@@ -186,43 +189,52 @@ ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el 
  
  **Movimiento suave de cámara**
  ```c#
- Camera.main.transform.DOMove(new Vector3(10, 5, -10), 2f); // Mueve la cámara a una nueva posición en 2 segundos
+ // Mueve la cámara a una nueva posición en 2 segundos
+ Camera.main.transform.DOMove(new Vector3(10, 5, -10), 2f); 
  ```
  
  **Zoom de cámara**
  ```c#
- Camera.main.orthographicSize.DOValue(5, 1f); // Cambia el tamaño ortogonal de la cámara en 1 segundo
+ // Cambia el tamaño ortogonal de la cámara en 1 segundo
+ Camera.main.orthographicSize.DOValue(5, 1f); 
  ```
 
  **Rotar la cámara**
  ```c#
- Camera.main.transform.DORotate(new Vector3(30, 0, 0), 2f); // Rota la cámara 30 grados en el eje X en 2 segundos
+ // Rota la cámara 30 grados en el eje X en 2 segundos
+ Camera.main.transform.DORotate(new Vector3(30, 0, 0), 2f); 
  ```
 
  **Seguir un objeto en movimiento**
  ```c#
- Camera.main.transform.DOFollow(targetTransform, 2f); // Sigue al objeto targetTransform con una velocidad de 2 unidades por segundo
+ // Sigue al objeto targetTransform con una velocidad de 2 unidades por segundo
+ Camera.main.transform.DOFollow(targetTransform, 2f); 
  ```
 
  **Combinar seguimiento con zoom**
  ```c#
- Camera.main.transform.DOFollow(targetTransform, 2f).SetLookAhead(0.5f); // Añade un poco de anticipación al seguimiento
- Camera.main.orthographicSize.DOValue(3, 2f); // Hace zoom mientras sigue al objeto
+ // Añade un poco de anticipación al seguimiento
+ Camera.main.transform.DOFollow(targetTransform, 2f).SetLookAhead(0.5f); 
+ // Hace zoom mientras sigue al objeto
+ Camera.main.orthographicSize.DOValue(3, 2f); 
  ```
 
  **Efecto Sacudida**
  ```c#
- Camera.main.DOShakePosition(1f, 0.2f, 10, 90, false); // Sacude la cámara durante 1 segundo
+ // Sacude la cámara durante 1 segundo
+ Camera.main.DOShakePosition(1f, 0.2f, 10, 90, false); 
  ```
 
  **Efecto de camara lenta**
  ```c#
- Time.timeScale = 0.5f; // Reduce la velocidad del tiempo
+ // Reduce la velocidad del tiempo
+ Time.timeScale = 0.5f; 
  ```
 
  **Volver a la normalidad despues de efecto**
  ```c#
- DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1, 2f); // Aumenta la velocidad del tiempo en 2 segundos
+ // Aumenta la velocidad del tiempo en 2 segundos
+ DOTween.To(() => Time.timeScale, x => Time.timeScale = x, 1, 2f); 
  ```
 
  **Combinar multiples efectos de camara**
@@ -238,7 +250,8 @@ ps.colorOverLifetime.color.gradient.Evaluate(1f).DOFade(0, 1f); // Desvanece el 
  ```c#
  public class CameraFollow : MonoBehaviour
  {
-    public Transform target; // Objeto a seguir
+    // Objeto a seguir
+    public Transform target; 
     public float smoothTime = 0.3f;
     private Vector3 velocity = Vector3.zero;
 
