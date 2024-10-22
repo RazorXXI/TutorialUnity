@@ -8,7 +8,7 @@ Una herramienta de Unity para crear animaciones suaves y personalizadas de forma
 
  - Descarga el paquete desde el Asset Store de Unity.
 
-    ![DoTween_AssetStore](/docs/wiki/imgWiki/05_DoTweenAssetStore.png)
+  ![DoTween_AssetStore](/docs/wiki/imgWiki/05_DoTweenAssetStore.png)
 
  - Importa el paquete a tu proyecto.
 
