@@ -8,7 +8,7 @@
 
  * **Physics.Raycast**:
     - Devuelve `true` o `false` si impacta o no contra un `GameObject` en escena.
-    - **Sintaxis**: `Physics.Raycast(orig, direc, **out** hit, dist);`
+    - **Sintaxis**: `Physics.Raycast(orig, direc, out hit, dist);`
     - Parámetros:
         - *orig*: Punto de inicio del rayo
         - *direc*: Vector de dirección del rayo
