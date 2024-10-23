@@ -77,10 +77,11 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [6.9: Renderización (`INCOMPLETO`)](/)
      * [6.10: Multijugador con Photon Engine (`INCOMPLETO`)](/)
 
- * [Appendix I: Construyendo un juego 2D con Unity (`INCOMPLETO`)](/docs/wiki/README.md)
- * [Appendix II: Configuración de PICO 4 en UNITY (`INCOMPLETO`)](/docs/wiki/chuletas.md)
- * [Appendix III: Cheat Sheet de DoTween](/docs/wiki/05_DoTweenCheatSheet_I.md)
- * [Appendix IV: Cheat Sheet de Raycast](/docs/wiki/06_RaycastCheatSheet_I.md)
+ * **Appendix - Cheat Sheets y Recursos**
+     * [Appendix I: Construyendo un juego 2D con Unity (`INCOMPLETO`)](/docs/wiki/README.md)
+     * [Appendix II: Configuración de PICO 4 en UNITY (`INCOMPLETO`)](/docs/wiki/chuletas.md)
+     * [Appendix III: Cheat Sheet de DoTween](/docs/wiki/05_DoTweenCheatSheet_I.md)
+     * [Appendix IV: Cheat Sheet de Raycast](/docs/wiki/06_RaycastCheatSheet_I.md)
 
  * **Scripts de Ejemplo**
      * [Buscar un player u otro objetivo](/scripts/BuscarPlayer.cs)
