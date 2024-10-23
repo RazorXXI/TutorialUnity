@@ -230,3 +230,49 @@ public class EnemyAI : MonoBehaviour
     }
 }
 ```
+
+### Ejemplo 07 - Combinando Raycast con OverlapSphere
+
+En este ejemplo hacemos uso combinado del raycast y de OverlapSphere para detectar multiples enemigos dentro de un radio de alcance y que estén dentro de su linea de visión.
+
+```C#
+using UnityEngine;
+
+public class PlayerAttack : MonoBehaviour
+{
+    public float range = 10f;       //Radio de distancia de deteccion de enemigos
+    public float damage = 20;       //Cantidad de daño
+    public LayerMask enemyLayer;    //Layer de los enemigos para filtrar las detecciones
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Detectar enemigos cercanos usando OverlapSphere
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, enemyLayer);
+
+            //Bucle para recorrer el array de Colliders
+            foreach (Collider collider in hitColliders)
+            {
+                //Para cada enemigo detectado, lanzar un Raycast para verificar si está en la línea de visión
+                RaycastHit hit;
+
+                //Comprobamos si esta en la linea de vision del player
+                if (Physics.Raycast(transform.position, (collider.transform.position - transform.position).normalized, out hit, range))
+                {
+                    if (hit.collider == collider)
+                    {
+                        // El enemigo está en la línea de visión, infligir daño
+                        Enemy enemy = hit.collider.GetComponent<Enemy>();
+                        if (enemy != null)
+                        {
+                            enemy.TakeDamage(damage);   //Aplica daño al enemigo
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
