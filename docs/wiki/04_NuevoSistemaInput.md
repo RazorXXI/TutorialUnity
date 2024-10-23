@@ -10,7 +10,7 @@ Cuando se instale, nos aparecerá el siguiente mensaje:
 
 Le daremos a `Yes` y se nos reiniciará Unity, de modo que ya podremos utilizar el nuevo sistema de Inputs. Peeero, quieto `parao` que antes tendremos que configurar algunas cosas "*como dijo Jack el Destripador...*"
 > [!NOTE]
-> *Jack The Ripper* - 
+> *''Jack The Ripper''* - 
 > Vayamos por partes.
 
 Pues bien, una vez instalado el paquete del `Nuevo Input System` de Unity, lo siguiente que tendremos que hacer, es irnos a `Edit -> Project Settings` y una vez en la ventana de `Project Setting` nos iremos a donde pone Input System Package (si no lo tienes clarinete, te dejo una imagen, que siempre vale mas que mil palabras o al menos eso dicen).
