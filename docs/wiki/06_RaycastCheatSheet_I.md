@@ -14,6 +14,101 @@
         - *direc*: Vector de dirección del rayo
         - *hit*: Objeto `RaycastHit` que almacena la información sobre la colisión.
         - *dist*: Distancia maxima que puede recorrer el rayo.
+ * **Physics.RaycastAll**: Devuelve un array de `RaycastHit` con todos los objetos impactados.
+ * **Physics2D.Raycast**: Versión 2D del Physics.Raycast para proyectos 2D.
 
+## Estructura del RaycastHit
 
-CONTINUAR AQUI CON EL RAYCAST
+ * **point**: Punto exacto de la colisión.
+ * **normal**: Vector normal a la superficie en el punto de colisión.
+ * **distance**: Distancia desde el origen del rayo hasta el punto de colisión.
+ * **collider**: Referencia al collider del GameObject impactado.
+
+## Usos Comunes del Raycast
+
+ * **Detección de colisiones**: Disparos, interacción con objetos, detectar plataformas...
+ * **Cálculo de distancias**: Medir distancia entre objetos.
+ * **Creación de efectos visuales**: Sombras, partículas...
+ * **Mecánicas de juego**: Puertas, triggers, ajuste de puntería...
+ * **Optimización**: Verificación de visibilidad.
+
+## Tips para raycast
+
+ * Visualicación:
+    Para visualizar el `raycast` en el `Scene View`, usaremos las funciones `Debug.DrawRay` o  `Debug.DrawLine`.
+ * Filtros:
+    Usaremos `layers` para filtrar los objetos a los cuales el `raycast` detecta.
+ * Optimización:
+    Emplearemos el `raycast` de modo eficiente para evitar sobrecargar la CPU.
+ * Combinaciones:
+    Podemos combinar el `raycast` con otras herramientas como `Physics.OverlapSphere` para detectar objetos cercanos.
+
+## Ejemplos del uso del Raycast
+
+### Ejemplo 01 - Declaración, detección y mensaje
+
+Lanzamos un rayo desde un GameObject y se detecta con que ha chocado.
+
+```C#
+using UnityEngine;
+
+public class MyScript : MonoBehaviour
+{
+    public float distancia = 10f
+
+    void Update()
+    {
+        //Variable para almacenar la informacion de la colision
+        RaycastHit hit;
+
+        //Creamos un rayo desde la posicion del gameObject hacia delante
+        Ray ray = new Ray(transform.position, transform.forward);
+
+        //Comprobamos si hay colision con algo al lanzar el rayo
+        if (Physics.Raycast(ray, out hit, distance))
+        {
+            //Devuelve un mensaje por consola que nos dice con que hemos chocado
+            Debug.Log("Hemos Chocado con: " + hit.collider.name);
+        }
+    }
+}
+```
+
+### Ejemplo 02 - Disparos
+
+Disparamos un rayo desde el cañon de un arma y se verifica si impacta contra un enemigo. Si el impacto es contra un enemigo, se le aplica daño a este.
+
+```C#
+public class Gun : MonoBehaviour
+{
+    public float range = 100f;          //Distancia maxima del rayo
+    public int damage = 50;             //Cantidad de daño al enemigo
+    public ParticleSystem muzzleFlash;  //Efecto de particulas para el disparo
+
+    public void Shoot()
+    {
+        muzzleFlash.Play(); // Efecto visual del disparo
+
+        RaycastHit hit;
+
+        // Crear un rayo desde la posición del cañón en la dirección hacia adelante
+        if (Physics.Raycast(transform.position, transform.forward, out hit, range))
+        {
+            //Mostramos por consola si ha habido impacto
+            Debug.Log("Impacto en: " + hit.collider.name);
+
+            // Si el objeto impactado tiene la etiqueta "Enemy"
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                // Infligir daño al enemigo
+                Enemy enemy = hit.collider.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    //Funcion para aplicar daño al enemigo
+                    enemy.TakeDamage(damage);
+                }
+            }
+        }
+    }
+}
+```
