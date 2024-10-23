@@ -34,13 +34,13 @@
 
 ## Tips para raycast
 
- * Visualicación:
+ * **Visualicación**:
     Para visualizar el `raycast` en el `Scene View`, usaremos las funciones `Debug.DrawRay` o  `Debug.DrawLine`.
- * Filtros:
+ * **Filtros**:
     Usaremos `layers` para filtrar los objetos a los cuales el `raycast` detecta.
- * Optimización:
+ * **Optimización**:
     Emplearemos el `raycast` de modo eficiente para evitar sobrecargar la CPU.
- * Combinaciones:
+ * **Combinaciones**:
     Podemos combinar el `raycast` con otras herramientas como `Physics.OverlapSphere` para detectar objetos cercanos.
 
 ## Ejemplos del uso del Raycast
@@ -65,7 +65,7 @@ public class MyScript : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
 
         //Comprobamos si hay colision con algo al lanzar el rayo
-        if (Physics.Raycast(ray, out hit, distance))
+        if (Physics.Raycast(ray, out hit, distancia))
         {
             //Devuelve un mensaje por consola que nos dice con que hemos chocado
             Debug.Log("Hemos Chocado con: " + hit.collider.name);
@@ -83,11 +83,11 @@ public class Gun : MonoBehaviour
 {
     public float range = 100f;          //Distancia maxima del rayo
     public int damage = 50;             //Cantidad de daño al enemigo
-    public ParticleSystem muzzleFlash;  //Efecto de particulas para el disparo
+    public ParticleSystem shootEffect;  //Efecto de particulas para el disparo
 
     public void Shoot()
     {
-        muzzleFlash.Play(); // Efecto visual del disparo
+        shootEffect.Play(); // Efecto visual del disparo
 
         RaycastHit hit;
 
@@ -120,14 +120,14 @@ En este ejemplo se detecta si el `player` está apuntando a un objeto interactua
 ```c#
 public class PlayerController : MonoBehaviour
 {
-    public float interactionDistance = 3f;
+    public float distancia = 3f;
 
     void Update()
     {
         if (Input.GetButtonDown("Interact"))
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, distancia))
             {
                 if (hit.collider.CompareTag("Interactable"))
                 {
@@ -161,7 +161,7 @@ En este ejemplo se lanza un rayo hacia abajo para comprobar si el jugador esta o
 ```C#
 public class PlayerController : MonoBehaviour
 {
-    public float groundCheckDistance = 0.1f;    //Distancia del raycasta hasta el suelo
+    public float distanciaAlSuelo = 0.1f;    //Distancia del raycasta hasta el suelo
 
     void Update()
     {
@@ -170,7 +170,7 @@ public class PlayerController : MonoBehaviour
         
         //Comprobamos si el jugador esta en el suelo o no
         //-Vector3.up apunta al suelo
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, groundCheckDistance))
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, distanciaAlSuelo))
         {
             // El jugador está en el suelo
             // ...
@@ -214,17 +214,17 @@ En este ejemplo, el enemigo lanza un raycast hacia delante para detectar un obst
 ```C#
 public class EnemyAI : MonoBehaviour
 {
-    public float raycastDistance = 5f;
+    public float distancia = 5f;
 
     void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, distancia))
         {
             if (hit.collider.CompareTag("Obstacle"))
             {
                 // El enemigo ha detectado un obstáculo, cambiar de dirección
-                // ...
+                // Ejecutar codigo para cambio de direccion
             }
         }
     }
@@ -240,7 +240,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float range = 10f;       //Radio de distancia de deteccion de enemigos
+    public float radious = 10f;       //Radio de distancia de deteccion de enemigos
     public float damage = 20;       //Cantidad de daño
     public LayerMask enemyLayer;    //Layer de los enemigos para filtrar las detecciones
 
@@ -249,7 +249,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //Detectar enemigos cercanos usando OverlapSphere
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, range, enemyLayer);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, radious, enemyLayer);
 
             //Bucle para recorrer el array de Colliders
             foreach (Collider collider in hitColliders)
@@ -258,7 +258,7 @@ public class PlayerAttack : MonoBehaviour
                 RaycastHit hit;
 
                 //Comprobamos si esta en la linea de vision del player
-                if (Physics.Raycast(transform.position, (collider.transform.position - transform.position).normalized, out hit, range))
+                if (Physics.Raycast(transform.position, (collider.transform.position - transform.position).normalized, out hit, radious))
                 {
                     if (hit.collider == collider)
                     {
@@ -275,4 +275,3 @@ public class PlayerAttack : MonoBehaviour
     }
 }
 ```
-
