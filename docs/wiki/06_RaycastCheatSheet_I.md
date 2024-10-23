@@ -112,3 +112,121 @@ public class Gun : MonoBehaviour
     }
 }
 ```
+
+### Ejemplo 03 - Interacción con objetos
+
+En este ejemplo se detecta si el `player` está apuntando a un objeto interactuable y si es así, se llama a la función `Interact()` de dicho objeto.
+
+```c#
+public class PlayerController : MonoBehaviour
+{
+    public float interactionDistance = 3f;
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Interact"))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
+            {
+                if (hit.collider.CompareTag("Interactable"))
+                {
+                    // Interactuar con el objeto
+                    Interactable interactableObject = hit.collider.GetComponent<Interactable>();
+                    if (interactableObject != null)
+                    {
+                        interactableObject.Interact();
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Clase que porta el objeto interactuable
+public class Interactable : MonoBehaviour
+{
+    public virtual void Interact()
+    {
+        // Aquí se implementa la lógica de interacción específica para cada objeto
+        Debug.Log("Interactuando con " + gameObject.name);
+    }
+}
+```
+
+### Ejemplo 04 - Detección de plataformas
+
+En este ejemplo se lanza un rayo hacia abajo para comprobar si el jugador esta o no en el suelo.
+
+```C#
+public class PlayerController : MonoBehaviour
+{
+    public float groundCheckDistance = 0.1f;    //Distancia del raycasta hasta el suelo
+
+    void Update()
+    {
+        
+        RaycastHit hit;
+        
+        //Comprobamos si el jugador esta en el suelo o no
+        //-Vector3.up apunta al suelo
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, groundCheckDistance))
+        {
+            // El jugador está en el suelo
+            // ...
+        }
+        else
+        {
+            // El jugador está en el aire
+            // ...
+        }
+    }
+}
+```
+
+### Ejemplo 05 - Apuntando con Punteria
+
+En este ejemplo lanzamos un rayo desde la camara y se determina el punto de impacto del cursor del raton en la escena
+
+```C#
+public class PunteriaScript : MonoBehaviour
+{
+    public Camera cam;
+
+    void Update()
+    {
+        RaycastHit hit;
+
+        //Lanzamos el rayo desde la camara y vemos donde impacta, segun la posicion donde se encuentra el raton
+        if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
+        {
+            // Mostrar el rayo cuando impacte con algun gameObject de la escena
+            Debug.DrawLine(cam.transform.position, hit.point, Color.red);
+        }
+    }
+}
+```
+
+### Ejemplo 06 - Navegación
+
+En este ejemplo, el enemigo lanza un raycast hacia delante para detectar un obstaculo y cambiar de dirección si es necesario.
+
+```C#
+public class EnemyAI : MonoBehaviour
+{
+    public float raycastDistance = 5f;
+
+    void Update()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance))
+        {
+            if (hit.collider.CompareTag("Obstacle"))
+            {
+                // El enemigo ha detectado un obstáculo, cambiar de dirección
+                // ...
+            }
+        }
+    }
+}
+```
