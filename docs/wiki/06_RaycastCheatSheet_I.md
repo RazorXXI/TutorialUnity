@@ -184,7 +184,7 @@ public class PlayerController : MonoBehaviour
 }
 ```
 
-### Ejemplo 05 - Apuntando con Punteria
+### Ejemplo 05 - Apuntando con el ratón
 
 En este ejemplo lanzamos un rayo desde la camara y se determina el punto de impacto del cursor del raton en la escena
 
