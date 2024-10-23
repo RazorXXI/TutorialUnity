@@ -273,5 +273,13 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
+
+    void OnDrawGizmosSelected()     //Funcion que muestra un gizmo al seleccionar el objeto que porta este codigo
+    {
+        Gizmos.color = Color.blue;
+
+        //Mostramos una esfera que representa el overlapSphere de color Azul
+        Gizmos.DrawSphere(transform.position, range);   
+    }
 }
 ```
