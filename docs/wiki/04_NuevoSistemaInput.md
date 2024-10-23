@@ -129,7 +129,7 @@ Y a continuación, vamos a crear un script al cual vamos a llamar `MoverCuadrado
 
  Ahora bien, vamos a mirar un poco mas en detalle el script y vamos a desgranarlo.
 
- Para comenzar, te lo he puesto con un comentario, porque es importante, si quieres usar el nuevo sistema de inputs de Unity, primero tendrás que importarlo, y para ello es la linea ```using UnityEngine.InputSystem;```, ya que si esta no estuviera, nos daría error a la hora de tratar de hacer uso de el.
+ Para comenzar, te lo he puesto con un comentario, porque es importante, si quieres usar el nuevo sistema de inputs de Unity, primero tendrás que importarlo, y para ello es la linea :point_right: ```using UnityEngine.InputSystem;```, ya que si esta no estuviera, nos daría error a la hora de tratar de hacer uso de el.
 
  Seguidamente, he definido dos variables, una de tipo `Rigidbody2D` para poder mover el cuadrado y una segunda de tipo `float` la cual será la velocidad con la que quiero que se mueva.
 
