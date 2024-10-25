@@ -13,26 +13,30 @@ Bueno, para muestra un botón, vamos al turron y vamos a explicar como implement
 
  1 - **Creación del sistema de particulas**
 
-     * Sobre un GameObject que tengas en escena, agregamos el componente `Particle System` o bien sobre un GameObject que creemos. Pero en resumen, se tiene que añadir como componente de un GameObject.
-     * Para poder crear los efectos, deberemos emplear las propiedades del componente, las cuales las veremos en el inspector. A continuación veremos que es cada cosa y para que sirve.
+ * Sobre un GameObject que tengas en escena, agregamos el componente `Particle System` o bien sobre un GameObject que creemos. Pero en resumen, se tiene que añadir como componente de un GameObject.
+
+ * Para poder crear los efectos, deberemos emplear las propiedades del componente, las cuales las veremos en el inspector. A continuación veremos que es cada cosa y para que sirve.
 
  2 - **Propiedades Principales de Particle System**
 
-     *  __Shape__:
-     * Emission
-     * Simulation
-     * Renderer
-     * Collision
+ *  __Shape__:
+ * __Emission__:
+ * __Simulation__:
+ * __Renderer__:
+ * __Collision__:
 
 ### 3.5.2 - Que se puede hacer con el sistema de particulas
 
  - Efectos Visuales
-     * Explosiones
-     * Fuego
-     * Humo
-     * Nieve
-     * Lluvia
-     * Agua
-     * Particulas efectos de magia
+
+     * Explosiones:
+     * Fuego:
+     * Humo:
+     * Nieve:
+     * Lluvia:
+     * Agua:
+     * Particulas efectos de magia:
+ 
  - Visualización de datos
+ 
  - Interacción con el player
