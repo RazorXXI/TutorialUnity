@@ -35,7 +35,7 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [3.2: Mas Física. Joint que te Joint y Character Controller](/docs/cap14.md)
      * [3.3: Materiales, Texturas y Shaders](/docs/cap15.md)
      * [3.4: Animaciones. Animation y Animator](/docs/cap16.md)
-     * [3.5: Sistema de Particulas (`INCOMPLETO`)](/)
+     * [3.5: Sistema de Particulas](/docs/cap81.md)
      * [3.6: Inputs (`INCOMPLETO`)](/)
      * [3.7: Sistema de Navegación (`INCOMPLETO`)](/)
      * [3.8: Audio (`INCOMPLETO`)](/)
