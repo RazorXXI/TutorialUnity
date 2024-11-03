@@ -101,5 +101,6 @@ Espero que te sirva y te ayude, pues se lo complicado que es encontrar en intern
      * [Movimiento mediante waypoints](/scripts/MovimientoWayPoint.cs)
      * [Efecto Parallax I](/scripts/ParallaxEffect.cs)
      * [Efecto Parallax II](/scripts/ParallaxScript.cs)
+     * [Player Controller Basico para juego Point and Click 2D](/scripts/PlayerControllerPC2D.cs)
      * [Busqueda de un target](/scripts/Target.cs)
      * [Un script con varias cosas ](/scripts/TipsAndVarious.cs)
